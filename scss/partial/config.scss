@@ -1,0 +1,26 @@
+// Colors
+// ----------------------------------
+
+$primary-color:         #337ab7;
+$secondary-color:       #cf359a;
+
+$success-color:         #5cb85c;
+$info-color:            #5bc0de;
+$warning-color:         #f0ad4e;
+$danger-color:          #d9534f;
+$light-color:           #fff;
+$dark-color:            #000;
+$grey-color:            #ccc;
+
+
+
+// Mixins
+// ----------------------------------
+
+@mixin transition{
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}

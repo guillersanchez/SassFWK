@@ -1,0 +1,18 @@
+/* importamos los archivos de las distintas carpetas */
+
+/* Carpeta partial */
+// primero llamamos al fichero con las variables!
+@import 'partial/config.scss';
+@import 'partial/fonts.scss';
+@import 'partial/reset.scss';
+
+/* Carpeta elements */
+@import 'elements/buttons.scss';
+@import 'elements/grid.scss';
+
+/* Carpeta modules */
+@import 'modules/contact.scss';
+@import 'modules/form.scss';
+
+/* Carpeta vendor */
+@import 'vendor/slider.scss';

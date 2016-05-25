@@ -1,0 +1,111 @@
+// Buttons
+// ----------------------------------
+
+.button{
+  font-size:15px;
+  padding: 10px 15px;
+  color:#333;
+  background:$light-color;
+  border:0;
+  border-radius:3px;
+  border:1px solid $grey-color;
+  display:inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  @include transition;
+  &:hover{
+    background:darken( $light-color, 10% );
+    cursor:pointer;
+  }
+}
+
+
+.button--primary{
+  @extend .button;
+  color:$light-color;
+  background:$primary-color;
+  border-color:darken( $primary-color, 10% );
+  &:hover{
+    background:darken( $primary-color, 10% );
+  }
+}
+
+.button--secondary{
+  @extend .button;
+  color:$light-color;
+  background:$secondary-color;
+  border-color:darken($secondary-color, 10% );
+  &:hover{
+    background:darken($secondary-color, 10% );
+  }
+}
+
+.button--success{
+  @extend .button;
+  color:$light-color;
+  background:$success-color;
+  border-color:darken($success-color, 10% );
+  &:hover{
+    background:darken($success-color, 10% );
+  }
+}
+
+.button--info{
+  @extend .button;
+  color:$light-color;
+  background:$info-color;
+  border-color:darken($info-color, 10% );
+  &:hover{
+    background:darken($info-color, 10% );
+  }
+}
+
+.button--warning{
+  @extend .button;
+  color:$light-color;
+  background:$warning-color;
+  border-color:darken($warning-color, 10% );
+  &:hover{
+    background:darken($warning-color, 10% );
+  }
+}
+
+.button--danger{
+  @extend .button;
+  color:$light-color;
+  background:$danger-color;
+  border-color:darken($danger-color, 10% );
+  &:hover{
+    background:darken($danger-color, 10% );
+  }
+}
+
+.button--danger{
+  @extend .button;
+  color:$light-color;
+  background:$danger-color;
+  border-color:darken($danger-color, 10% );
+  &:hover{
+    background:darken($danger-color, 10% );
+  }
+}
+
+.button--dark{
+  @extend .button;
+  color:$light-color;
+  background:$dark-color;
+  border-color:darken($dark-color, 10% );
+  &:hover{
+    background:lighten($dark-color, 40% );
+  }
+}
+
+.button--grey{
+  @extend .button;
+  color:$light-color;
+  background:$grey-color;
+  border-color:darken($grey-color, 10% );
+  &:hover{
+    background:darken($grey-color, 10% );
+  }
+}
