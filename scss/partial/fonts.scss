@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    FONTS
+\*------------------------------------*/
+
+/* MODO 1: IMPORTANDO LA FUENTE DE GOOGLE FONTS */
+//1)Importamos la fuente
+    //principal
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
+
+    //secundaria
+    @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+
+//2)Creamos variables y estilos
+    //principal
+    //creamos 1 variable con la fuente
+    $font-import-primary:'Roboto', sans-serif;
+
+    //metemos esa fuente en un estilo
+    .font-primary{
+      font-family:$font-import-primary;
+      font-weight:normal;
+    }
+
+    //secundaria
+    //creamos 1 variable con la fuente
+    $font-import-secondary:'Roboto Slab', serif;
+
+    //metemos esa fuente en un estilo
+    .font-secondary{
+      font-family:$font-import-secondary;
+      font-weight:normal;
+    }
+
+
+
+
+
+
+//Llamamos a la fuente principal en el body y a la secundaria en los H1,H2,H3...
+
+    body{
+      @extend .font-primary;
+    }
+
+
+
+
+// HEADINGS ====================================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend .font-secondary;
+}
