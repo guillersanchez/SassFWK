@@ -27,7 +27,7 @@
 
 
 
-.icon--star{
+.icon--star:before{
   @extend .fa;
   @extend .fa-star;
 }
