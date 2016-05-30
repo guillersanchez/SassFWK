@@ -28,3 +28,12 @@ $grey-color:            #ccc;
 }
 
 
+//Tipografias
+
+
+.icono--estrella:before{
+  @extend .fa;
+  content: "\f005";
+}
+
+
