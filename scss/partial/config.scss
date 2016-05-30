@@ -26,7 +26,13 @@ $grey-color:            #ccc;
   -ms-transition: 0.3s;
   transition: 0.3s;
 }
+/*------------------------------------*\
+    CONFIG HTML
+\*------------------------------------*/
 
-
-
+html {
+  font-size: 1em; /* 1 */
+  -webkit-text-size-adjust: 1em; /* 2 */
+  -ms-text-size-adjust: 1em; /* 2 */
+}
 
