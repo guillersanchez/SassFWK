@@ -3,6 +3,8 @@
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
+
+ En este archivo defino el font-face y todas las variables de esta fuente local
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
@@ -11,7 +13,7 @@
   font-weight: normal;
   font-style: normal;
 }
-.fa {
+.fa:before {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;

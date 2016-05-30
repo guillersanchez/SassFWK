@@ -3,26 +3,34 @@
 \*------------------------------------*/
 
 /* Carpeta partial */
-// primero llamamos al fichero con las variables!
-@import 'partial/config.scss';
-@import 'partial/fonts.scss';
-@import 'partial/reset.scss';
+    // primero llamamos al fichero con las variables!
+    @import 'partial/config.scss';
+    @import 'partial/reset.scss';
+    // importamos las fuentes principales
+    @import 'partial/fonts.scss';
+    //importamos la fuente de iconos para poder acceder a sus estilos y usarlos con @extend;
+    @import 'partial/font-awesome.scss';
 
 /* Carpeta elements */
-@import 'elements/buttons.scss';
-@import 'elements/grid.scss';
+    @import 'elements/buttons.scss';
+    @import 'elements/grid.scss';
 
 /* Carpeta modules */
-@import 'modules/contact.scss';
-@import 'modules/form.scss';
+    @import 'modules/contact.scss';
+    @import 'modules/form.scss';
 
 /* Carpeta vendor */
-@import 'vendor/slider.scss';
+    @import 'vendor/slider.scss';
 
 
 /*-----------------------------------------*\
     ESTA ES LA HOJA DE ESTILOS PRINCIPAL
 \*-----------------------------------------*/
+
+.icono--estrella{
+  @extend .fa;
+  @extend .fa-star;
+}
 
 
 

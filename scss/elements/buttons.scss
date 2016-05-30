@@ -109,3 +109,19 @@
     background:darken($grey-color, 10% );
   }
 }
+
+.button--save{
+  @extend .button;
+  color:$light-color;
+  background:$primary-color;
+  border-color:darken( $primary-color, 10% );
+  //llamamos al icono que usaremos
+  @extend .fa;
+  @extend .fa-save;
+  &:hover{
+    background:darken( $primary-color, 10% );
+  }
+  &:before{
+    padding: 0 3px 0 0;
+  }
+}
