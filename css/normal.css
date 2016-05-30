@@ -1,10 +1,12 @@
 body{
     background:#f1f1f1;
+    padding:10px !important;
 }
 
 header{
     height:auto;
-    border-bottom:1px solid #ccc;
+    border-bottom:2px solid #ccc !important;
     margin-bottom:20px;
+    padding-bottom:10px !important;
 }
 
