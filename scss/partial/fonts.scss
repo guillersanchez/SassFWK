@@ -1,8 +1,11 @@
 /*------------------------------------*\
     FONTS
+    Hay 2 formas de hacerlo: importamos la fuente o la descargamos en local
 \*------------------------------------*/
 
-/* MODO 1: IMPORTANDO LA FUENTE DE GOOGLE FONTS */
+// MODO 1: IMPORTANDO LA FUENTE DE GOOGLE FONTS
+// ----------------------------------
+
 //1)Importamos la fuente
     //principal
     @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
@@ -31,9 +34,12 @@
           font-weight:normal;
         }
 
+// MODO 2: DESCARGANDO LA FUENTE A LOCAL
+// ----------------------------------
 
-/* MODO 2: DESCARGANDO LA FUENTE A LOCAL */
 //1) Guardamos los archivos en la carpeta fonts
+
+
 
 
 
