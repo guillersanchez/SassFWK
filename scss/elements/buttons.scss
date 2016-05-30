@@ -8,7 +8,6 @@
   padding: 10px 15px;
   color:#333;
   background:$light-color;
-  border:0;
   border-radius:3px;
   border:1px solid $grey-color;
   display:inline-block;
@@ -126,5 +125,24 @@
     //llamamos al icono que usaremos
     @extend .fa;
     @extend .fa-save;
+  }
+}
+
+.button--hidetext{
+  @extend .button;
+  color:$light-color;
+  background:$primary-color;
+  border-color:darken( $primary-color, 10% );
+  //escondemos el texto
+  @extend .hidetext;
+
+  &:hover{
+    background:darken( $primary-color, 10% );
+  }
+  &:before{
+    padding: 0 3px 0 0;
+    //llamamos al icono que usaremos
+    @extend .fa;
+    @extend .fa-check;
   }
 }
