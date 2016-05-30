@@ -12,24 +12,24 @@
 
 //2)Creamos variables y estilos
     //principal
-    //creamos 1 variable con la fuente
-    $font-import-primary:'Roboto', sans-serif;
+        //creamos 1 variable con la fuente
+        $font-import-primary:'Roboto', sans-serif;
 
-    //metemos esa fuente en un estilo
-    .font-primary{
-      font-family:$font-import-primary;
-      font-weight:normal;
-    }
+        //metemos esa fuente en un estilo
+        .font-primary{
+          font-family:$font-import-primary;
+          font-weight:normal;
+        }
 
     //secundaria
-    //creamos 1 variable con la fuente
-    $font-import-secondary:'Roboto Slab', serif;
+        //creamos 1 variable con la fuente
+        $font-import-secondary:'Roboto Slab', serif;
 
-    //metemos esa fuente en un estilo
-    .font-secondary{
-      font-family:$font-import-secondary;
-      font-weight:normal;
-    }
+        //metemos esa fuente en un estilo
+        .font-secondary{
+          font-family:$font-import-secondary;
+          font-weight:normal;
+        }
 
 
 /* MODO 2: DESCARGANDO LA FUENTE A LOCAL */
