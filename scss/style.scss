@@ -32,5 +32,15 @@
   @extend .fa-star;
 }
 
+/*
+@media (max-width : 480px){
+  body{
+    background:red;
+  }
+}*/
 
-
+@media #{$mobile}{
+  body{
+    background:$info-color;
+  }
+}

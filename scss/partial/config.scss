@@ -27,6 +27,19 @@ $grey-color:            #ccc;
   transition: 0.3s;
 }
 
+/*------------------------------------*\
+    MEDIA QUERIES
+\*------------------------------------*/
+
+$smart: "(max-width : 320px)";
+$mobile: "(max-width : 480px)";
+$mobileMin: "(min-width : 320px)";
+$mobileLand: "(min-width : 480px) and (max-width : 800px) and (orientation : landscape)"; /* se amplia para tablets pequeñas de baja gama */
+$tablet: "(max-width : 768px)";
+$tabletMin: "(min-width : 768px)";
+$tabletLand: "(min-width : 800px) and (max-width : 1024px) and (orientation : landscape)";
+$desktop: "(min-width : 1025px)";
+
 
 
 /*------------------------------------*\
