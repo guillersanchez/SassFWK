@@ -21,3 +21,13 @@
 @import 'vendor/slider.scss';
 
 
+/*-----------------------------------------*\
+    ESTA ES LA HOJA DE ESTILOS PRINCIPAL
+\*-----------------------------------------*/
+
+
+
+.icon--star{
+  @extend .fa;
+  @extend .fa-star;
+}
