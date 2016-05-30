@@ -27,7 +27,7 @@
     ESTA ES LA HOJA DE ESTILOS PRINCIPAL
 \*-----------------------------------------*/
 
-.icono--estrella{
+.icono--estrella:before{
   @extend .fa;
   @extend .fa-star;
 }
