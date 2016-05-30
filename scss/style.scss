@@ -6,7 +6,6 @@
 // primero llamamos al fichero con las variables!
 @import 'partial/config.scss';
 @import 'partial/fonts.scss';
-@import 'partial/font-awesome.scss';
 @import 'partial/reset.scss';
 
 /* Carpeta elements */
@@ -26,8 +25,8 @@
 \*-----------------------------------------*/
 
 
-
+/*
 .icon--star:before{
   @extend .fa;
   @extend .fa-star;
-}
+}*/
