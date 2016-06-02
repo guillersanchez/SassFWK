@@ -63,7 +63,14 @@ $desktop: "(min-width : 1025px)";
     CONFIG HTML
 \*------------------------------------*/
 
+html{
+  //antialiasing
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
 body {
+  //fuentes
   font-size: 1em; /* Equivale a 16px */
   -webkit-text-size-adjust: 1em; /* 2 */
   -ms-text-size-adjust: 1em; /* 2 */

@@ -31,6 +31,10 @@
 /*------------------------------------*\
     CONFIG HTML
 \*------------------------------------*/
+html {
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
+
 body {
   font-size: 1em;
   /* Equivale a 16px */
@@ -145,10 +149,13 @@ h6 {
   font-weight: normal; }
 
 @font-face {
-  font-family: 'oswald-bold';
-  src: url("../fonts/oswald-bold/oswald-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald-bold/oswald-bold-webfont.woff2") format("woff2"), url("../fonts/oswald-bold/oswald-bold-webfont.woff") format("woff"), url("../fonts/oswald-bold/oswald-bold-webfont.ttf") format("truetype"), url("../fonts/oswald-bold/oswald-bold-webfont.svg#oswald-bold") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/oswald/oswald-v11-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Oswald Bold"), local("Oswald-Bold"), url("../fonts/oswald/oswald-v11-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald/oswald-v11-latin-700.woff2") format("woff2"), url("../fonts/oswald/oswald-v11-latin-700.woff") format("woff"), url("../fonts/oswald/oswald-v11-latin-700.ttf") format("truetype"), url("../fonts/oswald/oswald-v11-latin-700.svg#Oswald") format("svg");
+  /* Legacy iOS */ }
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2345,7 +2352,7 @@ h6 {
   body {
     background: #5bc0de; } }
 .fuentelocal {
-  font-family: 'oswald-bold',sans-serif;
-  font-size: 30px; }
+  font-family: 'Oswald',sans-serif;
+  font-size: 32px; }
 
 /*# sourceMappingURL=style.css.map */
