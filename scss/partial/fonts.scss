@@ -34,11 +34,24 @@
           font-weight:normal;
         }
 
+
+
 // MODO 2: DESCARGANDO LA FUENTE A LOCAL
 // ----------------------------------
 
 //1) Guardamos los archivos en la carpeta fonts
-
+//2) Declaramos los font-face, 1 x peso
+     // principal local
+        @font-face{
+          font-family:'oswald-bold';
+          src: url('../fonts/oswald-bold/oswald-bold-webfont.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/oswald-bold/oswald-bold-webfont.woff2') format('woff2'),
+          url('../fonts/oswald-bold/oswald-bold-webfont.woff') format('woff'),
+          url('../fonts/oswald-bold/oswald-bold-webfont.ttf') format('truetype'),
+          url('../fonts/oswald-bold/oswald-bold-webfont.svg#oswald-bold') format('svg');
+          font-weight:normal;
+          font-style:normal;
+        }
 
 
 

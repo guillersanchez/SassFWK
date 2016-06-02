@@ -27,13 +27,21 @@
     ESTA ES LA HOJA DE ESTILOS PRINCIPAL
 \*-----------------------------------------*/
 
+// Así llamamos a 1 icono
 .icono--estrella:before{
   @extend .fa;
   @extend .fa-star;
 }
 
-@media #{$mobile}{
+// Así se declaran los media queries en Sass
+@media  #{$tablet}{
   body{
-    background:$info-color;
+  background:$info-color;
   }
+}
+
+//probando fuente local - Oswald
+.fuentelocal{
+  font-family:'oswald-bold',sans-serif;
+  font-size:30px;
 }
