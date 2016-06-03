@@ -9,11 +9,17 @@
 
     // FUENTES
     // Si usamos fuentes importadas
-    @import 'partial/fonts-imported.scss';
+    //@import 'partial/fonts-imported.scss';
+
     // Si usamos fuentes locales
     @import 'partial/fonts-local.scss';
-    //importamos la fuente de iconos para poder acceder a sus estilos y usarlos con @extend;
+
+    //importamos la fuente de iconos FONTAWESOME para poder acceder a sus estilos y usarlos con @extend;
     @import 'partial/font-awesome.scss';
+
+    //importamos la fuente de iconos FONTAWESOME para poder acceder a sus estilos y usarlos con @extend;
+    @import 'partial/font-ionicons.scss';
+
 
 /* Carpeta elements */
     @import 'elements/buttons.scss';
@@ -31,7 +37,7 @@
     ESTA ES LA HOJA DE ESTILOS PRINCIPAL
 \*-----------------------------------------*/
 
-// Así llamamos a 1 icono
+// Así llamamos a 1 icono de fontawesome
 .icono--estrella:before{
   @extend .fa;
   @extend .fa-star;
@@ -44,8 +50,8 @@
   }
 }
 
-//probando fuente local - Oswald
-.fuentelocal{
-  font-family:'Oswald',sans-serif;
-  font-size:32px;
+// Así llamamos a un icono de Ionicons
+.icono--casa:before{
+  @extend .ion;
+  @extend .ionicon-var-android-calendar;
 }

@@ -76,6 +76,24 @@ body {
   -ms-text-size-adjust: 1em; /* 2 */
 }
 
+//Llamamos a la fuente principal en el body y a la secundaria en los H1,H2,H3...
+
+ body{
+   @extend .font-primary;
+ }
+
+
+// HEADINGS ====================================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend .font-secondary;
+}
+
 
 h1 {
   font-size: 2em;

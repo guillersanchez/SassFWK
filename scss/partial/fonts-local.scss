@@ -3,17 +3,58 @@
 // ----------------------------------
 
 //1) Guardamos los archivos en la carpeta fonts
+    // Podemos descargarla de aqui:https://google-webfonts-helper.herokuapp.com/fonts
+
 //2) Declaramos los font-face, 1 x peso
 // principal local
-@font-face{
-  font-family:'Oswald';
-  font-style:normal;
-  font-weight:700;
-  src: url('../fonts/oswald/oswald-v11-latin-700.eot'); /* IE9 Compat Modes */
-  src: local('Oswald Bold'), local('Oswald-Bold'),
-  url('../fonts/oswald/oswald-v11-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/oswald/oswald-v11-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/oswald/oswald-v11-latin-700.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/oswald/oswald-v11-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/oswald/oswald-v11-latin-700.svg#Oswald') format('svg'); /* Legacy iOS */
-}
+    @font-face {
+      font-family:'Merriweather Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: url('../fonts/merriweather/merriweather-sans-v8-latin-regular.eot'); /* IE9 Compat Modes */
+      src: local('Merriweather Sans'), local('MerriweatherSans-Regular'),
+      url('../fonts/merriweather/merriweather-sans-v8-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('../fonts/merriweather/merriweather-sans-v8-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+      url('../fonts/merriweather/merriweather-sans-v8-latin-regular.woff') format('woff'), /* Modern Browsers */
+      url('../fonts/merriweather/merriweather-sans-v8-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+      url('../fonts/merriweather/merriweather-sans-v8-latin-regular.svg#MerriweatherSans') format('svg'); /* Legacy iOS */
+    }
+
+    // secundaria local
+    @font-face{
+      font-family:'Oswald';
+      font-style:normal;
+      font-weight:700;
+      src: url('../fonts/oswald/oswald-v11-latin-700.eot'); /* IE9 Compat Modes */
+      src: local('Oswald Bold'), local('Oswald-Bold'),
+      url('../fonts/oswald/oswald-v11-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('../fonts/oswald/oswald-v11-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+      url('../fonts/oswald/oswald-v11-latin-700.woff') format('woff'), /* Modern Browsers */
+      url('../fonts/oswald/oswald-v11-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+      url('../fonts/oswald/oswald-v11-latin-700.svg#Oswald') format('svg'); /* Legacy iOS */
+    }
+
+
+
+//3)Creamos variables y estilos
+    //principal
+        //creamos 1 variable con la fuente
+        $font-import-primary:'Merriweather Sans',sans-serif;
+
+        //metemos esa fuente en un estilo
+        .font-primary{
+          font-family:$font-import-primary;
+        }
+
+    //secundaria
+        //creamos 1 variable con la fuente
+        $font-local-secondary:'Oswald',sans-serif;
+
+        //metemos esa fuente en un estilo
+        .font-secondary{
+          font-family:$font-local-secondary;
+        }
+
+
+
+
