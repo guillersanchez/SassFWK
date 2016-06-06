@@ -1,4 +1,15 @@
 /*------------------------------------*\
+    DECIDIMOS QUÉ ARCHIVOS CARGAMOS
+\*------------------------------------*/
+
+$fuenteImportada:          true!default;
+$fuenteLocal:              false!default;
+
+$iconosFontawesome:        true!default;
+$iconosIonicons:           true!default;
+
+
+/*------------------------------------*\
     IMPORTACION DE ARCHIVOS
 \*------------------------------------*/
 
@@ -8,10 +19,10 @@
     @import 'partial/reset.scss';
 
     // FUENTES
-    // Si usamos fuentes importadas
-    //@import 'partial/fonts-imported.scss';
+    // Importada
+   @import 'partial/fonts-imported.scss';
 
-    // Si usamos fuentes locales
+    // Local
     @import 'partial/fonts-local.scss';
 
     //importamos la fuente de iconos FONTAWESOME para poder acceder a sus estilos y usarlos con @extend;

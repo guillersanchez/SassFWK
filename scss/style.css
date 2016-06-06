@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /*------------------------------------*\
+    DECIDIMOS QU╔ ARCHIVOS CARGAMOS
+\*------------------------------------*/
+/*------------------------------------*\
     IMPORTACION DE ARCHIVOS
 \*------------------------------------*/
 /* Carpeta partial */
@@ -9,6 +12,8 @@
 /*------------------------------------*\
     MIXINS
 \*------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 .hidetext, .btn--hidetext {
   width: 40px;
   height: 40px;
@@ -23,7 +28,7 @@
     left: -18px !important; }
 
 /*------------------------------------*\
-    MEDIA QUERIES
+    MEDIA QUERIES BREAKPOINTS
 \*------------------------------------*/
 /* se amplia para tablets peque±as de baja gama */
 /*------------------------------------*\
@@ -129,24 +134,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@font-face {
-  font-family: 'Merriweather Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/merriweather/merriweather-sans-v8-latin-regular.eot");
-  /* IE9 Compat Modes */
-  src: local("Merriweather Sans"), local("MerriweatherSans-Regular"), url("../fonts/merriweather/merriweather-sans-v8-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather/merriweather-sans-v8-latin-regular.woff2") format("woff2"), url("../fonts/merriweather/merriweather-sans-v8-latin-regular.woff") format("woff"), url("../fonts/merriweather/merriweather-sans-v8-latin-regular.ttf") format("truetype"), url("../fonts/merriweather/merriweather-sans-v8-latin-regular.svg#MerriweatherSans") format("svg");
-  /* Legacy iOS */ }
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/oswald/oswald-v11-latin-700.eot");
-  /* IE9 Compat Modes */
-  src: local("Oswald Bold"), local("Oswald-Bold"), url("../fonts/oswald/oswald-v11-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/oswald/oswald-v11-latin-700.woff2") format("woff2"), url("../fonts/oswald/oswald-v11-latin-700.woff") format("woff"), url("../fonts/oswald/oswald-v11-latin-700.ttf") format("truetype"), url("../fonts/oswald/oswald-v11-latin-700.svg#Oswald") format("svg");
-  /* Legacy iOS */ }
 .font-primary, body {
-  font-family: "Merriweather Sans", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  font-weight: normal; }
 
 .font-secondary, h1,
 h2,
@@ -154,16 +144,17 @@ h3,
 h4,
 h5,
 h6, p .capitular {
-  font-family: "Oswald", sans-serif; }
+  font-family: "Roboto Slab", serif;
+  font-weight: normal; }
 
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-/* FONT PATH
+  /* FONT PATH
 
- En este archivo defino el font-face y todas las variables de esta fuente local
- * -------------------------- */
+   En este archivo defino el font-face y todas las variables de esta fuente local
+   * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
   src: url("../fonts/fontawesome/fontawesome-webfont.eot?v=4.0.3");
@@ -221,7 +212,7 @@ h6, p .capitular {
 
 .fa-border {
   padding: .2em .25em .15em;
-  border: solid 0.08em #eeeeee;
+  border: solid 0.08em #eee;
   border-radius: .1em; }
 
 .pull-right {
@@ -329,7 +320,7 @@ h6, p .capitular {
   font-size: 2em; }
 
 .fa-inverse {
-  color: #ffffff; }
+  color: #fff; }
 
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */

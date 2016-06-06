@@ -1,3 +1,4 @@
+@if $fuenteImportada == true{
 
 // MODO 1: IMPORTANDO LA FUENTE DE GOOGLE FONTS
 // ----------------------------------
@@ -29,3 +30,8 @@
           font-family:$font-import-secondary;
           font-weight:normal;
         }
+
+
+
+
+}
