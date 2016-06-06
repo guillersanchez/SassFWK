@@ -43,6 +43,14 @@
   @extend .fa-star;
 }
 
+// Así llamamos a un icono de Ionicons
+.icono--calendario:before{
+  @extend .ion;
+  @extend .ionicon-var-android-calendar;
+}
+
+
+
 // Así se declaran los media queries en Sass
 @media  #{$tablet}{
   body{
@@ -50,8 +58,3 @@
   }
 }
 
-// Así llamamos a un icono de Ionicons
-.icono--casa:before{
-  @extend .ion;
-  @extend .ionicon-var-android-calendar;
-}

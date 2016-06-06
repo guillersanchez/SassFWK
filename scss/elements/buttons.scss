@@ -2,8 +2,8 @@
     BUTTONS
 \*------------------------------------*/
 
-
-.button{
+/*clase principal para definir un botón*/
+.btn{
   font-size:0.875em;
   padding: 10px 15px;
   color:#333;
@@ -21,8 +21,8 @@
 }
 
 
-.button--primary{
-  @extend .button;
+.btn--primary{
+  @extend .btn;
   color:$light-color;
   background:$primary-color;
   border-color:darken( $primary-color, 10% );
@@ -31,8 +31,8 @@
   }
 }
 
-.button--secondary{
-  @extend .button;
+.btn--secondary{
+  @extend .btn;
   color:$light-color;
   background:$secondary-color;
   border-color:darken($secondary-color, 10% );
@@ -41,8 +41,8 @@
   }
 }
 
-.button--success{
-  @extend .button;
+.btn--success{
+  @extend .btn;
   color:$light-color;
   background:$success-color;
   border-color:darken($success-color, 10% );
@@ -51,8 +51,8 @@
   }
 }
 
-.button--info{
-  @extend .button;
+.btn--info{
+  @extend .btn;
   color:$light-color;
   background:$info-color;
   border-color:darken($info-color, 10% );
@@ -61,8 +61,8 @@
   }
 }
 
-.button--warning{
-  @extend .button;
+.btn--warning{
+  @extend .btn;
   color:$light-color;
   background:$warning-color;
   border-color:darken($warning-color, 10% );
@@ -71,8 +71,8 @@
   }
 }
 
-.button--danger{
-  @extend .button;
+.btn--danger{
+  @extend .btn;
   color:$light-color;
   background:$danger-color;
   border-color:darken($danger-color, 10% );
@@ -81,18 +81,9 @@
   }
 }
 
-.button--danger{
-  @extend .button;
-  color:$light-color;
-  background:$danger-color;
-  border-color:darken($danger-color, 10% );
-  &:hover{
-    background:darken($danger-color, 10% );
-  }
-}
 
-.button--dark{
-  @extend .button;
+.btn--dark{
+  @extend .btn;
   color:$light-color;
   background:$dark-color;
   border-color:darken($dark-color, 10% );
@@ -101,8 +92,8 @@
   }
 }
 
-.button--grey{
-  @extend .button;
+.btn--grey{
+  @extend .btn;
   color:$light-color;
   background:$grey-color;
   border-color:darken($grey-color, 10% );
@@ -111,8 +102,8 @@
   }
 }
 
-.button--save{
-  @extend .button;
+.btn--save{
+  @extend .btn;
   color:$light-color;
   background:$primary-color;
   border-color:darken( $primary-color, 10% );
@@ -128,8 +119,8 @@
   }
 }
 
-.button--hidetext{
-  @extend .button;
+.btn--hidetext{
+  @extend .btn;
   color:$light-color;
   background:$primary-color;
   border-color:darken( $primary-color, 10% );

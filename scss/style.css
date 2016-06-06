@@ -9,7 +9,7 @@
 /*------------------------------------*\
     MIXINS
 \*------------------------------------*/
-.hidetext, .button--hidetext {
+.hidetext, .btn--hidetext {
   width: 40px;
   height: 40px;
   display: inline-block;
@@ -18,7 +18,7 @@
   text-indent: 100%;
   white-space: nowrap;
   text-decoration: none; }
-  .hidetext:before, .button--hidetext:before {
+  .hidetext:before, .btn--hidetext:before {
     position: relative !important;
     left: -18px !important; }
 
@@ -170,7 +170,7 @@ h6, p .capitular {
   src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("../fonts/fontawesome/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-.fa, .button--save:before, .button--hidetext:before, .icono--estrella:before {
+.fa, .btn--save:before, .btn--hidetext:before, .icono--estrella:before {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -230,10 +230,10 @@ h6, p .capitular {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.button--save:before, .pull-left.button--hidetext:before, .pull-left.icono--estrella:before {
+.fa.pull-left, .pull-left.btn--save:before, .pull-left.btn--hidetext:before, .pull-left.icono--estrella:before {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.button--save:before, .pull-right.button--hidetext:before, .pull-right.icono--estrella:before {
+.fa.pull-right, .pull-right.btn--save:before, .pull-right.btn--hidetext:before, .pull-right.icono--estrella:before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -371,7 +371,7 @@ h6, p .capitular {
 .fa-th-list:before {
   content: "\f00b"; }
 
-.fa-check:before, .button--hidetext:before {
+.fa-check:before, .btn--hidetext:before {
   content: "\f00c"; }
 
 .fa-remove:before,
@@ -878,7 +878,7 @@ h6, p .capitular {
 .fa-paperclip:before {
   content: "\f0c6"; }
 
-.fa-save:before, .button--save:before,
+.fa-save:before, .btn--save:before,
 .fa-floppy-o:before {
   content: "\f0c7"; }
 
@@ -2245,7 +2245,7 @@ h6, p .capitular {
   src: url("../fonts/ionicons/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"), url("../fonts/ionicons/ionicons.ttf?v=2.0.0") format("truetype"), url("../fonts/ionicons/ionicons.woff?v=2.0.0") format("woff"), url("../fonts/ionicons/ionicons.svg?v=2.0.0#Ionicons") format("svg");
   font-weight: normal;
   font-style: normal; }
-.ion, .icono--casa:before {
+.ion, .icono--calendario:before {
   display: inline-block;
   font-family: "Ionicons";
   speak: none;
@@ -2339,7 +2339,7 @@ h6, p .capitular {
 .ionicon-var-android-bus:before {
   content: "\f36d"; }
 
-.ionicon-var-android-calendar:before, .icono--casa:before {
+.ionicon-var-android-calendar:before, .icono--calendario:before {
   content: "\f2d1"; }
 
 .ionicon-var-android-call:before {
@@ -4461,7 +4461,8 @@ h6, p .capitular {
 /*------------------------------------*\
     BUTTONS
 \*------------------------------------*/
-.button, .button--primary, .button--secondary, .button--success, .button--info, .button--warning, .button--danger, .button--dark, .button--grey, .button--save, .button--hidetext {
+/*clase principal para definir un bot¾n*/
+.btn, .btn--primary, .btn--secondary, .btn--success, .btn--info, .btn--warning, .btn--danger, .btn--dark, .btn--grey, .btn--save, .btn--hidetext {
   font-size: 0.875em;
   padding: 10px 15px;
   color: #333;
@@ -4476,89 +4477,82 @@ h6, p .capitular {
   -o-transition: 0.3s;
   -ms-transition: 0.3s;
   transition: 0.3s; }
-  .button:hover, .button--primary:hover, .button--secondary:hover, .button--success:hover, .button--info:hover, .button--warning:hover, .button--danger:hover, .button--dark:hover, .button--grey:hover, .button--save:hover, .button--hidetext:hover {
+  .btn:hover, .btn--primary:hover, .btn--secondary:hover, .btn--success:hover, .btn--info:hover, .btn--warning:hover, .btn--danger:hover, .btn--dark:hover, .btn--grey:hover, .btn--save:hover, .btn--hidetext:hover {
     background: #e6e6e6;
     cursor: pointer; }
 
-.button--primary {
+.btn--primary {
   color: #fff;
   background: #337ab7;
   border-color: #285f8f; }
-  .button--primary:hover {
+  .btn--primary:hover {
     background: #285f8f; }
 
-.button--secondary {
+.btn--secondary {
   color: #fff;
   background: #cf359a;
   border-color: #a9287d; }
-  .button--secondary:hover {
+  .btn--secondary:hover {
     background: #a9287d; }
 
-.button--success {
+.btn--success {
   color: #fff;
   background: #5cb85c;
   border-color: #449d44; }
-  .button--success:hover {
+  .btn--success:hover {
     background: #449d44; }
 
-.button--info {
+.btn--info {
   color: #fff;
   background: #5bc0de;
   border-color: #31b0d5; }
-  .button--info:hover {
+  .btn--info:hover {
     background: #31b0d5; }
 
-.button--warning {
+.btn--warning {
   color: #fff;
   background: #f0ad4e;
   border-color: #ec971f; }
-  .button--warning:hover {
+  .btn--warning:hover {
     background: #ec971f; }
 
-.button--danger {
+.btn--danger {
   color: #fff;
   background: #d9534f;
   border-color: #c9302c; }
-  .button--danger:hover {
+  .btn--danger:hover {
     background: #c9302c; }
 
-.button--danger {
-  color: #fff;
-  background: #d9534f;
-  border-color: #c9302c; }
-  .button--danger:hover {
-    background: #c9302c; }
-
-.button--dark {
+.btn--dark {
   color: #fff;
   background: #000;
   border-color: black; }
-  .button--dark:hover {
+  .btn--dark:hover {
     background: #666666; }
 
-.button--grey {
+.btn--grey {
   color: #fff;
   background: #ccc;
   border-color: #b3b3b3; }
-  .button--grey:hover {
+  .btn--grey:hover {
     background: #b3b3b3; }
 
-.button--save {
+.btn--save {
   color: #fff;
   background: #337ab7;
   border-color: #285f8f; }
-  .button--save:hover {
+  .btn--save:hover {
     background: #285f8f; }
-  .button--save:before {
+  .btn--save:before {
     padding: 0 3px 0 0; }
 
-.button--hidetext {
+.btn--hidetext {
   color: #fff;
   background: #337ab7;
   border-color: #285f8f; }
-  .button--hidetext:hover {
+  .btn--hidetext:hover {
     background: #285f8f; }
-  .button--hidetext:before {
+  .btn--hidetext:before {
     padding: 0 3px 0 0; }
 
 /* Carpeta modules */
