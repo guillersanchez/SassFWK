@@ -1,6 +1,23 @@
 /*-----------------------------------------*\
     ESTA ES LA HOJA DE ESTILOS PRINCIPAL
 \*-----------------------------------------*/
+header{
+  margin-top:20px !important;
+}
+
+button{
+  margin:5px 0;
+}
+
+.ejemplo{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #eee;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+
 
 // Así llamamos a 1 icono de fontawesome
 .icono--estrella:before{
@@ -15,10 +32,13 @@
 }
 
 
-
-// Así se declaran los media queries en Sass
-@media  #{$tablet}{
+// Así llamamos a los media queries
+@media (max-width: $screen-xs){
   body{
     background:$info-color;
   }
 }
+
+
+
+//@media (max-width: 600px)

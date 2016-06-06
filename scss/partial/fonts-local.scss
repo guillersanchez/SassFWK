@@ -10,7 +10,7 @@
 //2) Declaramos los font-face, 1 x peso
 // principal local
     @font-face {
-      font-family:'Merriweather Sans';
+      font-family:'Merriweather Sans', serif;
       font-style: normal;
       font-weight: 400;
       src: url('../fonts/merriweather/merriweather-sans-v8-latin-regular.eot'); /* IE9 Compat Modes */
@@ -24,7 +24,7 @@
 
     // secundaria local
     @font-face{
-      font-family:'Oswald';
+      font-family:'Oswald', sans-serif;
       font-style:normal;
       font-weight:700;
       src: url('../fonts/oswald/oswald-v11-latin-700.eot'); /* IE9 Compat Modes */
