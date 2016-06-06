@@ -1,0 +1,24 @@
+/*-----------------------------------------*\
+    ESTA ES LA HOJA DE ESTILOS PRINCIPAL
+\*-----------------------------------------*/
+
+// Así llamamos a 1 icono de fontawesome
+.icono--estrella:before{
+  @extend .fa;
+  @extend .fa-star;
+}
+
+// Así llamamos a un icono de Ionicons
+.icono--calendario:before{
+  @extend .ion;
+  @extend .ionicon-var-android-calendar;
+}
+
+
+
+// Así se declaran los media queries en Sass
+@media  #{$tablet}{
+  body{
+    background:$info-color;
+  }
+}

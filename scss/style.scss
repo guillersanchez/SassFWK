@@ -1,15 +1,4 @@
 /*------------------------------------*\
-    DECIDIMOS QUÉ ARCHIVOS CARGAMOS
-\*------------------------------------*/
-
-$fuenteImportada:          true!default;
-$fuenteLocal:              false!default;
-
-$iconosFontawesome:        true!default;
-$iconosIonicons:           true!default;
-
-
-/*------------------------------------*\
     IMPORTACION DE ARCHIVOS
 \*------------------------------------*/
 
@@ -18,9 +7,12 @@ $iconosIonicons:           true!default;
     @import 'partial/config.scss';
     @import 'partial/reset.scss';
 
+    //hoja libre de estilos
+    @import 'partial/main';
+
     // FUENTES
     // Importada
-   @import 'partial/fonts-imported.scss';
+    @import 'partial/fonts-imported.scss';
 
     // Local
     @import 'partial/fonts-local.scss';
@@ -44,28 +36,5 @@ $iconosIonicons:           true!default;
     @import 'vendor/slider.scss';
 
 
-/*-----------------------------------------*\
-    ESTA ES LA HOJA DE ESTILOS PRINCIPAL
-\*-----------------------------------------*/
 
-// Así llamamos a 1 icono de fontawesome
-.icono--estrella:before{
-  @extend .fa;
-  @extend .fa-star;
-}
-
-// Así llamamos a un icono de Ionicons
-.icono--calendario:before{
-  @extend .ion;
-  @extend .ionicon-var-android-calendar;
-}
-
-
-
-// Así se declaran los media queries en Sass
-@media  #{$tablet}{
-  body{
-  background:$info-color;
-  }
-}
 

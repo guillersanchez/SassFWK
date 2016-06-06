@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*------------------------------------*\
-    DECIDIMOS QU╔ ARCHIVOS CARGAMOS
-\*------------------------------------*/
-/*------------------------------------*\
     IMPORTACION DE ARCHIVOS
 \*------------------------------------*/
 /* Carpeta partial */
+/*------------------------------------*\
+    DECIDIMOS QU╔ ARCHIVOS CARGAMOS
+\*------------------------------------*/
 /*------------------------------------*\
     COLORS
 \*------------------------------------*/
@@ -134,6 +134,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/*-----------------------------------------*\
+    ESTA ES LA HOJA DE ESTILOS PRINCIPAL
+\*-----------------------------------------*/
+@media (max-width: 768px) {
+  body {
+    background: #5bc0de; } }
 .font-primary, body {
   font-family: "Roboto", sans-serif;
   font-weight: normal; }
@@ -161,7 +167,7 @@ h6, p .capitular {
   src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("../fonts/fontawesome/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-.fa, .btn--save:before, .btn--hidetext:before, .icono--estrella:before {
+.fa, .icono--estrella:before, .btn--save:before, .btn--hidetext:before {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -221,10 +227,10 @@ h6, p .capitular {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.btn--save:before, .pull-left.btn--hidetext:before, .pull-left.icono--estrella:before {
+.fa.pull-left, .pull-left.icono--estrella:before, .pull-left.btn--save:before, .pull-left.btn--hidetext:before {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.btn--save:before, .pull-right.btn--hidetext:before, .pull-right.icono--estrella:before {
+.fa.pull-right, .pull-right.icono--estrella:before, .pull-right.btn--save:before, .pull-right.btn--hidetext:before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -4548,11 +4554,5 @@ h6, p .capitular {
 
 /* Carpeta modules */
 /* Carpeta vendor */
-/*-----------------------------------------*\
-    ESTA ES LA HOJA DE ESTILOS PRINCIPAL
-\*-----------------------------------------*/
-@media (max-width: 768px) {
-  body {
-    background: #5bc0de; } }
 
 /*# sourceMappingURL=style.css.map */
