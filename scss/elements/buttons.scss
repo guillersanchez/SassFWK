@@ -7,11 +7,12 @@
   /*clase principal para definir un botón*/
   .btn {
     font-size     : 0.875em;
-    padding       : 10px 15px;
-    color         : #333;
+    padding       : 11px 15px;
+    color         : $light-color;
     background    : $light-color;
     border-radius : 3px;
     border        : 1px solid $grey-color;
+    border-color : rgba(0,0,0,0.2);
     display       : inline-block;
     text-align    : center;
     box-sizing    : border-box;
@@ -19,14 +20,18 @@
     &:hover {
       background : darken($light-color, 10%);
       cursor     : pointer;
+      border-color:transparent;
     }
+  }
+
+  .btn--default{
+    @extend .btn;
+    color        : #333;
   }
 
   .btn--primary {
     @extend .btn;
-    color        : $light-color;
     background   : $primary-color;
-    border-color : darken($primary-color, 10%);
     &:hover {
       background : darken($primary-color, 10%);
     }
@@ -34,9 +39,7 @@
 
   .btn--secondary {
     @extend .btn;
-    color        : $light-color;
     background   : $secondary-color;
-    border-color : darken($secondary-color, 10%);
     &:hover {
       background : darken($secondary-color, 10%);
     }
@@ -44,9 +47,7 @@
 
   .btn--success {
     @extend .btn;
-    color        : $light-color;
     background   : $success-color;
-    border-color : darken($success-color, 10%);
     &:hover {
       background : darken($success-color, 10%);
     }
@@ -54,9 +55,7 @@
 
   .btn--info {
     @extend .btn;
-    color        : $light-color;
     background   : $info-color;
-    border-color : darken($info-color, 10%);
     &:hover {
       background : darken($info-color, 10%);
     }
@@ -64,9 +63,7 @@
 
   .btn--warning {
     @extend .btn;
-    color        : $light-color;
     background   : $warning-color;
-    border-color : darken($warning-color, 10%);
     &:hover {
       background : darken($warning-color, 10%);
     }
@@ -74,9 +71,7 @@
 
   .btn--danger {
     @extend .btn;
-    color        : $light-color;
     background   : $danger-color;
-    border-color : darken($danger-color, 10%);
     &:hover {
       background : darken($danger-color, 10%);
     }
@@ -84,9 +79,7 @@
 
   .btn--dark {
     @extend .btn;
-    color        : $light-color;
     background   : $dark-color;
-    border-color : darken($dark-color, 10%);
     &:hover {
       background : lighten($dark-color, 40%);
     }
@@ -94,9 +87,7 @@
 
   .btn--grey {
     @extend .btn;
-    color        : $light-color;
     background   : $grey-color;
-    border-color : darken($grey-color, 10%);
     &:hover {
       background : darken($grey-color, 10%);
     }
@@ -104,9 +95,7 @@
 
   .btn--save {
     @extend .btn;
-    color        : $light-color;
     background   : $primary-color;
-    border-color : darken($primary-color, 10%);
 
     &:hover {
       background : darken($primary-color, 10%);
@@ -121,9 +110,7 @@
 
   .btn--hidetext {
     @extend .btn;
-    color        : $light-color;
     background   : $primary-color;
-    border-color : darken($primary-color, 10%);
     //escondemos el texto
     @extend .hidetext;
 

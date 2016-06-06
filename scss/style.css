@@ -4459,13 +4459,14 @@ h6, p .capitular {
     BUTTONS
 \*------------------------------------*/
 /*clase principal para definir un bot¾n*/
-.btn, .btn--primary, .btn--secondary, .btn--success, .btn--info, .btn--warning, .btn--danger, .btn--dark, .btn--grey, .btn--save, .btn--hidetext {
+.btn, .btn--default, .btn--primary, .btn--secondary, .btn--success, .btn--info, .btn--warning, .btn--danger, .btn--dark, .btn--grey, .btn--save, .btn--hidetext {
   font-size: 0.875em;
-  padding: 10px 15px;
-  color: #333;
+  padding: 11px 15px;
+  color: #fff;
   background: #fff;
   border-radius: 3px;
   border: 1px solid #ccc;
+  border-color: rgba(0, 0, 0, 0.2);
   display: inline-block;
   text-align: center;
   box-sizing: border-box;
@@ -4474,79 +4475,63 @@ h6, p .capitular {
   -o-transition: 0.3s;
   -ms-transition: 0.3s;
   transition: 0.3s; }
-  .btn:hover, .btn--primary:hover, .btn--secondary:hover, .btn--success:hover, .btn--info:hover, .btn--warning:hover, .btn--danger:hover, .btn--dark:hover, .btn--grey:hover, .btn--save:hover, .btn--hidetext:hover {
+  .btn:hover, .btn--default:hover, .btn--primary:hover, .btn--secondary:hover, .btn--success:hover, .btn--info:hover, .btn--warning:hover, .btn--danger:hover, .btn--dark:hover, .btn--grey:hover, .btn--save:hover, .btn--hidetext:hover {
     background: #e6e6e6;
-    cursor: pointer; }
+    cursor: pointer;
+    border-color: transparent; }
+
+.btn--default {
+  color: #333; }
 
 .btn--primary {
-  color: #fff;
-  background: #337ab7;
-  border-color: #285f8f; }
+  background: #337ab7; }
   .btn--primary:hover {
     background: #285f8f; }
 
 .btn--secondary {
-  color: #fff;
-  background: #cf359a;
-  border-color: #a9287d; }
+  background: #cf359a; }
   .btn--secondary:hover {
     background: #a9287d; }
 
 .btn--success {
-  color: #fff;
-  background: #5cb85c;
-  border-color: #449d44; }
+  background: #5cb85c; }
   .btn--success:hover {
     background: #449d44; }
 
 .btn--info {
-  color: #fff;
-  background: #5bc0de;
-  border-color: #31b0d5; }
+  background: #5bc0de; }
   .btn--info:hover {
     background: #31b0d5; }
 
 .btn--warning {
-  color: #fff;
-  background: #f0ad4e;
-  border-color: #ec971f; }
+  background: #f0ad4e; }
   .btn--warning:hover {
     background: #ec971f; }
 
 .btn--danger {
-  color: #fff;
-  background: #d9534f;
-  border-color: #c9302c; }
+  background: #d9534f; }
   .btn--danger:hover {
     background: #c9302c; }
 
 .btn--dark {
-  color: #fff;
-  background: #000;
-  border-color: black; }
+  background: #000; }
   .btn--dark:hover {
     background: #666666; }
 
 .btn--grey {
-  color: #fff;
-  background: #ccc;
-  border-color: #b3b3b3; }
+  background: #ccc; }
   .btn--grey:hover {
     background: #b3b3b3; }
 
 .btn--save {
-  color: #fff;
-  background: #337ab7;
-  border-color: #285f8f; }
+  background: #337ab7; }
   .btn--save:hover {
     background: #285f8f; }
   .btn--save:before {
     padding: 0 3px 0 0; }
 
 .btn--hidetext {
-  color: #fff;
-  background: #337ab7;
-  border-color: #285f8f; }
+  background: #337ab7; }
   .btn--hidetext:hover {
     background: #285f8f; }
   .btn--hidetext:before {
