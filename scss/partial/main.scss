@@ -3,10 +3,22 @@
 \*-----------------------------------------*/
 header{
   margin-top:20px !important;
+  margin-bottom:10px;
+  background:#d75893;
+  div{
+    font-size: 1.5em;
+    color:$light-color;
+    padding:5px;
+  }
 }
+
 
 button{
   margin:5px 0;
+}
+
+h2{
+  margin-bottom:10px;
 }
 
 .ejemplo{
