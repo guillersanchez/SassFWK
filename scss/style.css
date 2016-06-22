@@ -168,48 +168,44 @@ h2 {
 /*-----------------------------------------*\
     Estilos para la pßgina de las columnas
 \*-----------------------------------------*/
+/*$margenBloques: 15px;
+
+$margenesLaterales: false;*/
 /*para sacar el ancho de cada div, dividimos 100% entre los bloques que habrß en cada fila
 y le restamos el margen que habrß entre columnas*/
+/*$ancho: (100%/$bloquesPorFila) - $margenEntreBloques;*/
 .contenedor {
   background: #fbf2df;
   height: 100%;
   border: 1px solid red;
-  margin: 30px;
   padding: 0;
   box-sizing: border-box; }
   .contenedor div {
-    width: 32.66333%;
+    width: 33.33333%;
     background: #42b94d;
     color: #fff;
     height: 250px;
     border-radius: 3px;
     box-sizing: border-box;
     padding: 20px;
-    margin: 5px 0.5%;
-    vertical-align: top;
-    /*a partir del cuarto, colorea de 3 en 3*/ }
-    .contenedor div:first-child {
-      margin-left: 0; }
-    .contenedor div:nth-child(3n+3) {
-      background: orange;
-      margin-right: 0; }
-    .contenedor div:nth-child(3n+4) {
-      margin-left: 0;
-      background: blue; }
+    vertical-align: top; }
 
-/*con float:left*/
-.contenedor {
-  float: left; }
-  .contenedor div {
-    float: left; }
-
-/*con flex
+/*Ejemplo con float:left
 .contenedor{
- display:flex;
+  float: left;
   div{
-
+    float:left;
   }
-}*/
+}
+*/
+/*con flex*/
+.contenedor {
+  display: flex;
+  display: -webkit-flex;
+  /* Para navegadores webkit, como Safari */
+  flex-flow: row wrap;
+  -webkit-flex-flow: row wrap; }
+
 .row {
   -webkit-flex-direction: row;
   /* Safari */
