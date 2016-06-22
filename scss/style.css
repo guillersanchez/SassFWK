@@ -165,6 +165,87 @@ h2 {
 @media (max-width: 480px) {
   body {
     background: #5bc0de; } }
+/*-----------------------------------------*\
+    Estilos para la pßgina de las columnas
+\*-----------------------------------------*/
+/*para sacar el ancho de cada div, dividimos 100% entre los bloques que habrß en cada fila
+y le restamos el margen que habrß entre columnas*/
+.contenedor {
+  background: #fbf2df;
+  height: 100%;
+  border: 1px solid red;
+  margin: 30px;
+  padding: 0;
+  box-sizing: border-box; }
+  .contenedor div {
+    width: 32.66333%;
+    background: #42b94d;
+    color: #fff;
+    height: 250px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 5px 0.5%;
+    vertical-align: top;
+    /*a partir del cuarto, colorea de 3 en 3*/ }
+    .contenedor div:first-child {
+      margin-left: 0; }
+    .contenedor div:nth-child(3n+3) {
+      background: orange;
+      margin-right: 0; }
+    .contenedor div:nth-child(3n+4) {
+      margin-left: 0;
+      background: blue; }
+
+/*con float:left*/
+.contenedor {
+  float: left; }
+  .contenedor div {
+    float: left; }
+
+/*con flex
+.contenedor{
+ display:flex;
+  div{
+
+  }
+}*/
+.row {
+  -webkit-flex-direction: row;
+  /* Safari */
+  flex-direction: row; }
+
+.item-1 {
+  order: -1; }
+
+.item-2 {
+  order: 0; }
+
+.item-3 {
+  order: -2; }
+
+.item-6 {
+  order: 2; }
+
+.item-7 {
+  order: 0; }
+
+.item-8 {
+  order: 1; }
+
+/*div doble altura
+.content div.doble{
+  height:510px;
+}*/
+h3, p {
+  padding: 10px;
+  margin: 0; }
+
+h3 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  font-weight: bold; }
+
 .font-primary, body {
   font-family: "Roboto", sans-serif;
   font-weight: normal; }
