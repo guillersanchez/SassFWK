@@ -61,22 +61,14 @@ h2{
 \*-----------------------------------------*/
 
 
-$bloquesPorFila:3;
-/*$margenBloques: 15px;
-
-$margenesLaterales: false;*/
-
+$bloquesPorFila:5;
+$paddingEntreBloques:15px;
+$margenesLaterales: false;
 
 
-/*para sacar el ancho de cada div, dividimos 100% entre los bloques que habrá en cada fila
-y le restamos el margen que habrá entre columnas*/
 
-
-/*$ancho: (100%/$bloquesPorFila) - $margenEntreBloques;*/
-//$ancho: (100% / $bloquesPorFila) - 3.2%;
 
 $anchoBloque: 100% / $bloquesPorFila;
-
 
 .contenedor{
   background: #fbf2df;
@@ -84,67 +76,119 @@ $anchoBloque: 100% / $bloquesPorFila;
   border: 1px solid red;
   padding: 0;
   box-sizing: border-box;
+  margin:0;
+  @if $margenesLaterales == false{
+    margin-top:0;
+    margin-bottom:0;
+    margin-right:-$paddingEntreBloques;
+    margin-left:-$paddingEntreBloques;
+  }
 
-  div{
-    width: $anchoBloque;
-    background: #42b94d;
-    color: #fff;
-    height:250px;
-    border-radius: 3px;
-    box-sizing:border-box;
-    padding:20px;
-    vertical-align:top;
+
+
+
+  > div{
+    width: 100%;
+    padding:5px $paddingEntreBloques;
+    div.interior{
+      width:100%;
+      min-height:250px;
+      height:250px;
+      border-radius: 3px;
+      box-sizing:border-box;
+      color:#fff;
+      background: #42b94d;
+    }
   }
 }
 
-/*Ejemplo con float:left
+/*Ejemplo con float:left*/
 .contenedor{
   float: left;
   div{
     float:left;
   }
 }
-*/
 
-/*con flex*/
+@media (min-width: $screen-xs){
+  .contenedor > div{
+    width: $anchoBloque;
+  }
+}
+
+
+/*con flex
 .contenedor{
   display: flex;
-  display: -webkit-flex; /* Para navegadores webkit, como Safari */
+  display: -webkit-flex;
 
-  flex-flow: row wrap;
-  -webkit-flex-flow: row wrap;
+  flex-direction: column;
+  -webkit-flex-direction: column;
 
   div{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+
 
   }
 }
 
 
 
+@media (min-width: $screen-xs){
+  .contenedor{
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
 
-.row {
-  -webkit-flex-direction: row;  /* Safari */
-  flex-direction:  row;
+    div{
+        width: $anchoBloque;
+    }
+  }
 }
 
+*/
+
 .item-1{
-  order: -1;
+  order: 0;
+  div.interior{
+    background:red !important;
+  }
 }
 .item-2{
   order: 0;
+  div.interior{
+    background:#29a9ec !important;
+  }
 }
 .item-3{
-  order: -2;
+  order: 8;
+  div.interior{
+    background:orange !important;
+  }
 }
-.item-6{
-  order: 2;
+
+.item-4{
+  order: 0;
 }
+.item-5{
+  order: -1;
+  div.interior{
+    background:gray !important;
+  }
+}
+
+.item-6 {
+  order: 0;
+}
+
 .item-7{
   order: 0;
 }
 
 .item-8 {
-  order : 1;
+  order: 0;
 }
 
 

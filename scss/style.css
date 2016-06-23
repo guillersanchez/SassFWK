@@ -168,66 +168,101 @@ h2 {
 /*-----------------------------------------*\
     Estilos para la pßgina de las columnas
 \*-----------------------------------------*/
-/*$margenBloques: 15px;
-
-$margenesLaterales: false;*/
-/*para sacar el ancho de cada div, dividimos 100% entre los bloques que habrß en cada fila
-y le restamos el margen que habrß entre columnas*/
-/*$ancho: (100%/$bloquesPorFila) - $margenEntreBloques;*/
 .contenedor {
   background: #fbf2df;
   height: 100%;
   border: 1px solid red;
   padding: 0;
-  box-sizing: border-box; }
-  .contenedor div {
-    width: 33.33333%;
-    background: #42b94d;
-    color: #fff;
-    height: 250px;
-    border-radius: 3px;
-    box-sizing: border-box;
-    padding: 20px;
-    vertical-align: top; }
+  box-sizing: border-box;
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: -15px;
+  margin-left: -15px; }
+  .contenedor > div {
+    width: 100%;
+    padding: 5px 15px; }
+    .contenedor > div div.interior {
+      width: 100%;
+      min-height: 250px;
+      height: 250px;
+      border-radius: 3px;
+      box-sizing: border-box;
+      color: #fff;
+      background: #42b94d; }
 
-/*Ejemplo con float:left
-.contenedor{
-  float: left;
-  div{
-    float:left;
-  }
-}
-*/
-/*con flex*/
+/*Ejemplo con float:left*/
 .contenedor {
+  float: left; }
+  .contenedor div {
+    float: left; }
+
+@media (min-width: 480px) {
+  .contenedor > div {
+    width: 20%; } }
+/*con flex
+.contenedor{
   display: flex;
   display: -webkit-flex;
-  /* Para navegadores webkit, como Safari */
-  flex-flow: row wrap;
-  -webkit-flex-flow: row wrap; }
 
-.row {
-  -webkit-flex-direction: row;
-  /* Safari */
-  flex-direction: row; }
+  flex-direction: column;
+  -webkit-flex-direction: column;
 
+  div{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+
+
+  }
+}
+
+
+
+@media (min-width: $screen-xs){
+  .contenedor{
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+
+    div{
+        width: $anchoBloque;
+    }
+  }
+}
+
+*/
 .item-1 {
-  order: -1; }
+  order: 0; }
+  .item-1 div.interior {
+    background: red !important; }
 
 .item-2 {
   order: 0; }
+  .item-2 div.interior {
+    background: #29a9ec !important; }
 
 .item-3 {
-  order: -2; }
+  order: 8; }
+  .item-3 div.interior {
+    background: orange !important; }
+
+.item-4 {
+  order: 0; }
+
+.item-5 {
+  order: -1; }
+  .item-5 div.interior {
+    background: gray !important; }
 
 .item-6 {
-  order: 2; }
+  order: 0; }
 
 .item-7 {
   order: 0; }
 
 .item-8 {
-  order: 1; }
+  order: 0; }
 
 /*div doble altura
 .content div.doble{
