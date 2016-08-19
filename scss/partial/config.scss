@@ -10,7 +10,8 @@ $iconosIonicons:           true!default;
 
 $incluirBotones:           true!default;
 
-$gridBootstrap:            false!default;
+$gridBootstrap:            true!default;
+$gridPersonalizado:        true!default;
 
 
 /*------------------------------------*\
@@ -135,148 +136,12 @@ $container-lg:                 $container-large-desktop !default;
     Grid Personalizado
 \*-----------------------------------------*/
 
-$bloquesPorFila:4;
-$paddingEntreBloques:15px;
-$margenesLaterales: false;
+$bloquesPorFila:3;
+$paddingBloques-left_right:15px;
+$paddingBloques-up_down:10px;
 
-$anchoBloque: 100% / $bloquesPorFila;
-
-.contenedorColumnas{
-  background: #fbf2df;
-  height: 100%;
-  border: 1px solid red;
-  padding: 0;
-  box-sizing: border-box;
-  margin:0;
-  @if $margenesLaterales == false{
-    margin-top:0;
-    margin-bottom:0;
-    margin-right:-$paddingEntreBloques;
-    margin-left:-$paddingEntreBloques;
-  }
-
-  > div{
-    width: 100%;
-    padding:5px $paddingEntreBloques;
-    div.interior{
-      width:100%;
-      min-height:250px;
-      height:250px;
-      border-radius: 3px;
-      box-sizing:border-box;
-      color:#fff;
-      background: #42b94d;
-    }
-  }
-}
-
-/*Ejemplo con float:left*/
-.contenedorColumnas{
-  float: left;
-  div{
-    float:left;
-  }
-}
-
-@media (min-width: $screen-xs){
-  .contenedorColumnas > div{
-    width: $anchoBloque;
-  }
-}
-
-
-/*con flex
-.contenedor{
-  display: flex;
-  display: -webkit-flex;
-
-  flex-direction: column;
-  -webkit-flex-direction: column;
-
-  div{
-    display: flex;
-    display: -webkit-flex;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-
-
-  }
-}
-
-
-
-@media (min-width: $screen-xs){
-  .contenedor{
-    flex-flow: row wrap;
-    -webkit-flex-flow: row wrap;
-
-    div{
-        width: $anchoBloque;
-    }
-  }
-}
-
-*/
-
-.item-1{
-  order: 0;
-  div.interior{
-    background:red !important;
-  }
-}
-.item-2{
-  order: 0;
-  div.interior{
-    background:#29a9ec !important;
-  }
-}
-.item-3{
-  order: 8;
-  div.interior{
-    background:orange !important;
-  }
-}
-
-.item-4{
-  order: 0;
-}
-.item-5{
-  order: -1;
-  div.interior{
-    background:gray !important;
-  }
-}
-
-.item-6 {
-  order: 0;
-}
-
-.item-7{
-  order: 0;
-}
-
-.item-8 {
-  order: 0;
-}
-
-
-.contenedorColumnas{
-  h3, p{
-    padding:10px;
-    margin:0;
-  }
-
-  h3{
-    border-bottom:1px solid rgba(255,255,255,.2);
-    font-size:16px;
-    font-weight:bold;
-  }
-}
-
-
-
-
-
+$paddingMobile:true;
+//$margenesLaterales: true;
 
 
 /*------------------------------------*\
