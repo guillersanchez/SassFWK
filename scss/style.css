@@ -34,7 +34,7 @@
     GRID SYSTEM BOOTSTRAP
 \*------------------------------------*/
 /*-----------------------------------------*\
-    Grid Personalizado
+    Grids Personalizados
 \*-----------------------------------------*/
 /*------------------------------------*\
     CONFIGURACION GENERAL HTML
@@ -5238,23 +5238,20 @@ h6, p .capitular {
 
   .col-lg-offset-12 {
     margin-left: 100%; } }
-.gridPersonalizado {
+.gridPersonal {
   background: #fbf2df;
   height: 100%;
   border: 1px solid red;
   padding: 0;
   box-sizing: border-box;
-  margin: 0;
-  /*@if $margenesLaterales == false{
-    margin-top:0;
-    margin-bottom:0;
-    margin-right:-$paddingBloque;
-    margin-left:-$paddingBloque;
-  }*/ }
-  .gridPersonalizado > div {
+  margin: 0; }
+  .gridPersonal > div {
     width: 100%;
     padding: 10px 15px; }
-    .gridPersonalizado > div div.interior {
+    @media (max-width: 480px) {
+      .gridPersonal > div {
+        padding: 0; } }
+    .gridPersonal > div div.interior {
       width: 100%;
       min-height: 250px;
       height: 250px;
@@ -5264,14 +5261,25 @@ h6, p .capitular {
       background: #42b94d; }
 
 /*Ejemplo con float:left*/
-.gridPersonalizado {
+.gridPersonal {
   float: left; }
-  .gridPersonalizado div {
+  .gridPersonal div {
     float: left; }
 
+body .gridPersonal.Guillermo1 {
+  background: blue; }
+
 @media (min-width: 480px) {
-  .gridPersonalizado > div {
-    width: 33.33333%; } }
+  .gridPersonal.Guillermo1 > div {
+    width: 50%; } }
+
+body .gridPersonal {
+  background: coral; }
+
+@media (min-width: 480px) {
+  .gridPersonal > div {
+    width: 25%; } }
+
   /*con flex
   .contenedor{
     display: flex;
@@ -5336,10 +5344,10 @@ h6, p .capitular {
 .item-8 {
   order: 0; }
 
-.gridPersonalizado h3, .gridPersonalizado p {
+.gridPersonal h3, .gridPersonal p {
   padding: 10px;
   margin: 0; }
-.gridPersonalizado h3 {
+.gridPersonal h3 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 16px;
   font-weight: bold; }

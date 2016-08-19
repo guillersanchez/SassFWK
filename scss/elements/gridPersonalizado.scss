@@ -1,21 +1,16 @@
-@if $gridPersonalizado == true {
-
-  $anchoBloque: 100% / $bloquesPorFila;
+@if $gridPersonal == true {
 
 
-  .gridPersonalizado{
+
+
+
+  .gridPersonal{
     background: #fbf2df;
     height: 100%;
     border: 1px solid red;
     padding: 0;
     box-sizing: border-box;
     margin:0;
-    /*@if $margenesLaterales == false{
-      margin-top:0;
-      margin-bottom:0;
-      margin-right:-$paddingBloque;
-      margin-left:-$paddingBloque;
-    }*/
 
     > div{
       width: 100%;
@@ -25,7 +20,6 @@
           padding:0;
         }
       }
-
       div.interior{
         width:100%;
         min-height:250px;
@@ -36,21 +30,60 @@
         background: #42b94d;
       }
     }
+
+
+
   }
 
   /*Ejemplo con float:left*/
-  .gridPersonalizado{
+  .gridPersonal{
     float: left;
     div{
       float:left;
     }
   }
 
-  @media (min-width: $screen-xs){
-    .gridPersonalizado > div{
-      width: $anchoBloque;
+
+
+
+
+
+
+
+
+
+  @if $nombreGrid1{
+    body .gridPersonal.Guillermo1{
+      background:blue;
+    }
+    .gridPersonal.Guillermo1{
+      @media (min-width: $screen-xs){
+        > div{
+          $anchoBloque : 100% / $bloquesPorFilaejemplo1;
+          width:$anchoBloque;
+        }
+      }
     }
   }
+
+  @if $nombreGrid2{
+    body .gridPersonal{
+      background:coral;
+    }
+    .gridPersonal{
+      @media (min-width: $screen-xs){
+        > div{
+          $anchoBloque : 100% / $bloquesPorFilaejemplo2;
+          width:$anchoBloque;
+        }
+      }
+    }
+  }
+
+
+
+
+
 
 
   /*con flex
@@ -128,7 +161,7 @@
   }
 
 
-  .gridPersonalizado{
+  .gridPersonal{
     h3, p{
       padding:10px;
       margin:0;

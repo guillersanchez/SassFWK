@@ -11,7 +11,7 @@ $iconosIonicons:           true!default;
 $incluirBotones:           true!default;
 
 $gridBootstrap:            true!default;
-$gridPersonalizado:        true!default;
+$gridPersonal:        true!default;
 
 
 /*------------------------------------*\
@@ -133,15 +133,20 @@ $container-lg:                 $container-large-desktop !default;
 
 
 /*-----------------------------------------*\
-    Grid Personalizado
+    Grids Personalizados
 \*-----------------------------------------*/
 
-$bloquesPorFila:3;
+$nombreGrid1:Guillermo1;
+$bloquesPorFilaejemplo1:2;
 $paddingBloques-left_right:15px;
 $paddingBloques-up_down:10px;
+$paddingMobile:false;
 
-$paddingMobile:true;
-//$margenesLaterales: true;
+$nombreGrid2:Antonio2;
+$bloquesPorFilaejemplo2:4;
+$paddingBloques-left_right:15px;
+$paddingBloques-up_down:10px;
+$paddingMobile:false;
 
 
 /*------------------------------------*\
