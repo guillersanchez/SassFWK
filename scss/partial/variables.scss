@@ -23,7 +23,7 @@ $font-size-base:           16px;
 \*------------------------------------*/
 
 $primary-color:         #337ab7;
-$secondary-color:       #cf359a;
+$secondary-color:       pink;
 
 $success-color:         #5cb85c;
 $info-color:            #5bc0de;
@@ -160,9 +160,9 @@ body {
 
 //Llamamos a la fuente principal en el body y a la secundaria en los H1,H2,H3...
 
- body{
-   @extend .font-primary;
- }
+body{
+  @extend .font-primary;
+}
 
 
 // HEADINGS ====================================================
