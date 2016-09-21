@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 /* Carpeta Bootstrap */
-    @import 'bootstrap/bootstrap';
+   // @import 'bootstrap/bootstrap';
 
 /* Carpeta partial */
     // primero llamamos al fichero con las variables!
@@ -29,7 +29,6 @@
 
 /* Carpeta elements */
     @import 'elements/buttons.scss';
-
 
 /* Carpeta modules */
     @import 'modules/contact.scss';
