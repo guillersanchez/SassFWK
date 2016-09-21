@@ -2,6 +2,9 @@
     IMPORTACION DE ARCHIVOS
 \*------------------------------------*/
 
+/* Carpeta Bootstrap */
+    @import 'bootstrap/bootstrap';
+
 /* Carpeta partial */
     // primero llamamos al fichero con las variables!
     @import 'partial/config.scss';
@@ -27,10 +30,6 @@
 /* Carpeta elements */
     @import 'elements/buttons.scss';
 
-    //GRID de Bootstrap
-      @import 'elements/grid/grid-framework.scss';
-      @import 'elements/grid/grid.scss';
-      @import 'elements/grid.scss';
 
 /* Carpeta modules */
     @import 'modules/contact.scss';

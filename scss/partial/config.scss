@@ -1,5 +1,12 @@
 /*------------------------------------*\
-    DECIDIMOS QUÉ ARCHIVOS CARGAMOS
+    ELEMENTS
+\*------------------------------------*/
+
+$incluirBotones:           true!default;
+
+
+/*------------------------------------*\
+    FONTS
 \*------------------------------------*/
 
 $fuenteImportada:          true!default;
@@ -8,9 +15,7 @@ $fuenteLocal:              false!default;
 $iconosFontawesome:        true!default;
 $iconosIonicons:           true!default;
 
-$incluirBotones:           true!default;
-
-$gridBootstrap:            true!default;
+$font-size-base:           16px;
 
 
 /*------------------------------------*\
@@ -66,7 +71,7 @@ $grey-color:            #ccc;
 
 // Extra small screen / phone
 //** Deprecated `$screen-xs` as of v3.0.1
-$screen-xs:                  480px !default;
+$screen-xs:                  400px !default;
 //** Deprecated `$screen-xs-min` as of v3.2.0
 $screen-xs-min:              $screen-xs !default;
 //** Deprecated `$screen-phone` as of v3.0.1
@@ -74,21 +79,21 @@ $screen-phone:               $screen-xs-min !default;
 
 // Small screen / tablet
 //** Deprecated `$screen-sm` as of v3.0.1
-$screen-sm:                  768px !default;
+$screen-sm:                  768px;
 $screen-sm-min:              $screen-sm !default;
 //** Deprecated `$screen-tablet` as of v3.0.1
 $screen-tablet:              $screen-sm-min !default;
 
 // Medium screen / desktop
 //** Deprecated `$screen-md` as of v3.0.1
-$screen-md:                  992px !default;
+$screen-md:                  992px;
 $screen-md-min:              $screen-md !default;
 //** Deprecated `$screen-desktop` as of v3.0.1
 $screen-desktop:             $screen-md-min !default;
 
 // Large screen / wide desktop
 //** Deprecated `$screen-lg` as of v3.0.1
-$screen-lg:                  1200px !default;
+$screen-lg:                  1200px;
 $screen-lg-min:              $screen-lg !default;
 //** Deprecated `$screen-lg-desktop` as of v3.0.1
 $screen-lg-desktop:          $screen-lg-min !default;
@@ -107,9 +112,9 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 //## Define your custom responsive grid.
 
 //** Número de columnas del grid.
-$grid-columns:              12 !default;
+$grid-columns:              12;
 //** Padding entre columnas. Gets divided in half for the left and right.
-$grid-gutter-width:         30px !default;
+$grid-gutter-width:         30px;
 
 //== Container sizes
 //
@@ -143,12 +148,15 @@ html{
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
+
 body {
+
   //fuentes
-  font-size: 1em; /* Equivale a 16px */
-  -webkit-text-size-adjust: 1em; /* 2 */
-  -ms-text-size-adjust: 1em; /* 2 */
+  font-size: $font-size-base;
+  -webkit-text-size-adjust: $font-size-base;
+  -ms-text-size-adjust: $font-size-base;
 }
+
 
 //Llamamos a la fuente principal en el body y a la secundaria en los H1,H2,H3...
 
