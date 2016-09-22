@@ -6454,7 +6454,7 @@ h2 {
   background-color: rgba(86, 61, 124, 0.15);
   border: 1px solid rgba(86, 61, 124, 0.2); }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   body {
     background: #5bc0de; } }
 .font-primary, body {
@@ -10795,7 +10795,8 @@ h6, p .capitular {
   .btn:hover, .btn--default:hover, .btn--primary:hover, .btn--secondary:hover, .btn--success:hover, .btn--info:hover, .btn--warning:hover, .btn--danger:hover, .btn--dark:hover, .btn--grey:hover, .btn--save:hover, .btn--hidetext:hover {
     background: #e6e6e6;
     cursor: pointer;
-    border-color: transparent; }
+    border-color: transparent;
+    color: #fff; }
 
 .btn--default {
   color: #333; }
