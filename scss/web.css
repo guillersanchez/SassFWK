@@ -6435,7 +6435,7 @@ table {
 header {
   margin-top: 20px !important;
   margin-bottom: 10px;
-  background: pink; }
+  background: red; }
   header div {
     font-size: 1.5em;
     color: #fff;
@@ -10807,9 +10807,9 @@ h6, p .capitular {
     background: #285f8f; }
 
 .btn--secondary {
-  background: pink; }
+  background: red; }
   .btn--secondary:hover {
-    background: #ff8da1; }
+    background: #cc0000; }
 
 .btn--success {
   background: #5cb85c; }
