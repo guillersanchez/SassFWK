@@ -8,41 +8,49 @@
   .btn {
     font-size     : 0.875em;
     padding       : 11px 15px;
-    color         : $light-color;
-    background    : $light-color;
-    border-radius : 3px;
-    border        : 1px solid $grey-color;
-    border-color : rgba(0,0,0,0.2);
+    color         : $white;
+    background    : $white;
+    border-radius : $radioBoton !important;
+    border-width  : $bordeBoton !important;
+    border-style  : solid !important;
+    border-color  : rgba(0,0,0,0.1) !important;
+    box-sizing    : border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     display       : inline-block;
     text-align    : center;
-    box-sizing    : border-box;
     @include transition;
     &:hover {
-      background : darken($light-color, 10%);
+      background : darken($white, 10%);
       cursor     : pointer;
       border-color:transparent;
-      color         : $light-color;
+      color         : $white;
     }
   }
 
   .btn--default{
     @extend .btn;
     color        : #333;
-  }
-
-  .btn--primary {
-    @extend .btn;
-    background   : $primary-color;
     &:hover {
-      background : darken($primary-color, 10%);
+     color:#333;
     }
   }
 
-  .btn--secondary {
+  .btn--first {
     @extend .btn;
-    background   : $secondary-color;
+    background   : $first-color;
     &:hover {
-      background : darken($secondary-color, 10%);
+      background : darken($first-color, 10%);
+      color         : $white !important;
+    }
+  }
+
+  .btn--second {
+    @extend .btn;
+    background   : $second-color;
+    &:hover {
+      background : darken($second-color, 10%);
+      color         : $white !important;
     }
   }
 
@@ -51,6 +59,7 @@
     background   : $success-color;
     &:hover {
       background : darken($success-color, 10%);
+      color         : $white !important;
     }
   }
 
@@ -59,6 +68,7 @@
     background   : $info-color;
     &:hover {
       background : darken($info-color, 10%);
+      color         : $white !important;
     }
   }
 
@@ -67,6 +77,7 @@
     background   : $warning-color;
     &:hover {
       background : darken($warning-color, 10%);
+      color         : $white !important;
     }
   }
 
@@ -75,31 +86,35 @@
     background   : $danger-color;
     &:hover {
       background : darken($danger-color, 10%);
+      color         : $white !important;
     }
   }
 
   .btn--dark {
     @extend .btn;
-    background   : $dark-color;
+    background   : $black;
     &:hover {
-      background : lighten($dark-color, 40%);
+      background : lighten($black, 40%);
+      color         : $white !important;
     }
   }
 
   .btn--grey {
     @extend .btn;
-    background   : $grey-color;
+    background   : $gray-20;
     &:hover {
-      background : darken($grey-color, 10%);
+      background : darken($gray-20, 10%);
+      color         : $white !important;
     }
   }
 
   .btn--save {
     @extend .btn;
-    background   : $primary-color;
+    background   : $first-color;
 
     &:hover {
-      background : darken($primary-color, 10%);
+      background : darken($first-color, 10%);
+      color         : $white !important;
     }
     &:before {
       padding : 0 3px 0 0;
@@ -111,12 +126,13 @@
 
   .btn--hidetext {
     @extend .btn;
-    background   : $primary-color;
+    background   : $first-color;
     //escondemos el texto
     @extend .hidetext;
 
     &:hover {
-      background : darken($primary-color, 10%);
+      background : darken($first-color, 10%);
+      color         : $white !important;
     }
     &:before {
       padding : 0 3px 0 0;

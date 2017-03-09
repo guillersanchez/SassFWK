@@ -39,23 +39,23 @@
 
 
 //3)Creamos variables y estilos
-    //principal
-        //creamos 1 variable con la fuente
-        $font-import-primary:'Merriweather Sans',sans-serif;
+//principal
+//creamos 1 variable con la fuente
+$font-import-primary:'Merriweather Sans',sans-serif;
 
-        //metemos esa fuente en un estilo
-        .font-primary{
-          font-family:$font-import-primary;
-        }
+//metemos esa fuente en un estilo
+.font-primary{
+  font-family:$font-import-primary;
+}
 
-    //secundaria
-        //creamos 1 variable con la fuente
-        $font-local-secondary:'Oswald',sans-serif;
+//secundaria
+//creamos 1 variable con la fuente
+$font-local-secondary:'Oswald',sans-serif;
 
-        //metemos esa fuente en un estilo
-        .font-secondary{
-          font-family:$font-local-secondary;
-        }
+//metemos esa fuente en un estilo
+.font-secondary{
+  font-family:$font-local-secondary;
+}
 
 
 }

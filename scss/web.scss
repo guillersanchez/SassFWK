@@ -2,42 +2,53 @@
     IMPORTACION DE ARCHIVOS
 \*------------------------------------*/
 
-/* Carpeta Bootstrap */
+
+
+// primero llamamos al fichero con las variables!!!
+@import 'base/variables.scss';
+@import 'base/variables_bootstrap.scss';
+@import 'base/reset.scss';
+
+
+
+/*** ABSTRACTS [para elementos sueltos] ***/
+@import 'abstracts/mixins.scss';
+@import 'abstracts/buttons.scss';
+
+
+
+/*** BOOTSTRAP ***/
 @import 'bootstrap/bootstrap';
 
-/* Carpeta partial */
-// primero llamamos al fichero con las variables!
-@import 'partial/variables.scss';
-@import 'partial/reset.scss';
 
+
+
+/*** BASE ***/
 //hoja principal de estilos
-@import 'partial/main';
-
+@import 'base/shame.scss';
 // FUENTES
-// Importada
-@import 'partial/fonts-imported.scss';
+  // Importada
+  @import 'base/fonts-imported.scss';
 
-// Local
-@import 'partial/fonts-local.scss';
+  // Local
+  @import 'base/fonts-local.scss';
 
-//importamos la fuente de iconos FONTAWESOME para poder acceder a sus estilos y usarlos con @extend;
-@import 'partial/font-awesome.scss';
+  //importamos la fuente de iconos FONTAWESOME para poder acceder a sus estilos y usarlos con @extend;
+  @import 'base/font-awesome.scss';
 
-//importamos la fuente de iconos IONICONS para poder acceder a sus estilos y usarlos con @extend;
-@import 'partial/font-ionicons.scss';
-
-
-/* Carpeta elements */
-@import 'elements/buttons.scss';
-
-/* Carpeta modules */
-@import 'modules/contact.scss';
-@import 'modules/form.scss';
-
-/* Carpeta vendor */
-@import 'vendor/slider.scss';
+  //importamos la fuente de iconos IONICONS para poder acceder a sus estilos y usarlos con @extend;
+  @import 'base/font-ionicons.scss';
 
 
+
+/*** COMPONENTS ***/
+@import 'components/contact.scss';
+@import 'components/form.scss';
+@import 'components/slider';
+
+
+
+/* Carpeta vendor para las librerias*/
 
 
 

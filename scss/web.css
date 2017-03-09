@@ -2,15 +2,246 @@
 /*------------------------------------*\
     IMPORTACION DE ARCHIVOS
 \*------------------------------------*/
-/* Carpeta Bootstrap */
+/*------------------------------------*\
+    ELEMENTS
+\*------------------------------------*/
+/*------------------------------------*\
+    FONTS
+\*------------------------------------*/
+/*------------------------------------*\
+    COLORS - DIFERENTES CLASIFICACIONES
+\*------------------------------------*/
+/*------------------------------------*\
+    MEDIA QUERIES BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+    CONFIGURACION GENERAL HTML
+\*------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+html {
+  -webkit-font-smoothing: subpixel-antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
+
+body {
+  font-size: 16px;
+  -webkit-text-size-adjust: 16px;
+  -ms-text-size-adjust: 16px; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0; }
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0; }
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0; }
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0; }
+
+p {
+  font-size: 0.875em;
+  line-height: 1.5em;
+  text-align: left; }
+
+p + p:not(:first-of-type) {
+  text-indent: 1em; }
+
+p .capitular {
+  float: left;
+  font-size: 3em;
+  padding-bottom: 0;
+  margin: 0.6rem 0.2rem 0.5rem 0; }
+
+hr {
+  border-top: 1px dashed #8c8b8b;
+  border-bottom: 1px dashed #fff;
+  margin: 15px 0; }
+
+/*------------------------------------*\
+    GRID SYSTEM BOOTSTRAP
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*** ABSTRACTS [para elementos sueltos] ***/
+/*------------------------------------*\
+    MIXINS
+\*------------------------------------*/
+.hidetext, .btn--hidetext {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  text-decoration: none; }
+  .hidetext:before, .btn--hidetext:before {
+    position: relative !important;
+    left: -18px !important; }
+
+/*------------------------------------*\
+    BUTTONS
+\*------------------------------------*/
+/*clase principal para definir un bot¾n*/
+.btn, .btn--default, .btn--first, .btn--second, .btn--success, .btn--info, .btn--warning, .btn--danger, .btn--dark, .btn--grey, .btn--save, .btn--hidetext {
+  font-size: 0.875em;
+  padding: 11px 15px;
+  color: #fff;
+  background: #fff;
+  border-radius: 0 !important;
+  border-width: 3px !important;
+  border-style: solid !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s; }
+  .btn:hover, .btn--default:hover, .btn--first:hover, .btn--second:hover, .btn--success:hover, .btn--info:hover, .btn--warning:hover, .btn--danger:hover, .btn--dark:hover, .btn--grey:hover, .btn--save:hover, .btn--hidetext:hover {
+    background: #e6e6e6;
+    cursor: pointer;
+    border-color: transparent;
+    color: #fff; }
+
+.btn--default {
+  color: #333; }
+  .btn--default:hover {
+    color: #333; }
+
+.btn--first {
+  background: #337ab7; }
+  .btn--first:hover {
+    background: #285f8f;
+    color: #fff !important; }
+
+.btn--second {
+  background: red; }
+  .btn--second:hover {
+    background: #cc0000;
+    color: #fff !important; }
+
+.btn--success {
+  background: #5cb85c; }
+  .btn--success:hover {
+    background: #449d44;
+    color: #fff !important; }
+
+.btn--info {
+  background: #5bc0de; }
+  .btn--info:hover {
+    background: #31b0d5;
+    color: #fff !important; }
+
+.btn--warning {
+  background: #f0ad4e; }
+  .btn--warning:hover {
+    background: #ec971f;
+    color: #fff !important; }
+
+.btn--danger {
+  background: #d9534f; }
+  .btn--danger:hover {
+    background: #c9302c;
+    color: #fff !important; }
+
+.btn--dark {
+  background: #000; }
+  .btn--dark:hover {
+    background: #666666;
+    color: #fff !important; }
+
+.btn--grey {
+  background: #ccc; }
+  .btn--grey:hover {
+    background: #b3b3b3;
+    color: #fff !important; }
+
+.btn--save {
+  background: #337ab7; }
+  .btn--save:hover {
+    background: #285f8f;
+    color: #fff !important; }
+  .btn--save:before {
+    padding: 0 3px 0 0; }
+
+.btn--hidetext {
+  background: #337ab7; }
+  .btn--hidetext:hover {
+    background: #285f8f;
+    color: #fff !important; }
+  .btn--hidetext:before {
+    padding: 0 3px 0 0; }
+
+/*** BOOTSTRAP ***/
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -240,11 +471,11 @@ th {
   .navbar {
     display: none; }
 
-  .btn > .caret, .btn--default > .caret, .btn--primary > .caret, .btn--secondary > .caret, .btn--success > .caret, .btn--info > .caret, .btn--warning > .caret, .btn--danger > .caret, .btn--dark > .caret, .btn--grey > .caret, .btn--save > .caret, .btn--hidetext > .caret,
+  .btn > .caret, .btn--default > .caret, .btn--first > .caret, .btn--second > .caret, .btn--success > .caret, .btn--info > .caret, .btn--warning > .caret, .btn--danger > .caret, .btn--dark > .caret, .btn--grey > .caret, .btn--save > .caret, .btn--hidetext > .caret,
   .dropup > .btn > .caret,
   .dropup > .btn--default > .caret,
-  .dropup > .btn--primary > .caret,
-  .dropup > .btn--secondary > .caret,
+  .dropup > .btn--first > .caret,
+  .dropup > .btn--second > .caret,
   .dropup > .btn--success > .caret,
   .dropup > .btn--info > .caret,
   .dropup > .btn--warning > .caret,
@@ -1086,7 +1317,7 @@ html {
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857;
   color: #333333;
   background-color: #fff; }
@@ -1140,8 +1371,8 @@ img {
   border-radius: 50%; }
 
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 22px;
+  margin-bottom: 22px;
   border: 0;
   border-top: 1px solid #eeeeee; }
 
@@ -1193,8 +1424,8 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  margin-top: 20px;
-  margin-bottom: 10px; }
+  margin-top: 22px;
+  margin-bottom: 11px; }
   h1 small,
   h1 .small, .h1 small,
   .h1 .small,
@@ -1209,8 +1440,8 @@ h3, .h3 {
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: 10px;
-  margin-bottom: 10px; }
+  margin-top: 11px;
+  margin-bottom: 11px; }
   h4 small,
   h4 .small, .h4 small,
   .h4 .small,
@@ -1223,38 +1454,38 @@ h6, .h6 {
     font-size: 75%; }
 
 h1, .h1 {
-  font-size: 36px; }
+  font-size: 41px; }
 
 h2, .h2 {
-  font-size: 30px; }
+  font-size: 34px; }
 
 h3, .h3 {
-  font-size: 24px; }
+  font-size: 28px; }
 
 h4, .h4 {
-  font-size: 18px; }
+  font-size: 20px; }
 
 h5, .h5 {
-  font-size: 14px; }
+  font-size: 16px; }
 
 h6, .h6 {
-  font-size: 12px; }
+  font-size: 14px; }
 
 p {
-  margin: 0 0 10px; }
+  margin: 0 0 11px; }
 
 .lead {
-  margin-bottom: 20px;
-  font-size: 16px;
+  margin-bottom: 22px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.4; }
   @media (min-width: 768px) {
     .lead {
-      font-size: 21px; } }
+      font-size: 24px; } }
 
 small,
 .small {
-  font-size: 85%; }
+  font-size: 87%; }
 
 mark,
 .mark {
@@ -1362,14 +1593,14 @@ a.bg-danger:focus {
   background-color: #e4b9b9; }
 
 .page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
+  padding-bottom: 10px;
+  margin: 44px 0 22px;
   border-bottom: 1px solid #eeeeee; }
 
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 10px; }
+  margin-bottom: 11px; }
   ul ul,
   ul ol,
   ol ul,
@@ -1391,7 +1622,7 @@ ol {
 
 dl {
   margin-top: 0;
-  margin-bottom: 20px; }
+  margin-bottom: 22px; }
 
 dt,
 dd {
@@ -1429,9 +1660,9 @@ abbr[data-original-title] {
   font-size: 90%; }
 
 blockquote {
-  padding: 10px 20px;
-  margin: 0 0 20px;
-  font-size: 17.5px;
+  padding: 11px 22px;
+  margin: 0 0 22px;
+  font-size: 20px;
   border-left: 5px solid #eeeeee; }
   blockquote p:last-child,
   blockquote ul:last-child,
@@ -1472,7 +1703,7 @@ blockquote.pull-right {
     content: '\00A0 \2014'; }
 
 address {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   font-style: normal;
   line-height: 1.42857; }
 
@@ -1504,9 +1735,9 @@ kbd {
 
 pre {
   display: block;
-  padding: 9.5px;
-  margin: 0 0 10px;
-  font-size: 13px;
+  padding: 10.5px;
+  margin: 0 0 11px;
+  font-size: 15px;
   line-height: 1.42857;
   word-break: break-all;
   word-wrap: break-word;
@@ -2211,7 +2442,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 20px; }
+  margin-bottom: 22px; }
   .table > thead > tr > th,
   .table > thead > tr > td,
   .table > tbody > tr > th,
@@ -2361,7 +2592,7 @@ table th[class*="col-"] {
   @media screen and (max-width: 767px) {
     .table-responsive {
       width: 100%;
-      margin-bottom: 15px;
+      margin-bottom: 16.5px;
       overflow-y: hidden;
       -ms-overflow-style: -ms-autohiding-scrollbar;
       border: 1px solid #ddd; }
@@ -2406,8 +2637,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 20px;
-  font-size: 21px;
+  margin-bottom: 22px;
+  font-size: 24px;
   line-height: inherit;
   color: #333333;
   border: 0;
@@ -2450,16 +2681,16 @@ input[type="checkbox"]:focus {
 output {
   display: block;
   padding-top: 7px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857;
   color: #555555; }
 
 .form-control {
   display: block;
   width: 100%;
-  height: 34px;
+  height: 36px;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857;
   color: #555555;
   background-color: #fff;
@@ -2503,13 +2734,13 @@ input[type="search"] {
   input[type="time"].form-control,
   input[type="datetime-local"].form-control,
   input[type="month"].form-control {
-    line-height: 34px; }
+    line-height: 36px; }
   input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control,
   .input-group-sm > input[type="date"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="date"].btn,
   .input-group-sm > .input-group-btn > input[type="date"].btn--default,
-  .input-group-sm > .input-group-btn > input[type="date"].btn--primary,
-  .input-group-sm > .input-group-btn > input[type="date"].btn--secondary,
+  .input-group-sm > .input-group-btn > input[type="date"].btn--first,
+  .input-group-sm > .input-group-btn > input[type="date"].btn--second,
   .input-group-sm > .input-group-btn > input[type="date"].btn--success,
   .input-group-sm > .input-group-btn > input[type="date"].btn--info,
   .input-group-sm > .input-group-btn > input[type="date"].btn--warning,
@@ -2523,8 +2754,8 @@ input[type="search"] {
   .input-group-sm > input[type="time"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="time"].btn,
   .input-group-sm > .input-group-btn > input[type="time"].btn--default,
-  .input-group-sm > .input-group-btn > input[type="time"].btn--primary,
-  .input-group-sm > .input-group-btn > input[type="time"].btn--secondary,
+  .input-group-sm > .input-group-btn > input[type="time"].btn--first,
+  .input-group-sm > .input-group-btn > input[type="time"].btn--second,
   .input-group-sm > .input-group-btn > input[type="time"].btn--success,
   .input-group-sm > .input-group-btn > input[type="time"].btn--info,
   .input-group-sm > .input-group-btn > input[type="time"].btn--warning,
@@ -2539,8 +2770,8 @@ input[type="search"] {
   .input-group-sm > input[type="datetime-local"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn--default,
-  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn--primary,
-  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn--secondary,
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn--first,
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn--second,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn--success,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn--info,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn--warning,
@@ -2555,8 +2786,8 @@ input[type="search"] {
   .input-group-sm > input[type="month"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="month"].btn,
   .input-group-sm > .input-group-btn > input[type="month"].btn--default,
-  .input-group-sm > .input-group-btn > input[type="month"].btn--primary,
-  .input-group-sm > .input-group-btn > input[type="month"].btn--secondary,
+  .input-group-sm > .input-group-btn > input[type="month"].btn--first,
+  .input-group-sm > .input-group-btn > input[type="month"].btn--second,
   .input-group-sm > .input-group-btn > input[type="month"].btn--success,
   .input-group-sm > .input-group-btn > input[type="month"].btn--info,
   .input-group-sm > .input-group-btn > input[type="month"].btn--warning,
@@ -2566,13 +2797,13 @@ input[type="search"] {
   .input-group-sm > .input-group-btn > input[type="month"].btn--save,
   .input-group-sm > .input-group-btn > input[type="month"].btn--hidetext, .input-group-sm
   input[type="month"] {
-    line-height: 30px; }
+    line-height: 33px; }
   input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control,
   .input-group-lg > input[type="date"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="date"].btn,
   .input-group-lg > .input-group-btn > input[type="date"].btn--default,
-  .input-group-lg > .input-group-btn > input[type="date"].btn--primary,
-  .input-group-lg > .input-group-btn > input[type="date"].btn--secondary,
+  .input-group-lg > .input-group-btn > input[type="date"].btn--first,
+  .input-group-lg > .input-group-btn > input[type="date"].btn--second,
   .input-group-lg > .input-group-btn > input[type="date"].btn--success,
   .input-group-lg > .input-group-btn > input[type="date"].btn--info,
   .input-group-lg > .input-group-btn > input[type="date"].btn--warning,
@@ -2586,8 +2817,8 @@ input[type="search"] {
   .input-group-lg > input[type="time"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="time"].btn,
   .input-group-lg > .input-group-btn > input[type="time"].btn--default,
-  .input-group-lg > .input-group-btn > input[type="time"].btn--primary,
-  .input-group-lg > .input-group-btn > input[type="time"].btn--secondary,
+  .input-group-lg > .input-group-btn > input[type="time"].btn--first,
+  .input-group-lg > .input-group-btn > input[type="time"].btn--second,
   .input-group-lg > .input-group-btn > input[type="time"].btn--success,
   .input-group-lg > .input-group-btn > input[type="time"].btn--info,
   .input-group-lg > .input-group-btn > input[type="time"].btn--warning,
@@ -2602,8 +2833,8 @@ input[type="search"] {
   .input-group-lg > input[type="datetime-local"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn--default,
-  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn--primary,
-  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn--secondary,
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn--first,
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn--second,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn--success,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn--info,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn--warning,
@@ -2618,8 +2849,8 @@ input[type="search"] {
   .input-group-lg > input[type="month"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="month"].btn,
   .input-group-lg > .input-group-btn > input[type="month"].btn--default,
-  .input-group-lg > .input-group-btn > input[type="month"].btn--primary,
-  .input-group-lg > .input-group-btn > input[type="month"].btn--secondary,
+  .input-group-lg > .input-group-btn > input[type="month"].btn--first,
+  .input-group-lg > .input-group-btn > input[type="month"].btn--second,
   .input-group-lg > .input-group-btn > input[type="month"].btn--success,
   .input-group-lg > .input-group-btn > input[type="month"].btn--info,
   .input-group-lg > .input-group-btn > input[type="month"].btn--warning,
@@ -2629,7 +2860,7 @@ input[type="search"] {
   .input-group-lg > .input-group-btn > input[type="month"].btn--save,
   .input-group-lg > .input-group-btn > input[type="month"].btn--hidetext, .input-group-lg
   input[type="month"] {
-    line-height: 46px; } }
+    line-height: 49px; } }
 .form-group {
   margin-bottom: 15px; }
 
@@ -2641,7 +2872,7 @@ input[type="search"] {
   margin-bottom: 10px; }
   .radio label,
   .checkbox label {
-    min-height: 20px;
+    min-height: 22px;
     padding-left: 20px;
     margin-bottom: 0;
     font-weight: normal;
@@ -2694,13 +2925,13 @@ input[type="checkbox"] {
   padding-top: 7px;
   padding-bottom: 7px;
   margin-bottom: 0;
-  min-height: 34px; }
+  min-height: 38px; }
   .form-control-static.input-lg, .input-group-lg > .form-control-static.form-control,
   .input-group-lg > .form-control-static.input-group-addon,
   .input-group-lg > .input-group-btn > .form-control-static.btn,
   .input-group-lg > .input-group-btn > .form-control-static.btn--default,
-  .input-group-lg > .input-group-btn > .form-control-static.btn--primary,
-  .input-group-lg > .input-group-btn > .form-control-static.btn--secondary,
+  .input-group-lg > .input-group-btn > .form-control-static.btn--first,
+  .input-group-lg > .input-group-btn > .form-control-static.btn--second,
   .input-group-lg > .input-group-btn > .form-control-static.btn--success,
   .input-group-lg > .input-group-btn > .form-control-static.btn--info,
   .input-group-lg > .input-group-btn > .form-control-static.btn--warning,
@@ -2712,8 +2943,8 @@ input[type="checkbox"] {
   .input-group-sm > .form-control-static.input-group-addon,
   .input-group-sm > .input-group-btn > .form-control-static.btn,
   .input-group-sm > .input-group-btn > .form-control-static.btn--default,
-  .input-group-sm > .input-group-btn > .form-control-static.btn--primary,
-  .input-group-sm > .input-group-btn > .form-control-static.btn--secondary,
+  .input-group-sm > .input-group-btn > .form-control-static.btn--first,
+  .input-group-sm > .input-group-btn > .form-control-static.btn--second,
   .input-group-sm > .input-group-btn > .form-control-static.btn--success,
   .input-group-sm > .input-group-btn > .form-control-static.btn--info,
   .input-group-sm > .input-group-btn > .form-control-static.btn--warning,
@@ -2729,8 +2960,8 @@ input[type="checkbox"] {
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn,
 .input-group-sm > .input-group-btn > .btn--default,
-.input-group-sm > .input-group-btn > .btn--primary,
-.input-group-sm > .input-group-btn > .btn--secondary,
+.input-group-sm > .input-group-btn > .btn--first,
+.input-group-sm > .input-group-btn > .btn--second,
 .input-group-sm > .input-group-btn > .btn--success,
 .input-group-sm > .input-group-btn > .btn--info,
 .input-group-sm > .input-group-btn > .btn--warning,
@@ -2739,9 +2970,9 @@ input[type="checkbox"] {
 .input-group-sm > .input-group-btn > .btn--grey,
 .input-group-sm > .input-group-btn > .btn--save,
 .input-group-sm > .input-group-btn > .btn--hidetext {
-  height: 30px;
+  height: 33px;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 3px; }
 
@@ -2749,8 +2980,8 @@ select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn,
 .input-group-sm > .input-group-btn > select.btn--default,
-.input-group-sm > .input-group-btn > select.btn--primary,
-.input-group-sm > .input-group-btn > select.btn--secondary,
+.input-group-sm > .input-group-btn > select.btn--first,
+.input-group-sm > .input-group-btn > select.btn--second,
 .input-group-sm > .input-group-btn > select.btn--success,
 .input-group-sm > .input-group-btn > select.btn--info,
 .input-group-sm > .input-group-btn > select.btn--warning,
@@ -2759,15 +2990,15 @@ select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > .input-group-btn > select.btn--grey,
 .input-group-sm > .input-group-btn > select.btn--save,
 .input-group-sm > .input-group-btn > select.btn--hidetext {
-  height: 30px;
-  line-height: 30px; }
+  height: 33px;
+  line-height: 33px; }
 
 textarea.input-sm, .input-group-sm > textarea.form-control,
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
 .input-group-sm > .input-group-btn > textarea.btn--default,
-.input-group-sm > .input-group-btn > textarea.btn--primary,
-.input-group-sm > .input-group-btn > textarea.btn--secondary,
+.input-group-sm > .input-group-btn > textarea.btn--first,
+.input-group-sm > .input-group-btn > textarea.btn--second,
 .input-group-sm > .input-group-btn > textarea.btn--success,
 .input-group-sm > .input-group-btn > textarea.btn--info,
 .input-group-sm > .input-group-btn > textarea.btn--warning,
@@ -2781,8 +3012,8 @@ select[multiple].input-sm,
 .input-group-sm > select[multiple].input-group-addon,
 .input-group-sm > .input-group-btn > select[multiple].btn,
 .input-group-sm > .input-group-btn > select[multiple].btn--default,
-.input-group-sm > .input-group-btn > select[multiple].btn--primary,
-.input-group-sm > .input-group-btn > select[multiple].btn--secondary,
+.input-group-sm > .input-group-btn > select[multiple].btn--first,
+.input-group-sm > .input-group-btn > select[multiple].btn--second,
 .input-group-sm > .input-group-btn > select[multiple].btn--success,
 .input-group-sm > .input-group-btn > select[multiple].btn--info,
 .input-group-sm > .input-group-btn > select[multiple].btn--warning,
@@ -2794,30 +3025,30 @@ select[multiple].input-sm,
   height: auto; }
 
 .form-group-sm .form-control {
-  height: 30px;
+  height: 33px;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 3px; }
 .form-group-sm select.form-control {
-  height: 30px;
-  line-height: 30px; }
+  height: 33px;
+  line-height: 33px; }
 .form-group-sm textarea.form-control,
 .form-group-sm select[multiple].form-control {
   height: auto; }
 .form-group-sm .form-control-static {
-  height: 30px;
-  min-height: 32px;
+  height: 33px;
+  min-height: 36px;
   padding: 6px 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5; }
 
 .input-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn,
 .input-group-lg > .input-group-btn > .btn--default,
-.input-group-lg > .input-group-btn > .btn--primary,
-.input-group-lg > .input-group-btn > .btn--secondary,
+.input-group-lg > .input-group-btn > .btn--first,
+.input-group-lg > .input-group-btn > .btn--second,
 .input-group-lg > .input-group-btn > .btn--success,
 .input-group-lg > .input-group-btn > .btn--info,
 .input-group-lg > .input-group-btn > .btn--warning,
@@ -2826,9 +3057,9 @@ select[multiple].input-sm,
 .input-group-lg > .input-group-btn > .btn--grey,
 .input-group-lg > .input-group-btn > .btn--save,
 .input-group-lg > .input-group-btn > .btn--hidetext {
-  height: 46px;
+  height: 49px;
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33333;
   border-radius: 6px; }
 
@@ -2836,8 +3067,8 @@ select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn,
 .input-group-lg > .input-group-btn > select.btn--default,
-.input-group-lg > .input-group-btn > select.btn--primary,
-.input-group-lg > .input-group-btn > select.btn--secondary,
+.input-group-lg > .input-group-btn > select.btn--first,
+.input-group-lg > .input-group-btn > select.btn--second,
 .input-group-lg > .input-group-btn > select.btn--success,
 .input-group-lg > .input-group-btn > select.btn--info,
 .input-group-lg > .input-group-btn > select.btn--warning,
@@ -2846,15 +3077,15 @@ select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > .input-group-btn > select.btn--grey,
 .input-group-lg > .input-group-btn > select.btn--save,
 .input-group-lg > .input-group-btn > select.btn--hidetext {
-  height: 46px;
-  line-height: 46px; }
+  height: 49px;
+  line-height: 49px; }
 
 textarea.input-lg, .input-group-lg > textarea.form-control,
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
 .input-group-lg > .input-group-btn > textarea.btn--default,
-.input-group-lg > .input-group-btn > textarea.btn--primary,
-.input-group-lg > .input-group-btn > textarea.btn--secondary,
+.input-group-lg > .input-group-btn > textarea.btn--first,
+.input-group-lg > .input-group-btn > textarea.btn--second,
 .input-group-lg > .input-group-btn > textarea.btn--success,
 .input-group-lg > .input-group-btn > textarea.btn--info,
 .input-group-lg > .input-group-btn > textarea.btn--warning,
@@ -2868,8 +3099,8 @@ select[multiple].input-lg,
 .input-group-lg > select[multiple].input-group-addon,
 .input-group-lg > .input-group-btn > select[multiple].btn,
 .input-group-lg > .input-group-btn > select[multiple].btn--default,
-.input-group-lg > .input-group-btn > select[multiple].btn--primary,
-.input-group-lg > .input-group-btn > select[multiple].btn--secondary,
+.input-group-lg > .input-group-btn > select[multiple].btn--first,
+.input-group-lg > .input-group-btn > select[multiple].btn--second,
 .input-group-lg > .input-group-btn > select[multiple].btn--success,
 .input-group-lg > .input-group-btn > select[multiple].btn--info,
 .input-group-lg > .input-group-btn > select[multiple].btn--warning,
@@ -2881,28 +3112,28 @@ select[multiple].input-lg,
   height: auto; }
 
 .form-group-lg .form-control {
-  height: 46px;
+  height: 49px;
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33333;
   border-radius: 6px; }
 .form-group-lg select.form-control {
-  height: 46px;
-  line-height: 46px; }
+  height: 49px;
+  line-height: 49px; }
 .form-group-lg textarea.form-control,
 .form-group-lg select[multiple].form-control {
   height: auto; }
 .form-group-lg .form-control-static {
-  height: 46px;
-  min-height: 38px;
+  height: 49px;
+  min-height: 42px;
   padding: 11px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33333; }
 
 .has-feedback {
   position: relative; }
   .has-feedback .form-control {
-    padding-right: 42.5px; }
+    padding-right: 45px; }
 
 .form-control-feedback {
   position: absolute;
@@ -2910,9 +3141,9 @@ select[multiple].input-lg,
   right: 0;
   z-index: 2;
   display: block;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
   text-align: center;
   pointer-events: none; }
 
@@ -2920,8 +3151,8 @@ select[multiple].input-lg,
 .input-group-lg > .input-group-addon + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn--default + .form-control-feedback,
-.input-group-lg > .input-group-btn > .btn--primary + .form-control-feedback,
-.input-group-lg > .input-group-btn > .btn--secondary + .form-control-feedback,
+.input-group-lg > .input-group-btn > .btn--first + .form-control-feedback,
+.input-group-lg > .input-group-btn > .btn--second + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn--success + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn--info + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn--warning + .form-control-feedback,
@@ -2932,16 +3163,16 @@ select[multiple].input-lg,
 .input-group-lg > .input-group-btn > .btn--hidetext + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
 .form-group-lg .form-control + .form-control-feedback {
-  width: 46px;
-  height: 46px;
-  line-height: 46px; }
+  width: 49px;
+  height: 49px;
+  line-height: 49px; }
 
 .input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback,
 .input-group-sm > .input-group-addon + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn--default + .form-control-feedback,
-.input-group-sm > .input-group-btn > .btn--primary + .form-control-feedback,
-.input-group-sm > .input-group-btn > .btn--secondary + .form-control-feedback,
+.input-group-sm > .input-group-btn > .btn--first + .form-control-feedback,
+.input-group-sm > .input-group-btn > .btn--second + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn--success + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn--info + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn--warning + .form-control-feedback,
@@ -2952,9 +3183,9 @@ select[multiple].input-lg,
 .input-group-sm > .input-group-btn > .btn--hidetext + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
 .form-group-sm .form-control + .form-control-feedback {
-  width: 30px;
-  height: 30px;
-  line-height: 30px; }
+  width: 33px;
+  height: 33px;
+  line-height: 33px; }
 
 .has-success .help-block,
 .has-success .control-label,
@@ -3023,7 +3254,7 @@ select[multiple].input-lg,
   color: #a94442; }
 
 .has-feedback label ~ .form-control-feedback {
-  top: 25px; }
+  top: 27px; }
 .has-feedback label.sr-only ~ .form-control-feedback {
   top: 0; }
 
@@ -3081,7 +3312,7 @@ select[multiple].input-lg,
   padding-top: 7px; }
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 27px; }
+  min-height: 29px; }
 .form-horizontal .form-group {
   margin-left: -15px;
   margin-right: -15px; }
@@ -3100,13 +3331,13 @@ select[multiple].input-lg,
 @media (min-width: 768px) {
   .form-horizontal .form-group-lg .control-label {
     padding-top: 11px;
-    font-size: 18px; } }
+    font-size: 20px; } }
 @media (min-width: 768px) {
   .form-horizontal .form-group-sm .control-label {
     padding-top: 6px;
-    font-size: 12px; } }
+    font-size: 14px; } }
 
-.btn, .btn--default, .btn--primary, .btn--secondary, .btn--success, .btn--info, .btn--warning, .btn--danger, .btn--dark, .btn--grey, .btn--save, .btn--hidetext {
+.btn, .btn--default, .btn--first, .btn--second, .btn--success, .btn--info, .btn--warning, .btn--danger, .btn--dark, .btn--grey, .btn--save, .btn--hidetext {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -3118,32 +3349,32 @@ select[multiple].input-lg,
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857;
   border-radius: 4px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-  .btn:focus, .btn--default:focus, .btn--primary:focus, .btn--secondary:focus, .btn--success:focus, .btn--info:focus, .btn--warning:focus, .btn--danger:focus, .btn--dark:focus, .btn--grey:focus, .btn--save:focus, .btn--hidetext:focus, .btn.focus, .focus.btn--default, .focus.btn--primary, .focus.btn--secondary, .focus.btn--success, .focus.btn--info, .focus.btn--warning, .focus.btn--danger, .focus.btn--dark, .focus.btn--grey, .focus.btn--save, .focus.btn--hidetext, .btn:active:focus, .btn--default:active:focus, .btn--primary:active:focus, .btn--secondary:active:focus, .btn--success:active:focus, .btn--info:active:focus, .btn--warning:active:focus, .btn--danger:active:focus, .btn--dark:active:focus, .btn--grey:active:focus, .btn--save:active:focus, .btn--hidetext:active:focus, .btn:active.focus, .btn--default:active.focus, .btn--primary:active.focus, .btn--secondary:active.focus, .btn--success:active.focus, .btn--info:active.focus, .btn--warning:active.focus, .btn--danger:active.focus, .btn--dark:active.focus, .btn--grey:active.focus, .btn--save:active.focus, .btn--hidetext:active.focus, .btn.active:focus, .active.btn--default:focus, .active.btn--primary:focus, .active.btn--secondary:focus, .active.btn--success:focus, .active.btn--info:focus, .active.btn--warning:focus, .active.btn--danger:focus, .active.btn--dark:focus, .active.btn--grey:focus, .active.btn--save:focus, .active.btn--hidetext:focus, .btn.active.focus, .active.focus.btn--default, .active.focus.btn--primary, .active.focus.btn--secondary, .active.focus.btn--success, .active.focus.btn--info, .active.focus.btn--warning, .active.focus.btn--danger, .active.focus.btn--dark, .active.focus.btn--grey, .active.focus.btn--save, .active.focus.btn--hidetext {
+  .btn:focus, .btn--default:focus, .btn--first:focus, .btn--second:focus, .btn--success:focus, .btn--info:focus, .btn--warning:focus, .btn--danger:focus, .btn--dark:focus, .btn--grey:focus, .btn--save:focus, .btn--hidetext:focus, .btn.focus, .focus.btn--default, .focus.btn--first, .focus.btn--second, .focus.btn--success, .focus.btn--info, .focus.btn--warning, .focus.btn--danger, .focus.btn--dark, .focus.btn--grey, .focus.btn--save, .focus.btn--hidetext, .btn:active:focus, .btn--default:active:focus, .btn--first:active:focus, .btn--second:active:focus, .btn--success:active:focus, .btn--info:active:focus, .btn--warning:active:focus, .btn--danger:active:focus, .btn--dark:active:focus, .btn--grey:active:focus, .btn--save:active:focus, .btn--hidetext:active:focus, .btn:active.focus, .btn--default:active.focus, .btn--first:active.focus, .btn--second:active.focus, .btn--success:active.focus, .btn--info:active.focus, .btn--warning:active.focus, .btn--danger:active.focus, .btn--dark:active.focus, .btn--grey:active.focus, .btn--save:active.focus, .btn--hidetext:active.focus, .btn.active:focus, .active.btn--default:focus, .active.btn--first:focus, .active.btn--second:focus, .active.btn--success:focus, .active.btn--info:focus, .active.btn--warning:focus, .active.btn--danger:focus, .active.btn--dark:focus, .active.btn--grey:focus, .active.btn--save:focus, .active.btn--hidetext:focus, .btn.active.focus, .active.focus.btn--default, .active.focus.btn--first, .active.focus.btn--second, .active.focus.btn--success, .active.focus.btn--info, .active.focus.btn--warning, .active.focus.btn--danger, .active.focus.btn--dark, .active.focus.btn--grey, .active.focus.btn--save, .active.focus.btn--hidetext {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  .btn:hover, .btn--default:hover, .btn--primary:hover, .btn--secondary:hover, .btn--success:hover, .btn--info:hover, .btn--warning:hover, .btn--danger:hover, .btn--dark:hover, .btn--grey:hover, .btn--save:hover, .btn--hidetext:hover, .btn:focus, .btn--default:focus, .btn--primary:focus, .btn--secondary:focus, .btn--success:focus, .btn--info:focus, .btn--warning:focus, .btn--danger:focus, .btn--dark:focus, .btn--grey:focus, .btn--save:focus, .btn--hidetext:focus, .btn.focus, .focus.btn--default, .focus.btn--primary, .focus.btn--secondary, .focus.btn--success, .focus.btn--info, .focus.btn--warning, .focus.btn--danger, .focus.btn--dark, .focus.btn--grey, .focus.btn--save, .focus.btn--hidetext {
+  .btn:hover, .btn--default:hover, .btn--first:hover, .btn--second:hover, .btn--success:hover, .btn--info:hover, .btn--warning:hover, .btn--danger:hover, .btn--dark:hover, .btn--grey:hover, .btn--save:hover, .btn--hidetext:hover, .btn:focus, .btn--default:focus, .btn--first:focus, .btn--second:focus, .btn--success:focus, .btn--info:focus, .btn--warning:focus, .btn--danger:focus, .btn--dark:focus, .btn--grey:focus, .btn--save:focus, .btn--hidetext:focus, .btn.focus, .focus.btn--default, .focus.btn--first, .focus.btn--second, .focus.btn--success, .focus.btn--info, .focus.btn--warning, .focus.btn--danger, .focus.btn--dark, .focus.btn--grey, .focus.btn--save, .focus.btn--hidetext {
     color: #333;
     text-decoration: none; }
-  .btn:active, .btn--default:active, .btn--primary:active, .btn--secondary:active, .btn--success:active, .btn--info:active, .btn--warning:active, .btn--danger:active, .btn--dark:active, .btn--grey:active, .btn--save:active, .btn--hidetext:active, .btn.active, .active.btn--default, .active.btn--primary, .active.btn--secondary, .active.btn--success, .active.btn--info, .active.btn--warning, .active.btn--danger, .active.btn--dark, .active.btn--grey, .active.btn--save, .active.btn--hidetext {
+  .btn:active, .btn--default:active, .btn--first:active, .btn--second:active, .btn--success:active, .btn--info:active, .btn--warning:active, .btn--danger:active, .btn--dark:active, .btn--grey:active, .btn--save:active, .btn--hidetext:active, .btn.active, .active.btn--default, .active.btn--first, .active.btn--second, .active.btn--success, .active.btn--info, .active.btn--warning, .active.btn--danger, .active.btn--dark, .active.btn--grey, .active.btn--save, .active.btn--hidetext {
     outline: 0;
     background-image: none;
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
-  .btn.disabled, .disabled.btn--default, .disabled.btn--primary, .disabled.btn--secondary, .disabled.btn--success, .disabled.btn--info, .disabled.btn--warning, .disabled.btn--danger, .disabled.btn--dark, .disabled.btn--grey, .disabled.btn--save, .disabled.btn--hidetext, .btn[disabled], [disabled].btn--default, [disabled].btn--primary, [disabled].btn--secondary, [disabled].btn--success, [disabled].btn--info, [disabled].btn--warning, [disabled].btn--danger, [disabled].btn--dark, [disabled].btn--grey, [disabled].btn--save, [disabled].btn--hidetext, fieldset[disabled] .btn, fieldset[disabled] .btn--default, fieldset[disabled] .btn--primary, fieldset[disabled] .btn--secondary, fieldset[disabled] .btn--success, fieldset[disabled] .btn--info, fieldset[disabled] .btn--warning, fieldset[disabled] .btn--danger, fieldset[disabled] .btn--dark, fieldset[disabled] .btn--grey, fieldset[disabled] .btn--save, fieldset[disabled] .btn--hidetext {
+  .btn.disabled, .disabled.btn--default, .disabled.btn--first, .disabled.btn--second, .disabled.btn--success, .disabled.btn--info, .disabled.btn--warning, .disabled.btn--danger, .disabled.btn--dark, .disabled.btn--grey, .disabled.btn--save, .disabled.btn--hidetext, .btn[disabled], [disabled].btn--default, [disabled].btn--first, [disabled].btn--second, [disabled].btn--success, [disabled].btn--info, [disabled].btn--warning, [disabled].btn--danger, [disabled].btn--dark, [disabled].btn--grey, [disabled].btn--save, [disabled].btn--hidetext, fieldset[disabled] .btn, fieldset[disabled] .btn--default, fieldset[disabled] .btn--first, fieldset[disabled] .btn--second, fieldset[disabled] .btn--success, fieldset[disabled] .btn--info, fieldset[disabled] .btn--warning, fieldset[disabled] .btn--danger, fieldset[disabled] .btn--dark, fieldset[disabled] .btn--grey, fieldset[disabled] .btn--save, fieldset[disabled] .btn--hidetext {
     cursor: not-allowed;
     opacity: 0.65;
     filter: alpha(opacity=65);
     -webkit-box-shadow: none;
     box-shadow: none; }
 
-a.btn.disabled, a.disabled.btn--default, a.disabled.btn--primary, a.disabled.btn--secondary, a.disabled.btn--success, a.disabled.btn--info, a.disabled.btn--warning, a.disabled.btn--danger, a.disabled.btn--dark, a.disabled.btn--grey, a.disabled.btn--save, a.disabled.btn--hidetext, fieldset[disabled] a.btn, fieldset[disabled] a.btn--default, fieldset[disabled] a.btn--primary, fieldset[disabled] a.btn--secondary, fieldset[disabled] a.btn--success, fieldset[disabled] a.btn--info, fieldset[disabled] a.btn--warning, fieldset[disabled] a.btn--danger, fieldset[disabled] a.btn--dark, fieldset[disabled] a.btn--grey, fieldset[disabled] a.btn--save, fieldset[disabled] a.btn--hidetext {
+a.btn.disabled, a.disabled.btn--default, a.disabled.btn--first, a.disabled.btn--second, a.disabled.btn--success, a.disabled.btn--info, a.disabled.btn--warning, a.disabled.btn--danger, a.disabled.btn--dark, a.disabled.btn--grey, a.disabled.btn--save, a.disabled.btn--hidetext, fieldset[disabled] a.btn, fieldset[disabled] a.btn--default, fieldset[disabled] a.btn--first, fieldset[disabled] a.btn--second, fieldset[disabled] a.btn--success, fieldset[disabled] a.btn--info, fieldset[disabled] a.btn--warning, fieldset[disabled] a.btn--danger, fieldset[disabled] a.btn--dark, fieldset[disabled] a.btn--grey, fieldset[disabled] a.btn--save, fieldset[disabled] a.btn--hidetext {
   pointer-events: none; }
 
 .btn-default {
@@ -3338,21 +3569,21 @@ a.btn.disabled, a.disabled.btn--default, a.disabled.btn--primary, a.disabled.btn
     color: #777777;
     text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .btn--default, .btn-group-lg > .btn--primary, .btn-group-lg > .btn--secondary, .btn-group-lg > .btn--success, .btn-group-lg > .btn--info, .btn-group-lg > .btn--warning, .btn-group-lg > .btn--danger, .btn-group-lg > .btn--dark, .btn-group-lg > .btn--grey, .btn-group-lg > .btn--save, .btn-group-lg > .btn--hidetext {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .btn--default, .btn-group-lg > .btn--first, .btn-group-lg > .btn--second, .btn-group-lg > .btn--success, .btn-group-lg > .btn--info, .btn-group-lg > .btn--warning, .btn-group-lg > .btn--danger, .btn-group-lg > .btn--dark, .btn-group-lg > .btn--grey, .btn-group-lg > .btn--save, .btn-group-lg > .btn--hidetext {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33333;
   border-radius: 6px; }
 
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .btn--default, .btn-group-sm > .btn--primary, .btn-group-sm > .btn--secondary, .btn-group-sm > .btn--success, .btn-group-sm > .btn--info, .btn-group-sm > .btn--warning, .btn-group-sm > .btn--danger, .btn-group-sm > .btn--dark, .btn-group-sm > .btn--grey, .btn-group-sm > .btn--save, .btn-group-sm > .btn--hidetext {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .btn--default, .btn-group-sm > .btn--first, .btn-group-sm > .btn--second, .btn-group-sm > .btn--success, .btn-group-sm > .btn--info, .btn-group-sm > .btn--warning, .btn-group-sm > .btn--danger, .btn-group-sm > .btn--dark, .btn-group-sm > .btn--grey, .btn-group-sm > .btn--save, .btn-group-sm > .btn--hidetext {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 3px; }
 
-.btn-xs, .btn-group-xs > .btn, .btn-group-xs > .btn--default, .btn-group-xs > .btn--primary, .btn-group-xs > .btn--secondary, .btn-group-xs > .btn--success, .btn-group-xs > .btn--info, .btn-group-xs > .btn--warning, .btn-group-xs > .btn--danger, .btn-group-xs > .btn--dark, .btn-group-xs > .btn--grey, .btn-group-xs > .btn--save, .btn-group-xs > .btn--hidetext {
+.btn-xs, .btn-group-xs > .btn, .btn-group-xs > .btn--default, .btn-group-xs > .btn--first, .btn-group-xs > .btn--second, .btn-group-xs > .btn--success, .btn-group-xs > .btn--info, .btn-group-xs > .btn--warning, .btn-group-xs > .btn--danger, .btn-group-xs > .btn--dark, .btn-group-xs > .btn--grey, .btn-group-xs > .btn--save, .btn-group-xs > .btn--hidetext {
   padding: 1px 5px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 3px; }
 
@@ -3427,7 +3658,7 @@ tbody.collapse.in {
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
-  font-size: 14px;
+  font-size: 16px;
   text-align: left;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -3441,7 +3672,7 @@ tbody.collapse.in {
     left: auto; }
   .dropdown-menu .divider {
     height: 1px;
-    margin: 9px 0;
+    margin: 10px 0;
     overflow: hidden;
     background-color: #e5e5e5; }
   .dropdown-menu > li > a {
@@ -3489,7 +3720,7 @@ tbody.collapse.in {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.42857;
   color: #777777;
   white-space: nowrap; }
@@ -3530,11 +3761,11 @@ tbody.collapse.in {
   position: relative;
   display: inline-block;
   vertical-align: middle; }
-  .btn-group > .btn, .btn-group > .btn--default, .btn-group > .btn--primary, .btn-group > .btn--secondary, .btn-group > .btn--success, .btn-group > .btn--info, .btn-group > .btn--warning, .btn-group > .btn--danger, .btn-group > .btn--dark, .btn-group > .btn--grey, .btn-group > .btn--save, .btn-group > .btn--hidetext,
+  .btn-group > .btn, .btn-group > .btn--default, .btn-group > .btn--first, .btn-group > .btn--second, .btn-group > .btn--success, .btn-group > .btn--info, .btn-group > .btn--warning, .btn-group > .btn--danger, .btn-group > .btn--dark, .btn-group > .btn--grey, .btn-group > .btn--save, .btn-group > .btn--hidetext,
   .btn-group-vertical > .btn,
   .btn-group-vertical > .btn--default,
-  .btn-group-vertical > .btn--primary,
-  .btn-group-vertical > .btn--secondary,
+  .btn-group-vertical > .btn--first,
+  .btn-group-vertical > .btn--second,
   .btn-group-vertical > .btn--success,
   .btn-group-vertical > .btn--info,
   .btn-group-vertical > .btn--warning,
@@ -3545,11 +3776,11 @@ tbody.collapse.in {
   .btn-group-vertical > .btn--hidetext {
     position: relative;
     float: left; }
-    .btn-group > .btn:hover, .btn-group > .btn--default:hover, .btn-group > .btn--primary:hover, .btn-group > .btn--secondary:hover, .btn-group > .btn--success:hover, .btn-group > .btn--info:hover, .btn-group > .btn--warning:hover, .btn-group > .btn--danger:hover, .btn-group > .btn--dark:hover, .btn-group > .btn--grey:hover, .btn-group > .btn--save:hover, .btn-group > .btn--hidetext:hover, .btn-group > .btn:focus, .btn-group > .btn--default:focus, .btn-group > .btn--primary:focus, .btn-group > .btn--secondary:focus, .btn-group > .btn--success:focus, .btn-group > .btn--info:focus, .btn-group > .btn--warning:focus, .btn-group > .btn--danger:focus, .btn-group > .btn--dark:focus, .btn-group > .btn--grey:focus, .btn-group > .btn--save:focus, .btn-group > .btn--hidetext:focus, .btn-group > .btn:active, .btn-group > .btn--default:active, .btn-group > .btn--primary:active, .btn-group > .btn--secondary:active, .btn-group > .btn--success:active, .btn-group > .btn--info:active, .btn-group > .btn--warning:active, .btn-group > .btn--danger:active, .btn-group > .btn--dark:active, .btn-group > .btn--grey:active, .btn-group > .btn--save:active, .btn-group > .btn--hidetext:active, .btn-group > .btn.active, .btn-group > .active.btn--default, .btn-group > .active.btn--primary, .btn-group > .active.btn--secondary, .btn-group > .active.btn--success, .btn-group > .active.btn--info, .btn-group > .active.btn--warning, .btn-group > .active.btn--danger, .btn-group > .active.btn--dark, .btn-group > .active.btn--grey, .btn-group > .active.btn--save, .btn-group > .active.btn--hidetext,
+    .btn-group > .btn:hover, .btn-group > .btn--default:hover, .btn-group > .btn--first:hover, .btn-group > .btn--second:hover, .btn-group > .btn--success:hover, .btn-group > .btn--info:hover, .btn-group > .btn--warning:hover, .btn-group > .btn--danger:hover, .btn-group > .btn--dark:hover, .btn-group > .btn--grey:hover, .btn-group > .btn--save:hover, .btn-group > .btn--hidetext:hover, .btn-group > .btn:focus, .btn-group > .btn--default:focus, .btn-group > .btn--first:focus, .btn-group > .btn--second:focus, .btn-group > .btn--success:focus, .btn-group > .btn--info:focus, .btn-group > .btn--warning:focus, .btn-group > .btn--danger:focus, .btn-group > .btn--dark:focus, .btn-group > .btn--grey:focus, .btn-group > .btn--save:focus, .btn-group > .btn--hidetext:focus, .btn-group > .btn:active, .btn-group > .btn--default:active, .btn-group > .btn--first:active, .btn-group > .btn--second:active, .btn-group > .btn--success:active, .btn-group > .btn--info:active, .btn-group > .btn--warning:active, .btn-group > .btn--danger:active, .btn-group > .btn--dark:active, .btn-group > .btn--grey:active, .btn-group > .btn--save:active, .btn-group > .btn--hidetext:active, .btn-group > .btn.active, .btn-group > .active.btn--default, .btn-group > .active.btn--first, .btn-group > .active.btn--second, .btn-group > .active.btn--success, .btn-group > .active.btn--info, .btn-group > .active.btn--warning, .btn-group > .active.btn--danger, .btn-group > .active.btn--dark, .btn-group > .active.btn--grey, .btn-group > .active.btn--save, .btn-group > .active.btn--hidetext,
     .btn-group-vertical > .btn:hover,
     .btn-group-vertical > .btn--default:hover,
-    .btn-group-vertical > .btn--primary:hover,
-    .btn-group-vertical > .btn--secondary:hover,
+    .btn-group-vertical > .btn--first:hover,
+    .btn-group-vertical > .btn--second:hover,
     .btn-group-vertical > .btn--success:hover,
     .btn-group-vertical > .btn--info:hover,
     .btn-group-vertical > .btn--warning:hover,
@@ -3560,8 +3791,8 @@ tbody.collapse.in {
     .btn-group-vertical > .btn--hidetext:hover,
     .btn-group-vertical > .btn:focus,
     .btn-group-vertical > .btn--default:focus,
-    .btn-group-vertical > .btn--primary:focus,
-    .btn-group-vertical > .btn--secondary:focus,
+    .btn-group-vertical > .btn--first:focus,
+    .btn-group-vertical > .btn--second:focus,
     .btn-group-vertical > .btn--success:focus,
     .btn-group-vertical > .btn--info:focus,
     .btn-group-vertical > .btn--warning:focus,
@@ -3572,8 +3803,8 @@ tbody.collapse.in {
     .btn-group-vertical > .btn--hidetext:focus,
     .btn-group-vertical > .btn:active,
     .btn-group-vertical > .btn--default:active,
-    .btn-group-vertical > .btn--primary:active,
-    .btn-group-vertical > .btn--secondary:active,
+    .btn-group-vertical > .btn--first:active,
+    .btn-group-vertical > .btn--second:active,
     .btn-group-vertical > .btn--success:active,
     .btn-group-vertical > .btn--info:active,
     .btn-group-vertical > .btn--warning:active,
@@ -3584,8 +3815,8 @@ tbody.collapse.in {
     .btn-group-vertical > .btn--hidetext:active,
     .btn-group-vertical > .btn.active,
     .btn-group-vertical > .active.btn--default,
-    .btn-group-vertical > .active.btn--primary,
-    .btn-group-vertical > .active.btn--secondary,
+    .btn-group-vertical > .active.btn--first,
+    .btn-group-vertical > .active.btn--second,
     .btn-group-vertical > .active.btn--success,
     .btn-group-vertical > .active.btn--info,
     .btn-group-vertical > .active.btn--warning,
@@ -3596,11 +3827,11 @@ tbody.collapse.in {
     .btn-group-vertical > .active.btn--hidetext {
       z-index: 2; }
 
-.btn-group .btn + .btn, .btn-group .btn--default + .btn, .btn-group .btn--primary + .btn, .btn-group .btn--secondary + .btn, .btn-group .btn--success + .btn, .btn-group .btn--info + .btn, .btn-group .btn--warning + .btn, .btn-group .btn--danger + .btn, .btn-group .btn--dark + .btn, .btn-group .btn--grey + .btn, .btn-group .btn--save + .btn, .btn-group .btn--hidetext + .btn, .btn-group .btn + .btn--default, .btn-group .btn--default + .btn--default, .btn-group .btn--primary + .btn--default, .btn-group .btn--secondary + .btn--default, .btn-group .btn--success + .btn--default, .btn-group .btn--info + .btn--default, .btn-group .btn--warning + .btn--default, .btn-group .btn--danger + .btn--default, .btn-group .btn--dark + .btn--default, .btn-group .btn--grey + .btn--default, .btn-group .btn--save + .btn--default, .btn-group .btn--hidetext + .btn--default, .btn-group .btn + .btn--primary, .btn-group .btn--default + .btn--primary, .btn-group .btn--primary + .btn--primary, .btn-group .btn--secondary + .btn--primary, .btn-group .btn--success + .btn--primary, .btn-group .btn--info + .btn--primary, .btn-group .btn--warning + .btn--primary, .btn-group .btn--danger + .btn--primary, .btn-group .btn--dark + .btn--primary, .btn-group .btn--grey + .btn--primary, .btn-group .btn--save + .btn--primary, .btn-group .btn--hidetext + .btn--primary, .btn-group .btn + .btn--secondary, .btn-group .btn--default + .btn--secondary, .btn-group .btn--primary + .btn--secondary, .btn-group .btn--secondary + .btn--secondary, .btn-group .btn--success + .btn--secondary, .btn-group .btn--info + .btn--secondary, .btn-group .btn--warning + .btn--secondary, .btn-group .btn--danger + .btn--secondary, .btn-group .btn--dark + .btn--secondary, .btn-group .btn--grey + .btn--secondary, .btn-group .btn--save + .btn--secondary, .btn-group .btn--hidetext + .btn--secondary, .btn-group .btn + .btn--success, .btn-group .btn--default + .btn--success, .btn-group .btn--primary + .btn--success, .btn-group .btn--secondary + .btn--success, .btn-group .btn--success + .btn--success, .btn-group .btn--info + .btn--success, .btn-group .btn--warning + .btn--success, .btn-group .btn--danger + .btn--success, .btn-group .btn--dark + .btn--success, .btn-group .btn--grey + .btn--success, .btn-group .btn--save + .btn--success, .btn-group .btn--hidetext + .btn--success, .btn-group .btn + .btn--info, .btn-group .btn--default + .btn--info, .btn-group .btn--primary + .btn--info, .btn-group .btn--secondary + .btn--info, .btn-group .btn--success + .btn--info, .btn-group .btn--info + .btn--info, .btn-group .btn--warning + .btn--info, .btn-group .btn--danger + .btn--info, .btn-group .btn--dark + .btn--info, .btn-group .btn--grey + .btn--info, .btn-group .btn--save + .btn--info, .btn-group .btn--hidetext + .btn--info, .btn-group .btn + .btn--warning, .btn-group .btn--default + .btn--warning, .btn-group .btn--primary + .btn--warning, .btn-group .btn--secondary + .btn--warning, .btn-group .btn--success + .btn--warning, .btn-group .btn--info + .btn--warning, .btn-group .btn--warning + .btn--warning, .btn-group .btn--danger + .btn--warning, .btn-group .btn--dark + .btn--warning, .btn-group .btn--grey + .btn--warning, .btn-group .btn--save + .btn--warning, .btn-group .btn--hidetext + .btn--warning, .btn-group .btn + .btn--danger, .btn-group .btn--default + .btn--danger, .btn-group .btn--primary + .btn--danger, .btn-group .btn--secondary + .btn--danger, .btn-group .btn--success + .btn--danger, .btn-group .btn--info + .btn--danger, .btn-group .btn--warning + .btn--danger, .btn-group .btn--danger + .btn--danger, .btn-group .btn--dark + .btn--danger, .btn-group .btn--grey + .btn--danger, .btn-group .btn--save + .btn--danger, .btn-group .btn--hidetext + .btn--danger, .btn-group .btn + .btn--dark, .btn-group .btn--default + .btn--dark, .btn-group .btn--primary + .btn--dark, .btn-group .btn--secondary + .btn--dark, .btn-group .btn--success + .btn--dark, .btn-group .btn--info + .btn--dark, .btn-group .btn--warning + .btn--dark, .btn-group .btn--danger + .btn--dark, .btn-group .btn--dark + .btn--dark, .btn-group .btn--grey + .btn--dark, .btn-group .btn--save + .btn--dark, .btn-group .btn--hidetext + .btn--dark, .btn-group .btn + .btn--grey, .btn-group .btn--default + .btn--grey, .btn-group .btn--primary + .btn--grey, .btn-group .btn--secondary + .btn--grey, .btn-group .btn--success + .btn--grey, .btn-group .btn--info + .btn--grey, .btn-group .btn--warning + .btn--grey, .btn-group .btn--danger + .btn--grey, .btn-group .btn--dark + .btn--grey, .btn-group .btn--grey + .btn--grey, .btn-group .btn--save + .btn--grey, .btn-group .btn--hidetext + .btn--grey, .btn-group .btn + .btn--save, .btn-group .btn--default + .btn--save, .btn-group .btn--primary + .btn--save, .btn-group .btn--secondary + .btn--save, .btn-group .btn--success + .btn--save, .btn-group .btn--info + .btn--save, .btn-group .btn--warning + .btn--save, .btn-group .btn--danger + .btn--save, .btn-group .btn--dark + .btn--save, .btn-group .btn--grey + .btn--save, .btn-group .btn--save + .btn--save, .btn-group .btn--hidetext + .btn--save, .btn-group .btn + .btn--hidetext, .btn-group .btn--default + .btn--hidetext, .btn-group .btn--primary + .btn--hidetext, .btn-group .btn--secondary + .btn--hidetext, .btn-group .btn--success + .btn--hidetext, .btn-group .btn--info + .btn--hidetext, .btn-group .btn--warning + .btn--hidetext, .btn-group .btn--danger + .btn--hidetext, .btn-group .btn--dark + .btn--hidetext, .btn-group .btn--grey + .btn--hidetext, .btn-group .btn--save + .btn--hidetext, .btn-group .btn--hidetext + .btn--hidetext,
+.btn-group .btn + .btn, .btn-group .btn--default + .btn, .btn-group .btn--first + .btn, .btn-group .btn--second + .btn, .btn-group .btn--success + .btn, .btn-group .btn--info + .btn, .btn-group .btn--warning + .btn, .btn-group .btn--danger + .btn, .btn-group .btn--dark + .btn, .btn-group .btn--grey + .btn, .btn-group .btn--save + .btn, .btn-group .btn--hidetext + .btn, .btn-group .btn + .btn--default, .btn-group .btn--default + .btn--default, .btn-group .btn--first + .btn--default, .btn-group .btn--second + .btn--default, .btn-group .btn--success + .btn--default, .btn-group .btn--info + .btn--default, .btn-group .btn--warning + .btn--default, .btn-group .btn--danger + .btn--default, .btn-group .btn--dark + .btn--default, .btn-group .btn--grey + .btn--default, .btn-group .btn--save + .btn--default, .btn-group .btn--hidetext + .btn--default, .btn-group .btn + .btn--first, .btn-group .btn--default + .btn--first, .btn-group .btn--first + .btn--first, .btn-group .btn--second + .btn--first, .btn-group .btn--success + .btn--first, .btn-group .btn--info + .btn--first, .btn-group .btn--warning + .btn--first, .btn-group .btn--danger + .btn--first, .btn-group .btn--dark + .btn--first, .btn-group .btn--grey + .btn--first, .btn-group .btn--save + .btn--first, .btn-group .btn--hidetext + .btn--first, .btn-group .btn + .btn--second, .btn-group .btn--default + .btn--second, .btn-group .btn--first + .btn--second, .btn-group .btn--second + .btn--second, .btn-group .btn--success + .btn--second, .btn-group .btn--info + .btn--second, .btn-group .btn--warning + .btn--second, .btn-group .btn--danger + .btn--second, .btn-group .btn--dark + .btn--second, .btn-group .btn--grey + .btn--second, .btn-group .btn--save + .btn--second, .btn-group .btn--hidetext + .btn--second, .btn-group .btn + .btn--success, .btn-group .btn--default + .btn--success, .btn-group .btn--first + .btn--success, .btn-group .btn--second + .btn--success, .btn-group .btn--success + .btn--success, .btn-group .btn--info + .btn--success, .btn-group .btn--warning + .btn--success, .btn-group .btn--danger + .btn--success, .btn-group .btn--dark + .btn--success, .btn-group .btn--grey + .btn--success, .btn-group .btn--save + .btn--success, .btn-group .btn--hidetext + .btn--success, .btn-group .btn + .btn--info, .btn-group .btn--default + .btn--info, .btn-group .btn--first + .btn--info, .btn-group .btn--second + .btn--info, .btn-group .btn--success + .btn--info, .btn-group .btn--info + .btn--info, .btn-group .btn--warning + .btn--info, .btn-group .btn--danger + .btn--info, .btn-group .btn--dark + .btn--info, .btn-group .btn--grey + .btn--info, .btn-group .btn--save + .btn--info, .btn-group .btn--hidetext + .btn--info, .btn-group .btn + .btn--warning, .btn-group .btn--default + .btn--warning, .btn-group .btn--first + .btn--warning, .btn-group .btn--second + .btn--warning, .btn-group .btn--success + .btn--warning, .btn-group .btn--info + .btn--warning, .btn-group .btn--warning + .btn--warning, .btn-group .btn--danger + .btn--warning, .btn-group .btn--dark + .btn--warning, .btn-group .btn--grey + .btn--warning, .btn-group .btn--save + .btn--warning, .btn-group .btn--hidetext + .btn--warning, .btn-group .btn + .btn--danger, .btn-group .btn--default + .btn--danger, .btn-group .btn--first + .btn--danger, .btn-group .btn--second + .btn--danger, .btn-group .btn--success + .btn--danger, .btn-group .btn--info + .btn--danger, .btn-group .btn--warning + .btn--danger, .btn-group .btn--danger + .btn--danger, .btn-group .btn--dark + .btn--danger, .btn-group .btn--grey + .btn--danger, .btn-group .btn--save + .btn--danger, .btn-group .btn--hidetext + .btn--danger, .btn-group .btn + .btn--dark, .btn-group .btn--default + .btn--dark, .btn-group .btn--first + .btn--dark, .btn-group .btn--second + .btn--dark, .btn-group .btn--success + .btn--dark, .btn-group .btn--info + .btn--dark, .btn-group .btn--warning + .btn--dark, .btn-group .btn--danger + .btn--dark, .btn-group .btn--dark + .btn--dark, .btn-group .btn--grey + .btn--dark, .btn-group .btn--save + .btn--dark, .btn-group .btn--hidetext + .btn--dark, .btn-group .btn + .btn--grey, .btn-group .btn--default + .btn--grey, .btn-group .btn--first + .btn--grey, .btn-group .btn--second + .btn--grey, .btn-group .btn--success + .btn--grey, .btn-group .btn--info + .btn--grey, .btn-group .btn--warning + .btn--grey, .btn-group .btn--danger + .btn--grey, .btn-group .btn--dark + .btn--grey, .btn-group .btn--grey + .btn--grey, .btn-group .btn--save + .btn--grey, .btn-group .btn--hidetext + .btn--grey, .btn-group .btn + .btn--save, .btn-group .btn--default + .btn--save, .btn-group .btn--first + .btn--save, .btn-group .btn--second + .btn--save, .btn-group .btn--success + .btn--save, .btn-group .btn--info + .btn--save, .btn-group .btn--warning + .btn--save, .btn-group .btn--danger + .btn--save, .btn-group .btn--dark + .btn--save, .btn-group .btn--grey + .btn--save, .btn-group .btn--save + .btn--save, .btn-group .btn--hidetext + .btn--save, .btn-group .btn + .btn--hidetext, .btn-group .btn--default + .btn--hidetext, .btn-group .btn--first + .btn--hidetext, .btn-group .btn--second + .btn--hidetext, .btn-group .btn--success + .btn--hidetext, .btn-group .btn--info + .btn--hidetext, .btn-group .btn--warning + .btn--hidetext, .btn-group .btn--danger + .btn--hidetext, .btn-group .btn--dark + .btn--hidetext, .btn-group .btn--grey + .btn--hidetext, .btn-group .btn--save + .btn--hidetext, .btn-group .btn--hidetext + .btn--hidetext,
 .btn-group .btn + .btn-group,
 .btn-group .btn--default + .btn-group,
-.btn-group .btn--primary + .btn-group,
-.btn-group .btn--secondary + .btn-group,
+.btn-group .btn--first + .btn-group,
+.btn-group .btn--second + .btn-group,
 .btn-group .btn--success + .btn-group,
 .btn-group .btn--info + .btn-group,
 .btn-group .btn--warning + .btn-group,
@@ -3611,8 +3842,8 @@ tbody.collapse.in {
 .btn-group .btn--hidetext + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group .btn-group + .btn--default,
-.btn-group .btn-group + .btn--primary,
-.btn-group .btn-group + .btn--secondary,
+.btn-group .btn-group + .btn--first,
+.btn-group .btn-group + .btn--second,
 .btn-group .btn-group + .btn--success,
 .btn-group .btn-group + .btn--info,
 .btn-group .btn-group + .btn--warning,
@@ -3631,25 +3862,25 @@ tbody.collapse.in {
     display: table; }
   .btn-toolbar:after {
     clear: both; }
-  .btn-toolbar .btn, .btn-toolbar .btn--default, .btn-toolbar .btn--primary, .btn-toolbar .btn--secondary, .btn-toolbar .btn--success, .btn-toolbar .btn--info, .btn-toolbar .btn--warning, .btn-toolbar .btn--danger, .btn-toolbar .btn--dark, .btn-toolbar .btn--grey, .btn-toolbar .btn--save, .btn-toolbar .btn--hidetext,
+  .btn-toolbar .btn, .btn-toolbar .btn--default, .btn-toolbar .btn--first, .btn-toolbar .btn--second, .btn-toolbar .btn--success, .btn-toolbar .btn--info, .btn-toolbar .btn--warning, .btn-toolbar .btn--danger, .btn-toolbar .btn--dark, .btn-toolbar .btn--grey, .btn-toolbar .btn--save, .btn-toolbar .btn--hidetext,
   .btn-toolbar .btn-group,
   .btn-toolbar .input-group {
     float: left; }
-  .btn-toolbar > .btn, .btn-toolbar > .btn--default, .btn-toolbar > .btn--primary, .btn-toolbar > .btn--secondary, .btn-toolbar > .btn--success, .btn-toolbar > .btn--info, .btn-toolbar > .btn--warning, .btn-toolbar > .btn--danger, .btn-toolbar > .btn--dark, .btn-toolbar > .btn--grey, .btn-toolbar > .btn--save, .btn-toolbar > .btn--hidetext,
+  .btn-toolbar > .btn, .btn-toolbar > .btn--default, .btn-toolbar > .btn--first, .btn-toolbar > .btn--second, .btn-toolbar > .btn--success, .btn-toolbar > .btn--info, .btn-toolbar > .btn--warning, .btn-toolbar > .btn--danger, .btn-toolbar > .btn--dark, .btn-toolbar > .btn--grey, .btn-toolbar > .btn--save, .btn-toolbar > .btn--hidetext,
   .btn-toolbar > .btn-group,
   .btn-toolbar > .input-group {
     margin-left: 5px; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--default:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--primary:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--secondary:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--success:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--info:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--warning:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--danger:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--dark:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--grey:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--save:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--hidetext:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--default:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--first:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--second:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--success:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--info:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--warning:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--danger:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--dark:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--grey:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--save:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .btn--hidetext:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, .btn-group > .btn--default:first-child, .btn-group > .btn--primary:first-child, .btn-group > .btn--secondary:first-child, .btn-group > .btn--success:first-child, .btn-group > .btn--info:first-child, .btn-group > .btn--warning:first-child, .btn-group > .btn--danger:first-child, .btn-group > .btn--dark:first-child, .btn-group > .btn--grey:first-child, .btn-group > .btn--save:first-child, .btn-group > .btn--hidetext:first-child {
+.btn-group > .btn:first-child, .btn-group > .btn--default:first-child, .btn-group > .btn--first:first-child, .btn-group > .btn--second:first-child, .btn-group > .btn--success:first-child, .btn-group > .btn--info:first-child, .btn-group > .btn--warning:first-child, .btn-group > .btn--danger:first-child, .btn-group > .btn--dark:first-child, .btn-group > .btn--grey:first-child, .btn-group > .btn--save:first-child, .btn-group > .btn--hidetext:first-child {
   margin-left: 0; }
-  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--default:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--primary:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--secondary:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--success:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--info:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--warning:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--danger:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--dark:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--grey:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--save:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--hidetext:first-child:not(:last-child):not(.dropdown-toggle) {
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--default:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--first:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--second:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--success:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--info:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--warning:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--danger:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--dark:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--grey:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--save:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .btn--hidetext:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), .btn-group > .btn--default:last-child:not(:first-child), .btn-group > .btn--primary:last-child:not(:first-child), .btn-group > .btn--secondary:last-child:not(:first-child), .btn-group > .btn--success:last-child:not(:first-child), .btn-group > .btn--info:last-child:not(:first-child), .btn-group > .btn--warning:last-child:not(:first-child), .btn-group > .btn--danger:last-child:not(:first-child), .btn-group > .btn--dark:last-child:not(:first-child), .btn-group > .btn--grey:last-child:not(:first-child), .btn-group > .btn--save:last-child:not(:first-child), .btn-group > .btn--hidetext:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .btn--default:last-child:not(:first-child), .btn-group > .btn--first:last-child:not(:first-child), .btn-group > .btn--second:last-child:not(:first-child), .btn-group > .btn--success:last-child:not(:first-child), .btn-group > .btn--info:last-child:not(:first-child), .btn-group > .btn--warning:last-child:not(:first-child), .btn-group > .btn--danger:last-child:not(:first-child), .btn-group > .btn--dark:last-child:not(:first-child), .btn-group > .btn--grey:last-child:not(:first-child), .btn-group > .btn--save:last-child:not(:first-child), .btn-group > .btn--hidetext:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -3657,15 +3888,15 @@ tbody.collapse.in {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--default, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--primary, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--secondary, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--success, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--info, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--warning, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--danger, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--dark, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--grey, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--save, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--hidetext {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--default, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--first, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--second, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--success, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--info, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--warning, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--danger, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--dark, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--grey, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--save, .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn--hidetext {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--default:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--primary:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--secondary:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--success:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--info:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--warning:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--danger:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--dark:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--grey:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--save:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--hidetext:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--default:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--first:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--second:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--success:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--info:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--warning:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--danger:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--dark:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--grey:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--save:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .btn--hidetext:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--default:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--primary:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--secondary:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--success:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--info:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--warning:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--danger:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--dark:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--grey:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--save:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--hidetext:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--default:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--first:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--second:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--success:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--info:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--warning:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--danger:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--dark:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--grey:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--save:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .btn--hidetext:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -3673,11 +3904,11 @@ tbody.collapse.in {
 .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn-group > .btn + .dropdown-toggle, .btn-group > .btn--default + .dropdown-toggle, .btn-group > .btn--primary + .dropdown-toggle, .btn-group > .btn--secondary + .dropdown-toggle, .btn-group > .btn--success + .dropdown-toggle, .btn-group > .btn--info + .dropdown-toggle, .btn-group > .btn--warning + .dropdown-toggle, .btn-group > .btn--danger + .dropdown-toggle, .btn-group > .btn--dark + .dropdown-toggle, .btn-group > .btn--grey + .dropdown-toggle, .btn-group > .btn--save + .dropdown-toggle, .btn-group > .btn--hidetext + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, .btn-group > .btn--default + .dropdown-toggle, .btn-group > .btn--first + .dropdown-toggle, .btn-group > .btn--second + .dropdown-toggle, .btn-group > .btn--success + .dropdown-toggle, .btn-group > .btn--info + .dropdown-toggle, .btn-group > .btn--warning + .dropdown-toggle, .btn-group > .btn--danger + .dropdown-toggle, .btn-group > .btn--dark + .dropdown-toggle, .btn-group > .btn--grey + .dropdown-toggle, .btn-group > .btn--save + .dropdown-toggle, .btn-group > .btn--hidetext + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px; }
 
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .btn-group-lg.btn-group > .btn--default + .dropdown-toggle, .btn-group-lg.btn-group > .btn--primary + .dropdown-toggle, .btn-group-lg.btn-group > .btn--secondary + .dropdown-toggle, .btn-group-lg.btn-group > .btn--success + .dropdown-toggle, .btn-group-lg.btn-group > .btn--info + .dropdown-toggle, .btn-group-lg.btn-group > .btn--warning + .dropdown-toggle, .btn-group-lg.btn-group > .btn--danger + .dropdown-toggle, .btn-group-lg.btn-group > .btn--dark + .dropdown-toggle, .btn-group-lg.btn-group > .btn--grey + .dropdown-toggle, .btn-group-lg.btn-group > .btn--save + .dropdown-toggle, .btn-group-lg.btn-group > .btn--hidetext + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .btn-group-lg.btn-group > .btn--default + .dropdown-toggle, .btn-group-lg.btn-group > .btn--first + .dropdown-toggle, .btn-group-lg.btn-group > .btn--second + .dropdown-toggle, .btn-group-lg.btn-group > .btn--success + .dropdown-toggle, .btn-group-lg.btn-group > .btn--info + .dropdown-toggle, .btn-group-lg.btn-group > .btn--warning + .dropdown-toggle, .btn-group-lg.btn-group > .btn--danger + .dropdown-toggle, .btn-group-lg.btn-group > .btn--dark + .dropdown-toggle, .btn-group-lg.btn-group > .btn--grey + .dropdown-toggle, .btn-group-lg.btn-group > .btn--save + .dropdown-toggle, .btn-group-lg.btn-group > .btn--hidetext + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px; }
 
@@ -3688,22 +3919,22 @@ tbody.collapse.in {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
-.btn .caret, .btn--default .caret, .btn--primary .caret, .btn--secondary .caret, .btn--success .caret, .btn--info .caret, .btn--warning .caret, .btn--danger .caret, .btn--dark .caret, .btn--grey .caret, .btn--save .caret, .btn--hidetext .caret {
+.btn .caret, .btn--default .caret, .btn--first .caret, .btn--second .caret, .btn--success .caret, .btn--info .caret, .btn--warning .caret, .btn--danger .caret, .btn--dark .caret, .btn--grey .caret, .btn--save .caret, .btn--hidetext .caret {
   margin-left: 0; }
 
-.btn-lg .caret, .btn-group-lg > .btn .caret, .btn-group-lg > .btn--default .caret, .btn-group-lg > .btn--primary .caret, .btn-group-lg > .btn--secondary .caret, .btn-group-lg > .btn--success .caret, .btn-group-lg > .btn--info .caret, .btn-group-lg > .btn--warning .caret, .btn-group-lg > .btn--danger .caret, .btn-group-lg > .btn--dark .caret, .btn-group-lg > .btn--grey .caret, .btn-group-lg > .btn--save .caret, .btn-group-lg > .btn--hidetext .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, .btn-group-lg > .btn--default .caret, .btn-group-lg > .btn--first .caret, .btn-group-lg > .btn--second .caret, .btn-group-lg > .btn--success .caret, .btn-group-lg > .btn--info .caret, .btn-group-lg > .btn--warning .caret, .btn-group-lg > .btn--danger .caret, .btn-group-lg > .btn--dark .caret, .btn-group-lg > .btn--grey .caret, .btn-group-lg > .btn--save .caret, .btn-group-lg > .btn--hidetext .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0; }
 
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .btn-group-lg > .btn--default .caret, .dropup .btn-group-lg > .btn--primary .caret, .dropup .btn-group-lg > .btn--secondary .caret, .dropup .btn-group-lg > .btn--success .caret, .dropup .btn-group-lg > .btn--info .caret, .dropup .btn-group-lg > .btn--warning .caret, .dropup .btn-group-lg > .btn--danger .caret, .dropup .btn-group-lg > .btn--dark .caret, .dropup .btn-group-lg > .btn--grey .caret, .dropup .btn-group-lg > .btn--save .caret, .dropup .btn-group-lg > .btn--hidetext .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .btn-group-lg > .btn--default .caret, .dropup .btn-group-lg > .btn--first .caret, .dropup .btn-group-lg > .btn--second .caret, .dropup .btn-group-lg > .btn--success .caret, .dropup .btn-group-lg > .btn--info .caret, .dropup .btn-group-lg > .btn--warning .caret, .dropup .btn-group-lg > .btn--danger .caret, .dropup .btn-group-lg > .btn--dark .caret, .dropup .btn-group-lg > .btn--grey .caret, .dropup .btn-group-lg > .btn--save .caret, .dropup .btn-group-lg > .btn--hidetext .caret {
   border-width: 0 5px 5px; }
 
-.btn-group-vertical > .btn, .btn-group-vertical > .btn--default, .btn-group-vertical > .btn--primary, .btn-group-vertical > .btn--secondary, .btn-group-vertical > .btn--success, .btn-group-vertical > .btn--info, .btn-group-vertical > .btn--warning, .btn-group-vertical > .btn--danger, .btn-group-vertical > .btn--dark, .btn-group-vertical > .btn--grey, .btn-group-vertical > .btn--save, .btn-group-vertical > .btn--hidetext,
+.btn-group-vertical > .btn, .btn-group-vertical > .btn--default, .btn-group-vertical > .btn--first, .btn-group-vertical > .btn--second, .btn-group-vertical > .btn--success, .btn-group-vertical > .btn--info, .btn-group-vertical > .btn--warning, .btn-group-vertical > .btn--danger, .btn-group-vertical > .btn--dark, .btn-group-vertical > .btn--grey, .btn-group-vertical > .btn--save, .btn-group-vertical > .btn--hidetext,
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn,
 .btn-group-vertical > .btn-group > .btn--default,
-.btn-group-vertical > .btn-group > .btn--primary,
-.btn-group-vertical > .btn-group > .btn--secondary,
+.btn-group-vertical > .btn-group > .btn--first,
+.btn-group-vertical > .btn-group > .btn--second,
 .btn-group-vertical > .btn-group > .btn--success,
 .btn-group-vertical > .btn-group > .btn--info,
 .btn-group-vertical > .btn-group > .btn--warning,
@@ -3721,13 +3952,13 @@ tbody.collapse.in {
   display: table; }
 .btn-group-vertical > .btn-group:after {
   clear: both; }
-.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > .btn--default, .btn-group-vertical > .btn-group > .btn--primary, .btn-group-vertical > .btn-group > .btn--secondary, .btn-group-vertical > .btn-group > .btn--success, .btn-group-vertical > .btn-group > .btn--info, .btn-group-vertical > .btn-group > .btn--warning, .btn-group-vertical > .btn-group > .btn--danger, .btn-group-vertical > .btn-group > .btn--dark, .btn-group-vertical > .btn-group > .btn--grey, .btn-group-vertical > .btn-group > .btn--save, .btn-group-vertical > .btn-group > .btn--hidetext {
+.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > .btn--default, .btn-group-vertical > .btn-group > .btn--first, .btn-group-vertical > .btn-group > .btn--second, .btn-group-vertical > .btn-group > .btn--success, .btn-group-vertical > .btn-group > .btn--info, .btn-group-vertical > .btn-group > .btn--warning, .btn-group-vertical > .btn-group > .btn--danger, .btn-group-vertical > .btn-group > .btn--dark, .btn-group-vertical > .btn-group > .btn--grey, .btn-group-vertical > .btn-group > .btn--save, .btn-group-vertical > .btn-group > .btn--hidetext {
   float: none; }
-.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btn--default + .btn, .btn-group-vertical > .btn--primary + .btn, .btn-group-vertical > .btn--secondary + .btn, .btn-group-vertical > .btn--success + .btn, .btn-group-vertical > .btn--info + .btn, .btn-group-vertical > .btn--warning + .btn, .btn-group-vertical > .btn--danger + .btn, .btn-group-vertical > .btn--dark + .btn, .btn-group-vertical > .btn--grey + .btn, .btn-group-vertical > .btn--save + .btn, .btn-group-vertical > .btn--hidetext + .btn, .btn-group-vertical > .btn + .btn--default, .btn-group-vertical > .btn--default + .btn--default, .btn-group-vertical > .btn--primary + .btn--default, .btn-group-vertical > .btn--secondary + .btn--default, .btn-group-vertical > .btn--success + .btn--default, .btn-group-vertical > .btn--info + .btn--default, .btn-group-vertical > .btn--warning + .btn--default, .btn-group-vertical > .btn--danger + .btn--default, .btn-group-vertical > .btn--dark + .btn--default, .btn-group-vertical > .btn--grey + .btn--default, .btn-group-vertical > .btn--save + .btn--default, .btn-group-vertical > .btn--hidetext + .btn--default, .btn-group-vertical > .btn + .btn--primary, .btn-group-vertical > .btn--default + .btn--primary, .btn-group-vertical > .btn--primary + .btn--primary, .btn-group-vertical > .btn--secondary + .btn--primary, .btn-group-vertical > .btn--success + .btn--primary, .btn-group-vertical > .btn--info + .btn--primary, .btn-group-vertical > .btn--warning + .btn--primary, .btn-group-vertical > .btn--danger + .btn--primary, .btn-group-vertical > .btn--dark + .btn--primary, .btn-group-vertical > .btn--grey + .btn--primary, .btn-group-vertical > .btn--save + .btn--primary, .btn-group-vertical > .btn--hidetext + .btn--primary, .btn-group-vertical > .btn + .btn--secondary, .btn-group-vertical > .btn--default + .btn--secondary, .btn-group-vertical > .btn--primary + .btn--secondary, .btn-group-vertical > .btn--secondary + .btn--secondary, .btn-group-vertical > .btn--success + .btn--secondary, .btn-group-vertical > .btn--info + .btn--secondary, .btn-group-vertical > .btn--warning + .btn--secondary, .btn-group-vertical > .btn--danger + .btn--secondary, .btn-group-vertical > .btn--dark + .btn--secondary, .btn-group-vertical > .btn--grey + .btn--secondary, .btn-group-vertical > .btn--save + .btn--secondary, .btn-group-vertical > .btn--hidetext + .btn--secondary, .btn-group-vertical > .btn + .btn--success, .btn-group-vertical > .btn--default + .btn--success, .btn-group-vertical > .btn--primary + .btn--success, .btn-group-vertical > .btn--secondary + .btn--success, .btn-group-vertical > .btn--success + .btn--success, .btn-group-vertical > .btn--info + .btn--success, .btn-group-vertical > .btn--warning + .btn--success, .btn-group-vertical > .btn--danger + .btn--success, .btn-group-vertical > .btn--dark + .btn--success, .btn-group-vertical > .btn--grey + .btn--success, .btn-group-vertical > .btn--save + .btn--success, .btn-group-vertical > .btn--hidetext + .btn--success, .btn-group-vertical > .btn + .btn--info, .btn-group-vertical > .btn--default + .btn--info, .btn-group-vertical > .btn--primary + .btn--info, .btn-group-vertical > .btn--secondary + .btn--info, .btn-group-vertical > .btn--success + .btn--info, .btn-group-vertical > .btn--info + .btn--info, .btn-group-vertical > .btn--warning + .btn--info, .btn-group-vertical > .btn--danger + .btn--info, .btn-group-vertical > .btn--dark + .btn--info, .btn-group-vertical > .btn--grey + .btn--info, .btn-group-vertical > .btn--save + .btn--info, .btn-group-vertical > .btn--hidetext + .btn--info, .btn-group-vertical > .btn + .btn--warning, .btn-group-vertical > .btn--default + .btn--warning, .btn-group-vertical > .btn--primary + .btn--warning, .btn-group-vertical > .btn--secondary + .btn--warning, .btn-group-vertical > .btn--success + .btn--warning, .btn-group-vertical > .btn--info + .btn--warning, .btn-group-vertical > .btn--warning + .btn--warning, .btn-group-vertical > .btn--danger + .btn--warning, .btn-group-vertical > .btn--dark + .btn--warning, .btn-group-vertical > .btn--grey + .btn--warning, .btn-group-vertical > .btn--save + .btn--warning, .btn-group-vertical > .btn--hidetext + .btn--warning, .btn-group-vertical > .btn + .btn--danger, .btn-group-vertical > .btn--default + .btn--danger, .btn-group-vertical > .btn--primary + .btn--danger, .btn-group-vertical > .btn--secondary + .btn--danger, .btn-group-vertical > .btn--success + .btn--danger, .btn-group-vertical > .btn--info + .btn--danger, .btn-group-vertical > .btn--warning + .btn--danger, .btn-group-vertical > .btn--danger + .btn--danger, .btn-group-vertical > .btn--dark + .btn--danger, .btn-group-vertical > .btn--grey + .btn--danger, .btn-group-vertical > .btn--save + .btn--danger, .btn-group-vertical > .btn--hidetext + .btn--danger, .btn-group-vertical > .btn + .btn--dark, .btn-group-vertical > .btn--default + .btn--dark, .btn-group-vertical > .btn--primary + .btn--dark, .btn-group-vertical > .btn--secondary + .btn--dark, .btn-group-vertical > .btn--success + .btn--dark, .btn-group-vertical > .btn--info + .btn--dark, .btn-group-vertical > .btn--warning + .btn--dark, .btn-group-vertical > .btn--danger + .btn--dark, .btn-group-vertical > .btn--dark + .btn--dark, .btn-group-vertical > .btn--grey + .btn--dark, .btn-group-vertical > .btn--save + .btn--dark, .btn-group-vertical > .btn--hidetext + .btn--dark, .btn-group-vertical > .btn + .btn--grey, .btn-group-vertical > .btn--default + .btn--grey, .btn-group-vertical > .btn--primary + .btn--grey, .btn-group-vertical > .btn--secondary + .btn--grey, .btn-group-vertical > .btn--success + .btn--grey, .btn-group-vertical > .btn--info + .btn--grey, .btn-group-vertical > .btn--warning + .btn--grey, .btn-group-vertical > .btn--danger + .btn--grey, .btn-group-vertical > .btn--dark + .btn--grey, .btn-group-vertical > .btn--grey + .btn--grey, .btn-group-vertical > .btn--save + .btn--grey, .btn-group-vertical > .btn--hidetext + .btn--grey, .btn-group-vertical > .btn + .btn--save, .btn-group-vertical > .btn--default + .btn--save, .btn-group-vertical > .btn--primary + .btn--save, .btn-group-vertical > .btn--secondary + .btn--save, .btn-group-vertical > .btn--success + .btn--save, .btn-group-vertical > .btn--info + .btn--save, .btn-group-vertical > .btn--warning + .btn--save, .btn-group-vertical > .btn--danger + .btn--save, .btn-group-vertical > .btn--dark + .btn--save, .btn-group-vertical > .btn--grey + .btn--save, .btn-group-vertical > .btn--save + .btn--save, .btn-group-vertical > .btn--hidetext + .btn--save, .btn-group-vertical > .btn + .btn--hidetext, .btn-group-vertical > .btn--default + .btn--hidetext, .btn-group-vertical > .btn--primary + .btn--hidetext, .btn-group-vertical > .btn--secondary + .btn--hidetext, .btn-group-vertical > .btn--success + .btn--hidetext, .btn-group-vertical > .btn--info + .btn--hidetext, .btn-group-vertical > .btn--warning + .btn--hidetext, .btn-group-vertical > .btn--danger + .btn--hidetext, .btn-group-vertical > .btn--dark + .btn--hidetext, .btn-group-vertical > .btn--grey + .btn--hidetext, .btn-group-vertical > .btn--save + .btn--hidetext, .btn-group-vertical > .btn--hidetext + .btn--hidetext,
+.btn-group-vertical > .btn + .btn, .btn-group-vertical > .btn--default + .btn, .btn-group-vertical > .btn--first + .btn, .btn-group-vertical > .btn--second + .btn, .btn-group-vertical > .btn--success + .btn, .btn-group-vertical > .btn--info + .btn, .btn-group-vertical > .btn--warning + .btn, .btn-group-vertical > .btn--danger + .btn, .btn-group-vertical > .btn--dark + .btn, .btn-group-vertical > .btn--grey + .btn, .btn-group-vertical > .btn--save + .btn, .btn-group-vertical > .btn--hidetext + .btn, .btn-group-vertical > .btn + .btn--default, .btn-group-vertical > .btn--default + .btn--default, .btn-group-vertical > .btn--first + .btn--default, .btn-group-vertical > .btn--second + .btn--default, .btn-group-vertical > .btn--success + .btn--default, .btn-group-vertical > .btn--info + .btn--default, .btn-group-vertical > .btn--warning + .btn--default, .btn-group-vertical > .btn--danger + .btn--default, .btn-group-vertical > .btn--dark + .btn--default, .btn-group-vertical > .btn--grey + .btn--default, .btn-group-vertical > .btn--save + .btn--default, .btn-group-vertical > .btn--hidetext + .btn--default, .btn-group-vertical > .btn + .btn--first, .btn-group-vertical > .btn--default + .btn--first, .btn-group-vertical > .btn--first + .btn--first, .btn-group-vertical > .btn--second + .btn--first, .btn-group-vertical > .btn--success + .btn--first, .btn-group-vertical > .btn--info + .btn--first, .btn-group-vertical > .btn--warning + .btn--first, .btn-group-vertical > .btn--danger + .btn--first, .btn-group-vertical > .btn--dark + .btn--first, .btn-group-vertical > .btn--grey + .btn--first, .btn-group-vertical > .btn--save + .btn--first, .btn-group-vertical > .btn--hidetext + .btn--first, .btn-group-vertical > .btn + .btn--second, .btn-group-vertical > .btn--default + .btn--second, .btn-group-vertical > .btn--first + .btn--second, .btn-group-vertical > .btn--second + .btn--second, .btn-group-vertical > .btn--success + .btn--second, .btn-group-vertical > .btn--info + .btn--second, .btn-group-vertical > .btn--warning + .btn--second, .btn-group-vertical > .btn--danger + .btn--second, .btn-group-vertical > .btn--dark + .btn--second, .btn-group-vertical > .btn--grey + .btn--second, .btn-group-vertical > .btn--save + .btn--second, .btn-group-vertical > .btn--hidetext + .btn--second, .btn-group-vertical > .btn + .btn--success, .btn-group-vertical > .btn--default + .btn--success, .btn-group-vertical > .btn--first + .btn--success, .btn-group-vertical > .btn--second + .btn--success, .btn-group-vertical > .btn--success + .btn--success, .btn-group-vertical > .btn--info + .btn--success, .btn-group-vertical > .btn--warning + .btn--success, .btn-group-vertical > .btn--danger + .btn--success, .btn-group-vertical > .btn--dark + .btn--success, .btn-group-vertical > .btn--grey + .btn--success, .btn-group-vertical > .btn--save + .btn--success, .btn-group-vertical > .btn--hidetext + .btn--success, .btn-group-vertical > .btn + .btn--info, .btn-group-vertical > .btn--default + .btn--info, .btn-group-vertical > .btn--first + .btn--info, .btn-group-vertical > .btn--second + .btn--info, .btn-group-vertical > .btn--success + .btn--info, .btn-group-vertical > .btn--info + .btn--info, .btn-group-vertical > .btn--warning + .btn--info, .btn-group-vertical > .btn--danger + .btn--info, .btn-group-vertical > .btn--dark + .btn--info, .btn-group-vertical > .btn--grey + .btn--info, .btn-group-vertical > .btn--save + .btn--info, .btn-group-vertical > .btn--hidetext + .btn--info, .btn-group-vertical > .btn + .btn--warning, .btn-group-vertical > .btn--default + .btn--warning, .btn-group-vertical > .btn--first + .btn--warning, .btn-group-vertical > .btn--second + .btn--warning, .btn-group-vertical > .btn--success + .btn--warning, .btn-group-vertical > .btn--info + .btn--warning, .btn-group-vertical > .btn--warning + .btn--warning, .btn-group-vertical > .btn--danger + .btn--warning, .btn-group-vertical > .btn--dark + .btn--warning, .btn-group-vertical > .btn--grey + .btn--warning, .btn-group-vertical > .btn--save + .btn--warning, .btn-group-vertical > .btn--hidetext + .btn--warning, .btn-group-vertical > .btn + .btn--danger, .btn-group-vertical > .btn--default + .btn--danger, .btn-group-vertical > .btn--first + .btn--danger, .btn-group-vertical > .btn--second + .btn--danger, .btn-group-vertical > .btn--success + .btn--danger, .btn-group-vertical > .btn--info + .btn--danger, .btn-group-vertical > .btn--warning + .btn--danger, .btn-group-vertical > .btn--danger + .btn--danger, .btn-group-vertical > .btn--dark + .btn--danger, .btn-group-vertical > .btn--grey + .btn--danger, .btn-group-vertical > .btn--save + .btn--danger, .btn-group-vertical > .btn--hidetext + .btn--danger, .btn-group-vertical > .btn + .btn--dark, .btn-group-vertical > .btn--default + .btn--dark, .btn-group-vertical > .btn--first + .btn--dark, .btn-group-vertical > .btn--second + .btn--dark, .btn-group-vertical > .btn--success + .btn--dark, .btn-group-vertical > .btn--info + .btn--dark, .btn-group-vertical > .btn--warning + .btn--dark, .btn-group-vertical > .btn--danger + .btn--dark, .btn-group-vertical > .btn--dark + .btn--dark, .btn-group-vertical > .btn--grey + .btn--dark, .btn-group-vertical > .btn--save + .btn--dark, .btn-group-vertical > .btn--hidetext + .btn--dark, .btn-group-vertical > .btn + .btn--grey, .btn-group-vertical > .btn--default + .btn--grey, .btn-group-vertical > .btn--first + .btn--grey, .btn-group-vertical > .btn--second + .btn--grey, .btn-group-vertical > .btn--success + .btn--grey, .btn-group-vertical > .btn--info + .btn--grey, .btn-group-vertical > .btn--warning + .btn--grey, .btn-group-vertical > .btn--danger + .btn--grey, .btn-group-vertical > .btn--dark + .btn--grey, .btn-group-vertical > .btn--grey + .btn--grey, .btn-group-vertical > .btn--save + .btn--grey, .btn-group-vertical > .btn--hidetext + .btn--grey, .btn-group-vertical > .btn + .btn--save, .btn-group-vertical > .btn--default + .btn--save, .btn-group-vertical > .btn--first + .btn--save, .btn-group-vertical > .btn--second + .btn--save, .btn-group-vertical > .btn--success + .btn--save, .btn-group-vertical > .btn--info + .btn--save, .btn-group-vertical > .btn--warning + .btn--save, .btn-group-vertical > .btn--danger + .btn--save, .btn-group-vertical > .btn--dark + .btn--save, .btn-group-vertical > .btn--grey + .btn--save, .btn-group-vertical > .btn--save + .btn--save, .btn-group-vertical > .btn--hidetext + .btn--save, .btn-group-vertical > .btn + .btn--hidetext, .btn-group-vertical > .btn--default + .btn--hidetext, .btn-group-vertical > .btn--first + .btn--hidetext, .btn-group-vertical > .btn--second + .btn--hidetext, .btn-group-vertical > .btn--success + .btn--hidetext, .btn-group-vertical > .btn--info + .btn--hidetext, .btn-group-vertical > .btn--warning + .btn--hidetext, .btn-group-vertical > .btn--danger + .btn--hidetext, .btn-group-vertical > .btn--dark + .btn--hidetext, .btn-group-vertical > .btn--grey + .btn--hidetext, .btn-group-vertical > .btn--save + .btn--hidetext, .btn-group-vertical > .btn--hidetext + .btn--hidetext,
 .btn-group-vertical > .btn + .btn-group,
 .btn-group-vertical > .btn--default + .btn-group,
-.btn-group-vertical > .btn--primary + .btn-group,
-.btn-group-vertical > .btn--secondary + .btn-group,
+.btn-group-vertical > .btn--first + .btn-group,
+.btn-group-vertical > .btn--second + .btn-group,
 .btn-group-vertical > .btn--success + .btn-group,
 .btn-group-vertical > .btn--info + .btn-group,
 .btn-group-vertical > .btn--warning + .btn-group,
@@ -3738,8 +3969,8 @@ tbody.collapse.in {
 .btn-group-vertical > .btn--hidetext + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
 .btn-group-vertical > .btn-group + .btn--default,
-.btn-group-vertical > .btn-group + .btn--primary,
-.btn-group-vertical > .btn-group + .btn--secondary,
+.btn-group-vertical > .btn-group + .btn--first,
+.btn-group-vertical > .btn-group + .btn--second,
 .btn-group-vertical > .btn-group + .btn--success,
 .btn-group-vertical > .btn-group + .btn--info,
 .btn-group-vertical > .btn-group + .btn--warning,
@@ -3752,28 +3983,28 @@ tbody.collapse.in {
   margin-top: -1px;
   margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > .btn--default:not(:first-child):not(:last-child), .btn-group-vertical > .btn--primary:not(:first-child):not(:last-child), .btn-group-vertical > .btn--secondary:not(:first-child):not(:last-child), .btn-group-vertical > .btn--success:not(:first-child):not(:last-child), .btn-group-vertical > .btn--info:not(:first-child):not(:last-child), .btn-group-vertical > .btn--warning:not(:first-child):not(:last-child), .btn-group-vertical > .btn--danger:not(:first-child):not(:last-child), .btn-group-vertical > .btn--dark:not(:first-child):not(:last-child), .btn-group-vertical > .btn--grey:not(:first-child):not(:last-child), .btn-group-vertical > .btn--save:not(:first-child):not(:last-child), .btn-group-vertical > .btn--hidetext:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > .btn--default:not(:first-child):not(:last-child), .btn-group-vertical > .btn--first:not(:first-child):not(:last-child), .btn-group-vertical > .btn--second:not(:first-child):not(:last-child), .btn-group-vertical > .btn--success:not(:first-child):not(:last-child), .btn-group-vertical > .btn--info:not(:first-child):not(:last-child), .btn-group-vertical > .btn--warning:not(:first-child):not(:last-child), .btn-group-vertical > .btn--danger:not(:first-child):not(:last-child), .btn-group-vertical > .btn--dark:not(:first-child):not(:last-child), .btn-group-vertical > .btn--grey:not(:first-child):not(:last-child), .btn-group-vertical > .btn--save:not(:first-child):not(:last-child), .btn-group-vertical > .btn--hidetext:not(:first-child):not(:last-child) {
   border-radius: 0; }
-.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > .btn--default:first-child:not(:last-child), .btn-group-vertical > .btn--primary:first-child:not(:last-child), .btn-group-vertical > .btn--secondary:first-child:not(:last-child), .btn-group-vertical > .btn--success:first-child:not(:last-child), .btn-group-vertical > .btn--info:first-child:not(:last-child), .btn-group-vertical > .btn--warning:first-child:not(:last-child), .btn-group-vertical > .btn--danger:first-child:not(:last-child), .btn-group-vertical > .btn--dark:first-child:not(:last-child), .btn-group-vertical > .btn--grey:first-child:not(:last-child), .btn-group-vertical > .btn--save:first-child:not(:last-child), .btn-group-vertical > .btn--hidetext:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > .btn--default:first-child:not(:last-child), .btn-group-vertical > .btn--first:first-child:not(:last-child), .btn-group-vertical > .btn--second:first-child:not(:last-child), .btn-group-vertical > .btn--success:first-child:not(:last-child), .btn-group-vertical > .btn--info:first-child:not(:last-child), .btn-group-vertical > .btn--warning:first-child:not(:last-child), .btn-group-vertical > .btn--danger:first-child:not(:last-child), .btn-group-vertical > .btn--dark:first-child:not(:last-child), .btn-group-vertical > .btn--grey:first-child:not(:last-child), .btn-group-vertical > .btn--save:first-child:not(:last-child), .btn-group-vertical > .btn--hidetext:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
-.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > .btn--default:last-child:not(:first-child), .btn-group-vertical > .btn--primary:last-child:not(:first-child), .btn-group-vertical > .btn--secondary:last-child:not(:first-child), .btn-group-vertical > .btn--success:last-child:not(:first-child), .btn-group-vertical > .btn--info:last-child:not(:first-child), .btn-group-vertical > .btn--warning:last-child:not(:first-child), .btn-group-vertical > .btn--danger:last-child:not(:first-child), .btn-group-vertical > .btn--dark:last-child:not(:first-child), .btn-group-vertical > .btn--grey:last-child:not(:first-child), .btn-group-vertical > .btn--save:last-child:not(:first-child), .btn-group-vertical > .btn--hidetext:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > .btn--default:last-child:not(:first-child), .btn-group-vertical > .btn--first:last-child:not(:first-child), .btn-group-vertical > .btn--second:last-child:not(:first-child), .btn-group-vertical > .btn--success:last-child:not(:first-child), .btn-group-vertical > .btn--info:last-child:not(:first-child), .btn-group-vertical > .btn--warning:last-child:not(:first-child), .btn-group-vertical > .btn--danger:last-child:not(:first-child), .btn-group-vertical > .btn--dark:last-child:not(:first-child), .btn-group-vertical > .btn--grey:last-child:not(:first-child), .btn-group-vertical > .btn--save:last-child:not(:first-child), .btn-group-vertical > .btn--hidetext:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--default, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--primary, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--secondary, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--success, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--info, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--warning, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--danger, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--dark, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--grey, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--save, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--hidetext {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--default, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--first, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--second, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--success, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--info, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--warning, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--danger, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--dark, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--grey, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--save, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn--hidetext {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--default:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--primary:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--secondary:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--success:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--info:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--warning:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--danger:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--dark:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--grey:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--save:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--hidetext:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--default:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--first:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--second:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--success:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--info:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--warning:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--danger:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--dark:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--grey:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--save:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn--hidetext:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--default:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--primary:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--secondary:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--success:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--info:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--warning:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--danger:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--dark:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--grey:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--save:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--hidetext:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--default:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--first:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--second:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--success:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--info:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--warning:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--danger:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--dark:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--grey:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--save:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn--hidetext:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
@@ -3782,21 +4013,21 @@ tbody.collapse.in {
   width: 100%;
   table-layout: fixed;
   border-collapse: separate; }
-  .btn-group-justified > .btn, .btn-group-justified > .btn--default, .btn-group-justified > .btn--primary, .btn-group-justified > .btn--secondary, .btn-group-justified > .btn--success, .btn-group-justified > .btn--info, .btn-group-justified > .btn--warning, .btn-group-justified > .btn--danger, .btn-group-justified > .btn--dark, .btn-group-justified > .btn--grey, .btn-group-justified > .btn--save, .btn-group-justified > .btn--hidetext,
+  .btn-group-justified > .btn, .btn-group-justified > .btn--default, .btn-group-justified > .btn--first, .btn-group-justified > .btn--second, .btn-group-justified > .btn--success, .btn-group-justified > .btn--info, .btn-group-justified > .btn--warning, .btn-group-justified > .btn--danger, .btn-group-justified > .btn--dark, .btn-group-justified > .btn--grey, .btn-group-justified > .btn--save, .btn-group-justified > .btn--hidetext,
   .btn-group-justified > .btn-group {
     float: none;
     display: table-cell;
     width: 1%; }
-  .btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .btn--default, .btn-group-justified > .btn-group .btn--primary, .btn-group-justified > .btn-group .btn--secondary, .btn-group-justified > .btn-group .btn--success, .btn-group-justified > .btn-group .btn--info, .btn-group-justified > .btn-group .btn--warning, .btn-group-justified > .btn-group .btn--danger, .btn-group-justified > .btn-group .btn--dark, .btn-group-justified > .btn-group .btn--grey, .btn-group-justified > .btn-group .btn--save, .btn-group-justified > .btn-group .btn--hidetext {
+  .btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .btn--default, .btn-group-justified > .btn-group .btn--first, .btn-group-justified > .btn-group .btn--second, .btn-group-justified > .btn-group .btn--success, .btn-group-justified > .btn-group .btn--info, .btn-group-justified > .btn-group .btn--warning, .btn-group-justified > .btn-group .btn--danger, .btn-group-justified > .btn-group .btn--dark, .btn-group-justified > .btn-group .btn--grey, .btn-group-justified > .btn-group .btn--save, .btn-group-justified > .btn-group .btn--hidetext {
     width: 100%; }
   .btn-group-justified > .btn-group .dropdown-menu {
     left: auto; }
 
-[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > .btn--default input[type="radio"], [data-toggle="buttons"] > .btn--primary input[type="radio"], [data-toggle="buttons"] > .btn--secondary input[type="radio"], [data-toggle="buttons"] > .btn--success input[type="radio"], [data-toggle="buttons"] > .btn--info input[type="radio"], [data-toggle="buttons"] > .btn--warning input[type="radio"], [data-toggle="buttons"] > .btn--danger input[type="radio"], [data-toggle="buttons"] > .btn--dark input[type="radio"], [data-toggle="buttons"] > .btn--grey input[type="radio"], [data-toggle="buttons"] > .btn--save input[type="radio"], [data-toggle="buttons"] > .btn--hidetext input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > .btn--default input[type="radio"], [data-toggle="buttons"] > .btn--first input[type="radio"], [data-toggle="buttons"] > .btn--second input[type="radio"], [data-toggle="buttons"] > .btn--success input[type="radio"], [data-toggle="buttons"] > .btn--info input[type="radio"], [data-toggle="buttons"] > .btn--warning input[type="radio"], [data-toggle="buttons"] > .btn--danger input[type="radio"], [data-toggle="buttons"] > .btn--dark input[type="radio"], [data-toggle="buttons"] > .btn--grey input[type="radio"], [data-toggle="buttons"] > .btn--save input[type="radio"], [data-toggle="buttons"] > .btn--hidetext input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btn--default input[type="checkbox"],
-[data-toggle="buttons"] > .btn--primary input[type="checkbox"],
-[data-toggle="buttons"] > .btn--secondary input[type="checkbox"],
+[data-toggle="buttons"] > .btn--first input[type="checkbox"],
+[data-toggle="buttons"] > .btn--second input[type="checkbox"],
 [data-toggle="buttons"] > .btn--success input[type="checkbox"],
 [data-toggle="buttons"] > .btn--info input[type="checkbox"],
 [data-toggle="buttons"] > .btn--warning input[type="checkbox"],
@@ -3807,8 +4038,8 @@ tbody.collapse.in {
 [data-toggle="buttons"] > .btn--hidetext input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn--default input[type="radio"],
-[data-toggle="buttons"] > .btn-group > .btn--primary input[type="radio"],
-[data-toggle="buttons"] > .btn-group > .btn--secondary input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .btn--first input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .btn--second input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn--success input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn--info input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn--warning input[type="radio"],
@@ -3819,8 +4050,8 @@ tbody.collapse.in {
 [data-toggle="buttons"] > .btn-group > .btn--hidetext input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn--default input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > .btn--primary input[type="checkbox"],
-[data-toggle="buttons"] > .btn-group > .btn--secondary input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .btn--first input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .btn--second input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn--success input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn--info input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn--warning input[type="checkbox"],
@@ -3867,7 +4098,7 @@ tbody.collapse.in {
 
 .input-group-addon {
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1;
   color: #555555;
@@ -3879,8 +4110,8 @@ tbody.collapse.in {
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn,
   .input-group-sm > .input-group-btn > .input-group-addon.btn--default,
-  .input-group-sm > .input-group-btn > .input-group-addon.btn--primary,
-  .input-group-sm > .input-group-btn > .input-group-addon.btn--secondary,
+  .input-group-sm > .input-group-btn > .input-group-addon.btn--first,
+  .input-group-sm > .input-group-btn > .input-group-addon.btn--second,
   .input-group-sm > .input-group-btn > .input-group-addon.btn--success,
   .input-group-sm > .input-group-btn > .input-group-addon.btn--info,
   .input-group-sm > .input-group-btn > .input-group-addon.btn--warning,
@@ -3890,14 +4121,14 @@ tbody.collapse.in {
   .input-group-sm > .input-group-btn > .input-group-addon.btn--save,
   .input-group-sm > .input-group-btn > .input-group-addon.btn--hidetext {
     padding: 5px 10px;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 3px; }
   .input-group-addon.input-lg,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn,
   .input-group-lg > .input-group-btn > .input-group-addon.btn--default,
-  .input-group-lg > .input-group-btn > .input-group-addon.btn--primary,
-  .input-group-lg > .input-group-btn > .input-group-addon.btn--secondary,
+  .input-group-lg > .input-group-btn > .input-group-addon.btn--first,
+  .input-group-lg > .input-group-btn > .input-group-addon.btn--second,
   .input-group-lg > .input-group-btn > .input-group-addon.btn--success,
   .input-group-lg > .input-group-btn > .input-group-addon.btn--info,
   .input-group-lg > .input-group-btn > .input-group-addon.btn--warning,
@@ -3907,7 +4138,7 @@ tbody.collapse.in {
   .input-group-lg > .input-group-btn > .input-group-addon.btn--save,
   .input-group-lg > .input-group-btn > .input-group-addon.btn--hidetext {
     padding: 10px 16px;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 6px; }
   .input-group-addon input[type="radio"],
   .input-group-addon input[type="checkbox"] {
@@ -3917,8 +4148,8 @@ tbody.collapse.in {
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
 .input-group-btn:first-child > .btn--default,
-.input-group-btn:first-child > .btn--primary,
-.input-group-btn:first-child > .btn--secondary,
+.input-group-btn:first-child > .btn--first,
+.input-group-btn:first-child > .btn--second,
 .input-group-btn:first-child > .btn--success,
 .input-group-btn:first-child > .btn--info,
 .input-group-btn:first-child > .btn--warning,
@@ -3929,8 +4160,8 @@ tbody.collapse.in {
 .input-group-btn:first-child > .btn--hidetext,
 .input-group-btn:first-child > .btn-group > .btn,
 .input-group-btn:first-child > .btn-group > .btn--default,
-.input-group-btn:first-child > .btn-group > .btn--primary,
-.input-group-btn:first-child > .btn-group > .btn--secondary,
+.input-group-btn:first-child > .btn-group > .btn--first,
+.input-group-btn:first-child > .btn-group > .btn--second,
 .input-group-btn:first-child > .btn-group > .btn--success,
 .input-group-btn:first-child > .btn-group > .btn--info,
 .input-group-btn:first-child > .btn-group > .btn--warning,
@@ -3942,8 +4173,8 @@ tbody.collapse.in {
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn--default:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > .btn--primary:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > .btn--secondary:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .btn--first:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .btn--second:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn--success:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn--info:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn--warning:not(:last-child):not(.dropdown-toggle),
@@ -3954,8 +4185,8 @@ tbody.collapse.in {
 .input-group-btn:last-child > .btn--hidetext:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn--default,
-.input-group-btn:last-child > .btn-group:not(:last-child) > .btn--primary,
-.input-group-btn:last-child > .btn-group:not(:last-child) > .btn--secondary,
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn--first,
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn--second,
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn--success,
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn--info,
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn--warning,
@@ -3974,8 +4205,8 @@ tbody.collapse.in {
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
 .input-group-btn:last-child > .btn--default,
-.input-group-btn:last-child > .btn--primary,
-.input-group-btn:last-child > .btn--secondary,
+.input-group-btn:last-child > .btn--first,
+.input-group-btn:last-child > .btn--second,
 .input-group-btn:last-child > .btn--success,
 .input-group-btn:last-child > .btn--info,
 .input-group-btn:last-child > .btn--warning,
@@ -3986,8 +4217,8 @@ tbody.collapse.in {
 .input-group-btn:last-child > .btn--hidetext,
 .input-group-btn:last-child > .btn-group > .btn,
 .input-group-btn:last-child > .btn-group > .btn--default,
-.input-group-btn:last-child > .btn-group > .btn--primary,
-.input-group-btn:last-child > .btn-group > .btn--secondary,
+.input-group-btn:last-child > .btn-group > .btn--first,
+.input-group-btn:last-child > .btn-group > .btn--second,
 .input-group-btn:last-child > .btn-group > .btn--success,
 .input-group-btn:last-child > .btn-group > .btn--info,
 .input-group-btn:last-child > .btn-group > .btn--warning,
@@ -3999,8 +4230,8 @@ tbody.collapse.in {
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
 .input-group-btn:first-child > .btn--default:not(:first-child),
-.input-group-btn:first-child > .btn--primary:not(:first-child),
-.input-group-btn:first-child > .btn--secondary:not(:first-child),
+.input-group-btn:first-child > .btn--first:not(:first-child),
+.input-group-btn:first-child > .btn--second:not(:first-child),
 .input-group-btn:first-child > .btn--success:not(:first-child),
 .input-group-btn:first-child > .btn--info:not(:first-child),
 .input-group-btn:first-child > .btn--warning:not(:first-child),
@@ -4011,8 +4242,8 @@ tbody.collapse.in {
 .input-group-btn:first-child > .btn--hidetext:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn--default,
-.input-group-btn:first-child > .btn-group:not(:first-child) > .btn--primary,
-.input-group-btn:first-child > .btn-group:not(:first-child) > .btn--secondary,
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn--first,
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn--second,
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn--success,
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn--info,
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn--warning,
@@ -4031,16 +4262,16 @@ tbody.collapse.in {
   position: relative;
   font-size: 0;
   white-space: nowrap; }
-  .input-group-btn > .btn, .input-group-btn > .btn--default, .input-group-btn > .btn--primary, .input-group-btn > .btn--secondary, .input-group-btn > .btn--success, .input-group-btn > .btn--info, .input-group-btn > .btn--warning, .input-group-btn > .btn--danger, .input-group-btn > .btn--dark, .input-group-btn > .btn--grey, .input-group-btn > .btn--save, .input-group-btn > .btn--hidetext {
+  .input-group-btn > .btn, .input-group-btn > .btn--default, .input-group-btn > .btn--first, .input-group-btn > .btn--second, .input-group-btn > .btn--success, .input-group-btn > .btn--info, .input-group-btn > .btn--warning, .input-group-btn > .btn--danger, .input-group-btn > .btn--dark, .input-group-btn > .btn--grey, .input-group-btn > .btn--save, .input-group-btn > .btn--hidetext {
     position: relative; }
-    .input-group-btn > .btn + .btn, .input-group-btn > .btn--default + .btn, .input-group-btn > .btn--primary + .btn, .input-group-btn > .btn--secondary + .btn, .input-group-btn > .btn--success + .btn, .input-group-btn > .btn--info + .btn, .input-group-btn > .btn--warning + .btn, .input-group-btn > .btn--danger + .btn, .input-group-btn > .btn--dark + .btn, .input-group-btn > .btn--grey + .btn, .input-group-btn > .btn--save + .btn, .input-group-btn > .btn--hidetext + .btn, .input-group-btn > .btn + .btn--default, .input-group-btn > .btn--default + .btn--default, .input-group-btn > .btn--primary + .btn--default, .input-group-btn > .btn--secondary + .btn--default, .input-group-btn > .btn--success + .btn--default, .input-group-btn > .btn--info + .btn--default, .input-group-btn > .btn--warning + .btn--default, .input-group-btn > .btn--danger + .btn--default, .input-group-btn > .btn--dark + .btn--default, .input-group-btn > .btn--grey + .btn--default, .input-group-btn > .btn--save + .btn--default, .input-group-btn > .btn--hidetext + .btn--default, .input-group-btn > .btn + .btn--primary, .input-group-btn > .btn--default + .btn--primary, .input-group-btn > .btn--primary + .btn--primary, .input-group-btn > .btn--secondary + .btn--primary, .input-group-btn > .btn--success + .btn--primary, .input-group-btn > .btn--info + .btn--primary, .input-group-btn > .btn--warning + .btn--primary, .input-group-btn > .btn--danger + .btn--primary, .input-group-btn > .btn--dark + .btn--primary, .input-group-btn > .btn--grey + .btn--primary, .input-group-btn > .btn--save + .btn--primary, .input-group-btn > .btn--hidetext + .btn--primary, .input-group-btn > .btn + .btn--secondary, .input-group-btn > .btn--default + .btn--secondary, .input-group-btn > .btn--primary + .btn--secondary, .input-group-btn > .btn--secondary + .btn--secondary, .input-group-btn > .btn--success + .btn--secondary, .input-group-btn > .btn--info + .btn--secondary, .input-group-btn > .btn--warning + .btn--secondary, .input-group-btn > .btn--danger + .btn--secondary, .input-group-btn > .btn--dark + .btn--secondary, .input-group-btn > .btn--grey + .btn--secondary, .input-group-btn > .btn--save + .btn--secondary, .input-group-btn > .btn--hidetext + .btn--secondary, .input-group-btn > .btn + .btn--success, .input-group-btn > .btn--default + .btn--success, .input-group-btn > .btn--primary + .btn--success, .input-group-btn > .btn--secondary + .btn--success, .input-group-btn > .btn--success + .btn--success, .input-group-btn > .btn--info + .btn--success, .input-group-btn > .btn--warning + .btn--success, .input-group-btn > .btn--danger + .btn--success, .input-group-btn > .btn--dark + .btn--success, .input-group-btn > .btn--grey + .btn--success, .input-group-btn > .btn--save + .btn--success, .input-group-btn > .btn--hidetext + .btn--success, .input-group-btn > .btn + .btn--info, .input-group-btn > .btn--default + .btn--info, .input-group-btn > .btn--primary + .btn--info, .input-group-btn > .btn--secondary + .btn--info, .input-group-btn > .btn--success + .btn--info, .input-group-btn > .btn--info + .btn--info, .input-group-btn > .btn--warning + .btn--info, .input-group-btn > .btn--danger + .btn--info, .input-group-btn > .btn--dark + .btn--info, .input-group-btn > .btn--grey + .btn--info, .input-group-btn > .btn--save + .btn--info, .input-group-btn > .btn--hidetext + .btn--info, .input-group-btn > .btn + .btn--warning, .input-group-btn > .btn--default + .btn--warning, .input-group-btn > .btn--primary + .btn--warning, .input-group-btn > .btn--secondary + .btn--warning, .input-group-btn > .btn--success + .btn--warning, .input-group-btn > .btn--info + .btn--warning, .input-group-btn > .btn--warning + .btn--warning, .input-group-btn > .btn--danger + .btn--warning, .input-group-btn > .btn--dark + .btn--warning, .input-group-btn > .btn--grey + .btn--warning, .input-group-btn > .btn--save + .btn--warning, .input-group-btn > .btn--hidetext + .btn--warning, .input-group-btn > .btn + .btn--danger, .input-group-btn > .btn--default + .btn--danger, .input-group-btn > .btn--primary + .btn--danger, .input-group-btn > .btn--secondary + .btn--danger, .input-group-btn > .btn--success + .btn--danger, .input-group-btn > .btn--info + .btn--danger, .input-group-btn > .btn--warning + .btn--danger, .input-group-btn > .btn--danger + .btn--danger, .input-group-btn > .btn--dark + .btn--danger, .input-group-btn > .btn--grey + .btn--danger, .input-group-btn > .btn--save + .btn--danger, .input-group-btn > .btn--hidetext + .btn--danger, .input-group-btn > .btn + .btn--dark, .input-group-btn > .btn--default + .btn--dark, .input-group-btn > .btn--primary + .btn--dark, .input-group-btn > .btn--secondary + .btn--dark, .input-group-btn > .btn--success + .btn--dark, .input-group-btn > .btn--info + .btn--dark, .input-group-btn > .btn--warning + .btn--dark, .input-group-btn > .btn--danger + .btn--dark, .input-group-btn > .btn--dark + .btn--dark, .input-group-btn > .btn--grey + .btn--dark, .input-group-btn > .btn--save + .btn--dark, .input-group-btn > .btn--hidetext + .btn--dark, .input-group-btn > .btn + .btn--grey, .input-group-btn > .btn--default + .btn--grey, .input-group-btn > .btn--primary + .btn--grey, .input-group-btn > .btn--secondary + .btn--grey, .input-group-btn > .btn--success + .btn--grey, .input-group-btn > .btn--info + .btn--grey, .input-group-btn > .btn--warning + .btn--grey, .input-group-btn > .btn--danger + .btn--grey, .input-group-btn > .btn--dark + .btn--grey, .input-group-btn > .btn--grey + .btn--grey, .input-group-btn > .btn--save + .btn--grey, .input-group-btn > .btn--hidetext + .btn--grey, .input-group-btn > .btn + .btn--save, .input-group-btn > .btn--default + .btn--save, .input-group-btn > .btn--primary + .btn--save, .input-group-btn > .btn--secondary + .btn--save, .input-group-btn > .btn--success + .btn--save, .input-group-btn > .btn--info + .btn--save, .input-group-btn > .btn--warning + .btn--save, .input-group-btn > .btn--danger + .btn--save, .input-group-btn > .btn--dark + .btn--save, .input-group-btn > .btn--grey + .btn--save, .input-group-btn > .btn--save + .btn--save, .input-group-btn > .btn--hidetext + .btn--save, .input-group-btn > .btn + .btn--hidetext, .input-group-btn > .btn--default + .btn--hidetext, .input-group-btn > .btn--primary + .btn--hidetext, .input-group-btn > .btn--secondary + .btn--hidetext, .input-group-btn > .btn--success + .btn--hidetext, .input-group-btn > .btn--info + .btn--hidetext, .input-group-btn > .btn--warning + .btn--hidetext, .input-group-btn > .btn--danger + .btn--hidetext, .input-group-btn > .btn--dark + .btn--hidetext, .input-group-btn > .btn--grey + .btn--hidetext, .input-group-btn > .btn--save + .btn--hidetext, .input-group-btn > .btn--hidetext + .btn--hidetext {
+    .input-group-btn > .btn + .btn, .input-group-btn > .btn--default + .btn, .input-group-btn > .btn--first + .btn, .input-group-btn > .btn--second + .btn, .input-group-btn > .btn--success + .btn, .input-group-btn > .btn--info + .btn, .input-group-btn > .btn--warning + .btn, .input-group-btn > .btn--danger + .btn, .input-group-btn > .btn--dark + .btn, .input-group-btn > .btn--grey + .btn, .input-group-btn > .btn--save + .btn, .input-group-btn > .btn--hidetext + .btn, .input-group-btn > .btn + .btn--default, .input-group-btn > .btn--default + .btn--default, .input-group-btn > .btn--first + .btn--default, .input-group-btn > .btn--second + .btn--default, .input-group-btn > .btn--success + .btn--default, .input-group-btn > .btn--info + .btn--default, .input-group-btn > .btn--warning + .btn--default, .input-group-btn > .btn--danger + .btn--default, .input-group-btn > .btn--dark + .btn--default, .input-group-btn > .btn--grey + .btn--default, .input-group-btn > .btn--save + .btn--default, .input-group-btn > .btn--hidetext + .btn--default, .input-group-btn > .btn + .btn--first, .input-group-btn > .btn--default + .btn--first, .input-group-btn > .btn--first + .btn--first, .input-group-btn > .btn--second + .btn--first, .input-group-btn > .btn--success + .btn--first, .input-group-btn > .btn--info + .btn--first, .input-group-btn > .btn--warning + .btn--first, .input-group-btn > .btn--danger + .btn--first, .input-group-btn > .btn--dark + .btn--first, .input-group-btn > .btn--grey + .btn--first, .input-group-btn > .btn--save + .btn--first, .input-group-btn > .btn--hidetext + .btn--first, .input-group-btn > .btn + .btn--second, .input-group-btn > .btn--default + .btn--second, .input-group-btn > .btn--first + .btn--second, .input-group-btn > .btn--second + .btn--second, .input-group-btn > .btn--success + .btn--second, .input-group-btn > .btn--info + .btn--second, .input-group-btn > .btn--warning + .btn--second, .input-group-btn > .btn--danger + .btn--second, .input-group-btn > .btn--dark + .btn--second, .input-group-btn > .btn--grey + .btn--second, .input-group-btn > .btn--save + .btn--second, .input-group-btn > .btn--hidetext + .btn--second, .input-group-btn > .btn + .btn--success, .input-group-btn > .btn--default + .btn--success, .input-group-btn > .btn--first + .btn--success, .input-group-btn > .btn--second + .btn--success, .input-group-btn > .btn--success + .btn--success, .input-group-btn > .btn--info + .btn--success, .input-group-btn > .btn--warning + .btn--success, .input-group-btn > .btn--danger + .btn--success, .input-group-btn > .btn--dark + .btn--success, .input-group-btn > .btn--grey + .btn--success, .input-group-btn > .btn--save + .btn--success, .input-group-btn > .btn--hidetext + .btn--success, .input-group-btn > .btn + .btn--info, .input-group-btn > .btn--default + .btn--info, .input-group-btn > .btn--first + .btn--info, .input-group-btn > .btn--second + .btn--info, .input-group-btn > .btn--success + .btn--info, .input-group-btn > .btn--info + .btn--info, .input-group-btn > .btn--warning + .btn--info, .input-group-btn > .btn--danger + .btn--info, .input-group-btn > .btn--dark + .btn--info, .input-group-btn > .btn--grey + .btn--info, .input-group-btn > .btn--save + .btn--info, .input-group-btn > .btn--hidetext + .btn--info, .input-group-btn > .btn + .btn--warning, .input-group-btn > .btn--default + .btn--warning, .input-group-btn > .btn--first + .btn--warning, .input-group-btn > .btn--second + .btn--warning, .input-group-btn > .btn--success + .btn--warning, .input-group-btn > .btn--info + .btn--warning, .input-group-btn > .btn--warning + .btn--warning, .input-group-btn > .btn--danger + .btn--warning, .input-group-btn > .btn--dark + .btn--warning, .input-group-btn > .btn--grey + .btn--warning, .input-group-btn > .btn--save + .btn--warning, .input-group-btn > .btn--hidetext + .btn--warning, .input-group-btn > .btn + .btn--danger, .input-group-btn > .btn--default + .btn--danger, .input-group-btn > .btn--first + .btn--danger, .input-group-btn > .btn--second + .btn--danger, .input-group-btn > .btn--success + .btn--danger, .input-group-btn > .btn--info + .btn--danger, .input-group-btn > .btn--warning + .btn--danger, .input-group-btn > .btn--danger + .btn--danger, .input-group-btn > .btn--dark + .btn--danger, .input-group-btn > .btn--grey + .btn--danger, .input-group-btn > .btn--save + .btn--danger, .input-group-btn > .btn--hidetext + .btn--danger, .input-group-btn > .btn + .btn--dark, .input-group-btn > .btn--default + .btn--dark, .input-group-btn > .btn--first + .btn--dark, .input-group-btn > .btn--second + .btn--dark, .input-group-btn > .btn--success + .btn--dark, .input-group-btn > .btn--info + .btn--dark, .input-group-btn > .btn--warning + .btn--dark, .input-group-btn > .btn--danger + .btn--dark, .input-group-btn > .btn--dark + .btn--dark, .input-group-btn > .btn--grey + .btn--dark, .input-group-btn > .btn--save + .btn--dark, .input-group-btn > .btn--hidetext + .btn--dark, .input-group-btn > .btn + .btn--grey, .input-group-btn > .btn--default + .btn--grey, .input-group-btn > .btn--first + .btn--grey, .input-group-btn > .btn--second + .btn--grey, .input-group-btn > .btn--success + .btn--grey, .input-group-btn > .btn--info + .btn--grey, .input-group-btn > .btn--warning + .btn--grey, .input-group-btn > .btn--danger + .btn--grey, .input-group-btn > .btn--dark + .btn--grey, .input-group-btn > .btn--grey + .btn--grey, .input-group-btn > .btn--save + .btn--grey, .input-group-btn > .btn--hidetext + .btn--grey, .input-group-btn > .btn + .btn--save, .input-group-btn > .btn--default + .btn--save, .input-group-btn > .btn--first + .btn--save, .input-group-btn > .btn--second + .btn--save, .input-group-btn > .btn--success + .btn--save, .input-group-btn > .btn--info + .btn--save, .input-group-btn > .btn--warning + .btn--save, .input-group-btn > .btn--danger + .btn--save, .input-group-btn > .btn--dark + .btn--save, .input-group-btn > .btn--grey + .btn--save, .input-group-btn > .btn--save + .btn--save, .input-group-btn > .btn--hidetext + .btn--save, .input-group-btn > .btn + .btn--hidetext, .input-group-btn > .btn--default + .btn--hidetext, .input-group-btn > .btn--first + .btn--hidetext, .input-group-btn > .btn--second + .btn--hidetext, .input-group-btn > .btn--success + .btn--hidetext, .input-group-btn > .btn--info + .btn--hidetext, .input-group-btn > .btn--warning + .btn--hidetext, .input-group-btn > .btn--danger + .btn--hidetext, .input-group-btn > .btn--dark + .btn--hidetext, .input-group-btn > .btn--grey + .btn--hidetext, .input-group-btn > .btn--save + .btn--hidetext, .input-group-btn > .btn--hidetext + .btn--hidetext {
       margin-left: -1px; }
-    .input-group-btn > .btn:hover, .input-group-btn > .btn--default:hover, .input-group-btn > .btn--primary:hover, .input-group-btn > .btn--secondary:hover, .input-group-btn > .btn--success:hover, .input-group-btn > .btn--info:hover, .input-group-btn > .btn--warning:hover, .input-group-btn > .btn--danger:hover, .input-group-btn > .btn--dark:hover, .input-group-btn > .btn--grey:hover, .input-group-btn > .btn--save:hover, .input-group-btn > .btn--hidetext:hover, .input-group-btn > .btn:focus, .input-group-btn > .btn--default:focus, .input-group-btn > .btn--primary:focus, .input-group-btn > .btn--secondary:focus, .input-group-btn > .btn--success:focus, .input-group-btn > .btn--info:focus, .input-group-btn > .btn--warning:focus, .input-group-btn > .btn--danger:focus, .input-group-btn > .btn--dark:focus, .input-group-btn > .btn--grey:focus, .input-group-btn > .btn--save:focus, .input-group-btn > .btn--hidetext:focus, .input-group-btn > .btn:active, .input-group-btn > .btn--default:active, .input-group-btn > .btn--primary:active, .input-group-btn > .btn--secondary:active, .input-group-btn > .btn--success:active, .input-group-btn > .btn--info:active, .input-group-btn > .btn--warning:active, .input-group-btn > .btn--danger:active, .input-group-btn > .btn--dark:active, .input-group-btn > .btn--grey:active, .input-group-btn > .btn--save:active, .input-group-btn > .btn--hidetext:active {
+    .input-group-btn > .btn:hover, .input-group-btn > .btn--default:hover, .input-group-btn > .btn--first:hover, .input-group-btn > .btn--second:hover, .input-group-btn > .btn--success:hover, .input-group-btn > .btn--info:hover, .input-group-btn > .btn--warning:hover, .input-group-btn > .btn--danger:hover, .input-group-btn > .btn--dark:hover, .input-group-btn > .btn--grey:hover, .input-group-btn > .btn--save:hover, .input-group-btn > .btn--hidetext:hover, .input-group-btn > .btn:focus, .input-group-btn > .btn--default:focus, .input-group-btn > .btn--first:focus, .input-group-btn > .btn--second:focus, .input-group-btn > .btn--success:focus, .input-group-btn > .btn--info:focus, .input-group-btn > .btn--warning:focus, .input-group-btn > .btn--danger:focus, .input-group-btn > .btn--dark:focus, .input-group-btn > .btn--grey:focus, .input-group-btn > .btn--save:focus, .input-group-btn > .btn--hidetext:focus, .input-group-btn > .btn:active, .input-group-btn > .btn--default:active, .input-group-btn > .btn--first:active, .input-group-btn > .btn--second:active, .input-group-btn > .btn--success:active, .input-group-btn > .btn--info:active, .input-group-btn > .btn--warning:active, .input-group-btn > .btn--danger:active, .input-group-btn > .btn--dark:active, .input-group-btn > .btn--grey:active, .input-group-btn > .btn--save:active, .input-group-btn > .btn--hidetext:active {
       z-index: 2; }
-  .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn--default, .input-group-btn:first-child > .btn--primary, .input-group-btn:first-child > .btn--secondary, .input-group-btn:first-child > .btn--success, .input-group-btn:first-child > .btn--info, .input-group-btn:first-child > .btn--warning, .input-group-btn:first-child > .btn--danger, .input-group-btn:first-child > .btn--dark, .input-group-btn:first-child > .btn--grey, .input-group-btn:first-child > .btn--save, .input-group-btn:first-child > .btn--hidetext,
+  .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn--default, .input-group-btn:first-child > .btn--first, .input-group-btn:first-child > .btn--second, .input-group-btn:first-child > .btn--success, .input-group-btn:first-child > .btn--info, .input-group-btn:first-child > .btn--warning, .input-group-btn:first-child > .btn--danger, .input-group-btn:first-child > .btn--dark, .input-group-btn:first-child > .btn--grey, .input-group-btn:first-child > .btn--save, .input-group-btn:first-child > .btn--hidetext,
   .input-group-btn:first-child > .btn-group {
     margin-right: -1px; }
-  .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn--default, .input-group-btn:last-child > .btn--primary, .input-group-btn:last-child > .btn--secondary, .input-group-btn:last-child > .btn--success, .input-group-btn:last-child > .btn--info, .input-group-btn:last-child > .btn--warning, .input-group-btn:last-child > .btn--danger, .input-group-btn:last-child > .btn--dark, .input-group-btn:last-child > .btn--grey, .input-group-btn:last-child > .btn--save, .input-group-btn:last-child > .btn--hidetext,
+  .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn--default, .input-group-btn:last-child > .btn--first, .input-group-btn:last-child > .btn--second, .input-group-btn:last-child > .btn--success, .input-group-btn:last-child > .btn--info, .input-group-btn:last-child > .btn--warning, .input-group-btn:last-child > .btn--danger, .input-group-btn:last-child > .btn--dark, .input-group-btn:last-child > .btn--grey, .input-group-btn:last-child > .btn--save, .input-group-btn:last-child > .btn--hidetext,
   .input-group-btn:last-child > .btn-group {
     z-index: 2;
     margin-left: -1px; }
@@ -4076,7 +4307,7 @@ tbody.collapse.in {
     border-color: #337ab7; }
   .nav .nav-divider {
     height: 1px;
-    margin: 9px 0;
+    margin: 10px 0;
     overflow: hidden;
     background-color: #e5e5e5; }
   .nav > li > a > img {
@@ -4169,7 +4400,7 @@ tbody.collapse.in {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   border: 1px solid transparent; }
   .navbar:before, .navbar:after {
     content: " ";
@@ -4222,7 +4453,7 @@ tbody.collapse.in {
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
   max-height: 340px; }
-  @media (max-device-width: 480px) and (orientation: landscape) {
+  @media (max-device-width: 300px) and (orientation: landscape) {
     .navbar-fixed-top .navbar-collapse,
     .navbar-fixed-bottom .navbar-collapse {
       max-height: 200px; } }
@@ -4270,9 +4501,9 @@ tbody.collapse.in {
 
 .navbar-brand {
   float: left;
-  padding: 15px 15px;
-  font-size: 18px;
-  line-height: 20px;
+  padding: 14px 15px;
+  font-size: 20px;
+  line-height: 22px;
   height: 50px; }
   .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none; }
@@ -4307,11 +4538,11 @@ tbody.collapse.in {
       display: none; } }
 
 .navbar-nav {
-  margin: 7.5px -15px; }
+  margin: 7px -15px; }
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
-    line-height: 20px; }
+    line-height: 22px; }
   @media (max-width: 767px) {
     .navbar-nav .open .dropdown-menu {
       position: static;
@@ -4325,7 +4556,7 @@ tbody.collapse.in {
       .navbar-nav .open .dropdown-menu .dropdown-header {
         padding: 5px 15px 5px 25px; }
       .navbar-nav .open .dropdown-menu > li > a {
-        line-height: 20px; }
+        line-height: 22px; }
         .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
           background-image: none; } }
   @media (min-width: 768px) {
@@ -4335,8 +4566,8 @@ tbody.collapse.in {
       .navbar-nav > li {
         float: left; }
         .navbar-nav > li > a {
-          padding-top: 15px;
-          padding-bottom: 15px; } }
+          padding-top: 14px;
+          padding-bottom: 14px; } }
 
 .navbar-form {
   margin-left: -15px;
@@ -4346,8 +4577,8 @@ tbody.collapse.in {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 8px;
-  margin-bottom: 8px; }
+  margin-top: 7px;
+  margin-bottom: 7px; }
   @media (min-width: 768px) {
     .navbar-form .form-group {
       display: inline-block;
@@ -4415,18 +4646,18 @@ tbody.collapse.in {
   border-bottom-left-radius: 0; }
 
 .navbar-btn {
-  margin-top: 8px;
-  margin-bottom: 8px; }
-  .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .btn-group-sm > .navbar-btn.btn--default, .btn-group-sm > .navbar-btn.btn--primary, .btn-group-sm > .navbar-btn.btn--secondary, .btn-group-sm > .navbar-btn.btn--success, .btn-group-sm > .navbar-btn.btn--info, .btn-group-sm > .navbar-btn.btn--warning, .btn-group-sm > .navbar-btn.btn--danger, .btn-group-sm > .navbar-btn.btn--dark, .btn-group-sm > .navbar-btn.btn--grey, .btn-group-sm > .navbar-btn.btn--save, .btn-group-sm > .navbar-btn.btn--hidetext {
-    margin-top: 10px;
-    margin-bottom: 10px; }
-  .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .btn-group-xs > .navbar-btn.btn--default, .btn-group-xs > .navbar-btn.btn--primary, .btn-group-xs > .navbar-btn.btn--secondary, .btn-group-xs > .navbar-btn.btn--success, .btn-group-xs > .navbar-btn.btn--info, .btn-group-xs > .navbar-btn.btn--warning, .btn-group-xs > .navbar-btn.btn--danger, .btn-group-xs > .navbar-btn.btn--dark, .btn-group-xs > .navbar-btn.btn--grey, .btn-group-xs > .navbar-btn.btn--save, .btn-group-xs > .navbar-btn.btn--hidetext {
+  margin-top: 7px;
+  margin-bottom: 7px; }
+  .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .btn-group-sm > .navbar-btn.btn--default, .btn-group-sm > .navbar-btn.btn--first, .btn-group-sm > .navbar-btn.btn--second, .btn-group-sm > .navbar-btn.btn--success, .btn-group-sm > .navbar-btn.btn--info, .btn-group-sm > .navbar-btn.btn--warning, .btn-group-sm > .navbar-btn.btn--danger, .btn-group-sm > .navbar-btn.btn--dark, .btn-group-sm > .navbar-btn.btn--grey, .btn-group-sm > .navbar-btn.btn--save, .btn-group-sm > .navbar-btn.btn--hidetext {
+    margin-top: 8.5px;
+    margin-bottom: 8.5px; }
+  .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .btn-group-xs > .navbar-btn.btn--default, .btn-group-xs > .navbar-btn.btn--first, .btn-group-xs > .navbar-btn.btn--second, .btn-group-xs > .navbar-btn.btn--success, .btn-group-xs > .navbar-btn.btn--info, .btn-group-xs > .navbar-btn.btn--warning, .btn-group-xs > .navbar-btn.btn--danger, .btn-group-xs > .navbar-btn.btn--dark, .btn-group-xs > .navbar-btn.btn--grey, .btn-group-xs > .navbar-btn.btn--save, .btn-group-xs > .navbar-btn.btn--hidetext {
     margin-top: 14px;
     margin-bottom: 14px; }
 
 .navbar-text {
-  margin-top: 15px;
-  margin-bottom: 15px; }
+  margin-top: 14px;
+  margin-bottom: 14px; }
   @media (min-width: 768px) {
     .navbar-text {
       float: left;
@@ -4560,7 +4791,7 @@ tbody.collapse.in {
 
 .breadcrumb {
   padding: 8px 15px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   list-style: none;
   background-color: #f5f5f5;
   border-radius: 4px; }
@@ -4576,7 +4807,7 @@ tbody.collapse.in {
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin: 20px 0;
+  margin: 22px 0;
   border-radius: 4px; }
   .pagination > li {
     display: inline; }
@@ -4630,7 +4861,7 @@ tbody.collapse.in {
 .pagination-lg > li > a,
 .pagination-lg > li > span {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33333; }
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
@@ -4644,7 +4875,7 @@ tbody.collapse.in {
 .pagination-sm > li > a,
 .pagination-sm > li > span {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5; }
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
@@ -4657,7 +4888,7 @@ tbody.collapse.in {
 
 .pager {
   padding-left: 0;
-  margin: 20px 0;
+  margin: 22px 0;
   list-style: none;
   text-align: center; }
   .pager:before, .pager:after {
@@ -4705,7 +4936,7 @@ tbody.collapse.in {
   border-radius: .25em; }
   .label:empty {
     display: none; }
-  .btn .label, .btn--default .label, .btn--primary .label, .btn--secondary .label, .btn--success .label, .btn--info .label, .btn--warning .label, .btn--danger .label, .btn--dark .label, .btn--grey .label, .btn--save .label, .btn--hidetext .label {
+  .btn .label, .btn--default .label, .btn--first .label, .btn--second .label, .btn--success .label, .btn--info .label, .btn--warning .label, .btn--danger .label, .btn--dark .label, .btn--grey .label, .btn--save .label, .btn--hidetext .label {
     position: relative;
     top: -1px; }
 
@@ -4748,7 +4979,7 @@ a.label:hover, a.label:focus {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   color: #fff;
   line-height: 1;
@@ -4759,10 +4990,10 @@ a.label:hover, a.label:focus {
   border-radius: 10px; }
   .badge:empty {
     display: none; }
-  .btn .badge, .btn--default .badge, .btn--primary .badge, .btn--secondary .badge, .btn--success .badge, .btn--info .badge, .btn--warning .badge, .btn--danger .badge, .btn--dark .badge, .btn--grey .badge, .btn--save .badge, .btn--hidetext .badge {
+  .btn .badge, .btn--default .badge, .btn--first .badge, .btn--second .badge, .btn--success .badge, .btn--info .badge, .btn--warning .badge, .btn--danger .badge, .btn--dark .badge, .btn--grey .badge, .btn--save .badge, .btn--hidetext .badge {
     position: relative;
     top: -1px; }
-  .btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .btn--default .badge, .btn-group-xs > .btn--primary .badge, .btn-group-xs > .btn--secondary .badge, .btn-group-xs > .btn--success .badge, .btn-group-xs > .btn--info .badge, .btn-group-xs > .btn--warning .badge, .btn-group-xs > .btn--danger .badge, .btn-group-xs > .btn--dark .badge, .btn-group-xs > .btn--grey .badge, .btn-group-xs > .btn--save .badge, .btn-group-xs > .btn--hidetext .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .btn--default .badge, .btn-group-xs > .btn--primary .badge, .btn-group-xs > .btn--secondary .badge, .btn-group-xs > .btn--success .badge, .btn-group-xs > .btn--info .badge, .btn-group-xs > .btn--warning .badge, .btn-group-xs > .btn--danger .badge, .btn-group-xs > .btn--dark .badge, .btn-group-xs > .btn--grey .badge, .btn-group-xs > .btn--save .badge, .btn-group-xs > .btn--hidetext .badge {
+  .btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .btn--default .badge, .btn-group-xs > .btn--first .badge, .btn-group-xs > .btn--second .badge, .btn-group-xs > .btn--success .badge, .btn-group-xs > .btn--info .badge, .btn-group-xs > .btn--warning .badge, .btn-group-xs > .btn--danger .badge, .btn-group-xs > .btn--dark .badge, .btn-group-xs > .btn--grey .badge, .btn-group-xs > .btn--save .badge, .btn-group-xs > .btn--hidetext .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .btn--default .badge, .btn-group-xs > .btn--first .badge, .btn-group-xs > .btn--second .badge, .btn-group-xs > .btn--success .badge, .btn-group-xs > .btn--info .badge, .btn-group-xs > .btn--warning .badge, .btn-group-xs > .btn--danger .badge, .btn-group-xs > .btn--dark .badge, .btn-group-xs > .btn--grey .badge, .btn-group-xs > .btn--save .badge, .btn-group-xs > .btn--hidetext .badge {
     top: 0;
     padding: 1px 5px; }
   .list-group-item.active > .badge, .nav-pills > .active > a > .badge {
@@ -4791,7 +5022,7 @@ a.badge:hover, a.badge:focus {
     color: inherit; }
   .jumbotron p {
     margin-bottom: 15px;
-    font-size: 21px;
+    font-size: 24px;
     font-weight: 200; }
   .jumbotron > hr {
     border-top-color: #d5d5d5; }
@@ -4810,12 +5041,12 @@ a.badge:hover, a.badge:focus {
         padding-right: 60px; }
       .jumbotron h1,
       .jumbotron .h1 {
-        font-size: 63px; } }
+        font-size: 72px; } }
 
 .thumbnail {
   display: block;
   padding: 4px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   line-height: 1.42857;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -4841,7 +5072,7 @@ a.thumbnail.active {
 
 .alert {
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   border: 1px solid transparent;
   border-radius: 4px; }
   .alert h4 {
@@ -4913,8 +5144,8 @@ a.thumbnail.active {
     background-position: 0 0; } }
 .progress {
   overflow: hidden;
-  height: 20px;
-  margin-bottom: 20px;
+  height: 22px;
+  margin-bottom: 22px;
   background-color: #f5f5f5;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -4924,8 +5155,8 @@ a.thumbnail.active {
   float: left;
   width: 0%;
   height: 100%;
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 22px;
   color: #fff;
   text-align: center;
   background-color: #337ab7;
@@ -5183,7 +5414,7 @@ button.list-group-item-danger {
   line-height: 1.3; }
 
 .panel {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -5209,7 +5440,7 @@ button.list-group-item-danger {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 18px;
   color: inherit; }
   .panel-title > a,
   .panel-title > small,
@@ -5377,7 +5608,7 @@ button.list-group-item-danger {
   margin-bottom: 0; }
 
 .panel-group {
-  margin-bottom: 20px; }
+  margin-bottom: 22px; }
   .panel-group .panel {
     margin-bottom: 0;
     border-radius: 4px; }
@@ -5525,7 +5756,7 @@ button.list-group-item-danger {
 
 .close {
   float: right;
-  font-size: 21px;
+  font-size: 24px;
   font-weight: bold;
   line-height: 1;
   color: #000;
@@ -5639,10 +5870,10 @@ button.close {
     display: table; }
   .modal-footer:after {
     clear: both; }
-  .modal-footer .btn + .btn, .modal-footer .btn--default + .btn, .modal-footer .btn--primary + .btn, .modal-footer .btn--secondary + .btn, .modal-footer .btn--success + .btn, .modal-footer .btn--info + .btn, .modal-footer .btn--warning + .btn, .modal-footer .btn--danger + .btn, .modal-footer .btn--dark + .btn, .modal-footer .btn--grey + .btn, .modal-footer .btn--save + .btn, .modal-footer .btn--hidetext + .btn, .modal-footer .btn + .btn--default, .modal-footer .btn--default + .btn--default, .modal-footer .btn--primary + .btn--default, .modal-footer .btn--secondary + .btn--default, .modal-footer .btn--success + .btn--default, .modal-footer .btn--info + .btn--default, .modal-footer .btn--warning + .btn--default, .modal-footer .btn--danger + .btn--default, .modal-footer .btn--dark + .btn--default, .modal-footer .btn--grey + .btn--default, .modal-footer .btn--save + .btn--default, .modal-footer .btn--hidetext + .btn--default, .modal-footer .btn + .btn--primary, .modal-footer .btn--default + .btn--primary, .modal-footer .btn--primary + .btn--primary, .modal-footer .btn--secondary + .btn--primary, .modal-footer .btn--success + .btn--primary, .modal-footer .btn--info + .btn--primary, .modal-footer .btn--warning + .btn--primary, .modal-footer .btn--danger + .btn--primary, .modal-footer .btn--dark + .btn--primary, .modal-footer .btn--grey + .btn--primary, .modal-footer .btn--save + .btn--primary, .modal-footer .btn--hidetext + .btn--primary, .modal-footer .btn + .btn--secondary, .modal-footer .btn--default + .btn--secondary, .modal-footer .btn--primary + .btn--secondary, .modal-footer .btn--secondary + .btn--secondary, .modal-footer .btn--success + .btn--secondary, .modal-footer .btn--info + .btn--secondary, .modal-footer .btn--warning + .btn--secondary, .modal-footer .btn--danger + .btn--secondary, .modal-footer .btn--dark + .btn--secondary, .modal-footer .btn--grey + .btn--secondary, .modal-footer .btn--save + .btn--secondary, .modal-footer .btn--hidetext + .btn--secondary, .modal-footer .btn + .btn--success, .modal-footer .btn--default + .btn--success, .modal-footer .btn--primary + .btn--success, .modal-footer .btn--secondary + .btn--success, .modal-footer .btn--success + .btn--success, .modal-footer .btn--info + .btn--success, .modal-footer .btn--warning + .btn--success, .modal-footer .btn--danger + .btn--success, .modal-footer .btn--dark + .btn--success, .modal-footer .btn--grey + .btn--success, .modal-footer .btn--save + .btn--success, .modal-footer .btn--hidetext + .btn--success, .modal-footer .btn + .btn--info, .modal-footer .btn--default + .btn--info, .modal-footer .btn--primary + .btn--info, .modal-footer .btn--secondary + .btn--info, .modal-footer .btn--success + .btn--info, .modal-footer .btn--info + .btn--info, .modal-footer .btn--warning + .btn--info, .modal-footer .btn--danger + .btn--info, .modal-footer .btn--dark + .btn--info, .modal-footer .btn--grey + .btn--info, .modal-footer .btn--save + .btn--info, .modal-footer .btn--hidetext + .btn--info, .modal-footer .btn + .btn--warning, .modal-footer .btn--default + .btn--warning, .modal-footer .btn--primary + .btn--warning, .modal-footer .btn--secondary + .btn--warning, .modal-footer .btn--success + .btn--warning, .modal-footer .btn--info + .btn--warning, .modal-footer .btn--warning + .btn--warning, .modal-footer .btn--danger + .btn--warning, .modal-footer .btn--dark + .btn--warning, .modal-footer .btn--grey + .btn--warning, .modal-footer .btn--save + .btn--warning, .modal-footer .btn--hidetext + .btn--warning, .modal-footer .btn + .btn--danger, .modal-footer .btn--default + .btn--danger, .modal-footer .btn--primary + .btn--danger, .modal-footer .btn--secondary + .btn--danger, .modal-footer .btn--success + .btn--danger, .modal-footer .btn--info + .btn--danger, .modal-footer .btn--warning + .btn--danger, .modal-footer .btn--danger + .btn--danger, .modal-footer .btn--dark + .btn--danger, .modal-footer .btn--grey + .btn--danger, .modal-footer .btn--save + .btn--danger, .modal-footer .btn--hidetext + .btn--danger, .modal-footer .btn + .btn--dark, .modal-footer .btn--default + .btn--dark, .modal-footer .btn--primary + .btn--dark, .modal-footer .btn--secondary + .btn--dark, .modal-footer .btn--success + .btn--dark, .modal-footer .btn--info + .btn--dark, .modal-footer .btn--warning + .btn--dark, .modal-footer .btn--danger + .btn--dark, .modal-footer .btn--dark + .btn--dark, .modal-footer .btn--grey + .btn--dark, .modal-footer .btn--save + .btn--dark, .modal-footer .btn--hidetext + .btn--dark, .modal-footer .btn + .btn--grey, .modal-footer .btn--default + .btn--grey, .modal-footer .btn--primary + .btn--grey, .modal-footer .btn--secondary + .btn--grey, .modal-footer .btn--success + .btn--grey, .modal-footer .btn--info + .btn--grey, .modal-footer .btn--warning + .btn--grey, .modal-footer .btn--danger + .btn--grey, .modal-footer .btn--dark + .btn--grey, .modal-footer .btn--grey + .btn--grey, .modal-footer .btn--save + .btn--grey, .modal-footer .btn--hidetext + .btn--grey, .modal-footer .btn + .btn--save, .modal-footer .btn--default + .btn--save, .modal-footer .btn--primary + .btn--save, .modal-footer .btn--secondary + .btn--save, .modal-footer .btn--success + .btn--save, .modal-footer .btn--info + .btn--save, .modal-footer .btn--warning + .btn--save, .modal-footer .btn--danger + .btn--save, .modal-footer .btn--dark + .btn--save, .modal-footer .btn--grey + .btn--save, .modal-footer .btn--save + .btn--save, .modal-footer .btn--hidetext + .btn--save, .modal-footer .btn + .btn--hidetext, .modal-footer .btn--default + .btn--hidetext, .modal-footer .btn--primary + .btn--hidetext, .modal-footer .btn--secondary + .btn--hidetext, .modal-footer .btn--success + .btn--hidetext, .modal-footer .btn--info + .btn--hidetext, .modal-footer .btn--warning + .btn--hidetext, .modal-footer .btn--danger + .btn--hidetext, .modal-footer .btn--dark + .btn--hidetext, .modal-footer .btn--grey + .btn--hidetext, .modal-footer .btn--save + .btn--hidetext, .modal-footer .btn--hidetext + .btn--hidetext {
+  .modal-footer .btn + .btn, .modal-footer .btn--default + .btn, .modal-footer .btn--first + .btn, .modal-footer .btn--second + .btn, .modal-footer .btn--success + .btn, .modal-footer .btn--info + .btn, .modal-footer .btn--warning + .btn, .modal-footer .btn--danger + .btn, .modal-footer .btn--dark + .btn, .modal-footer .btn--grey + .btn, .modal-footer .btn--save + .btn, .modal-footer .btn--hidetext + .btn, .modal-footer .btn + .btn--default, .modal-footer .btn--default + .btn--default, .modal-footer .btn--first + .btn--default, .modal-footer .btn--second + .btn--default, .modal-footer .btn--success + .btn--default, .modal-footer .btn--info + .btn--default, .modal-footer .btn--warning + .btn--default, .modal-footer .btn--danger + .btn--default, .modal-footer .btn--dark + .btn--default, .modal-footer .btn--grey + .btn--default, .modal-footer .btn--save + .btn--default, .modal-footer .btn--hidetext + .btn--default, .modal-footer .btn + .btn--first, .modal-footer .btn--default + .btn--first, .modal-footer .btn--first + .btn--first, .modal-footer .btn--second + .btn--first, .modal-footer .btn--success + .btn--first, .modal-footer .btn--info + .btn--first, .modal-footer .btn--warning + .btn--first, .modal-footer .btn--danger + .btn--first, .modal-footer .btn--dark + .btn--first, .modal-footer .btn--grey + .btn--first, .modal-footer .btn--save + .btn--first, .modal-footer .btn--hidetext + .btn--first, .modal-footer .btn + .btn--second, .modal-footer .btn--default + .btn--second, .modal-footer .btn--first + .btn--second, .modal-footer .btn--second + .btn--second, .modal-footer .btn--success + .btn--second, .modal-footer .btn--info + .btn--second, .modal-footer .btn--warning + .btn--second, .modal-footer .btn--danger + .btn--second, .modal-footer .btn--dark + .btn--second, .modal-footer .btn--grey + .btn--second, .modal-footer .btn--save + .btn--second, .modal-footer .btn--hidetext + .btn--second, .modal-footer .btn + .btn--success, .modal-footer .btn--default + .btn--success, .modal-footer .btn--first + .btn--success, .modal-footer .btn--second + .btn--success, .modal-footer .btn--success + .btn--success, .modal-footer .btn--info + .btn--success, .modal-footer .btn--warning + .btn--success, .modal-footer .btn--danger + .btn--success, .modal-footer .btn--dark + .btn--success, .modal-footer .btn--grey + .btn--success, .modal-footer .btn--save + .btn--success, .modal-footer .btn--hidetext + .btn--success, .modal-footer .btn + .btn--info, .modal-footer .btn--default + .btn--info, .modal-footer .btn--first + .btn--info, .modal-footer .btn--second + .btn--info, .modal-footer .btn--success + .btn--info, .modal-footer .btn--info + .btn--info, .modal-footer .btn--warning + .btn--info, .modal-footer .btn--danger + .btn--info, .modal-footer .btn--dark + .btn--info, .modal-footer .btn--grey + .btn--info, .modal-footer .btn--save + .btn--info, .modal-footer .btn--hidetext + .btn--info, .modal-footer .btn + .btn--warning, .modal-footer .btn--default + .btn--warning, .modal-footer .btn--first + .btn--warning, .modal-footer .btn--second + .btn--warning, .modal-footer .btn--success + .btn--warning, .modal-footer .btn--info + .btn--warning, .modal-footer .btn--warning + .btn--warning, .modal-footer .btn--danger + .btn--warning, .modal-footer .btn--dark + .btn--warning, .modal-footer .btn--grey + .btn--warning, .modal-footer .btn--save + .btn--warning, .modal-footer .btn--hidetext + .btn--warning, .modal-footer .btn + .btn--danger, .modal-footer .btn--default + .btn--danger, .modal-footer .btn--first + .btn--danger, .modal-footer .btn--second + .btn--danger, .modal-footer .btn--success + .btn--danger, .modal-footer .btn--info + .btn--danger, .modal-footer .btn--warning + .btn--danger, .modal-footer .btn--danger + .btn--danger, .modal-footer .btn--dark + .btn--danger, .modal-footer .btn--grey + .btn--danger, .modal-footer .btn--save + .btn--danger, .modal-footer .btn--hidetext + .btn--danger, .modal-footer .btn + .btn--dark, .modal-footer .btn--default + .btn--dark, .modal-footer .btn--first + .btn--dark, .modal-footer .btn--second + .btn--dark, .modal-footer .btn--success + .btn--dark, .modal-footer .btn--info + .btn--dark, .modal-footer .btn--warning + .btn--dark, .modal-footer .btn--danger + .btn--dark, .modal-footer .btn--dark + .btn--dark, .modal-footer .btn--grey + .btn--dark, .modal-footer .btn--save + .btn--dark, .modal-footer .btn--hidetext + .btn--dark, .modal-footer .btn + .btn--grey, .modal-footer .btn--default + .btn--grey, .modal-footer .btn--first + .btn--grey, .modal-footer .btn--second + .btn--grey, .modal-footer .btn--success + .btn--grey, .modal-footer .btn--info + .btn--grey, .modal-footer .btn--warning + .btn--grey, .modal-footer .btn--danger + .btn--grey, .modal-footer .btn--dark + .btn--grey, .modal-footer .btn--grey + .btn--grey, .modal-footer .btn--save + .btn--grey, .modal-footer .btn--hidetext + .btn--grey, .modal-footer .btn + .btn--save, .modal-footer .btn--default + .btn--save, .modal-footer .btn--first + .btn--save, .modal-footer .btn--second + .btn--save, .modal-footer .btn--success + .btn--save, .modal-footer .btn--info + .btn--save, .modal-footer .btn--warning + .btn--save, .modal-footer .btn--danger + .btn--save, .modal-footer .btn--dark + .btn--save, .modal-footer .btn--grey + .btn--save, .modal-footer .btn--save + .btn--save, .modal-footer .btn--hidetext + .btn--save, .modal-footer .btn + .btn--hidetext, .modal-footer .btn--default + .btn--hidetext, .modal-footer .btn--first + .btn--hidetext, .modal-footer .btn--second + .btn--hidetext, .modal-footer .btn--success + .btn--hidetext, .modal-footer .btn--info + .btn--hidetext, .modal-footer .btn--warning + .btn--hidetext, .modal-footer .btn--danger + .btn--hidetext, .modal-footer .btn--dark + .btn--hidetext, .modal-footer .btn--grey + .btn--hidetext, .modal-footer .btn--save + .btn--hidetext, .modal-footer .btn--hidetext + .btn--hidetext {
     margin-left: 5px;
     margin-bottom: 0; }
-  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .btn--default + .btn, .modal-footer .btn-group .btn--primary + .btn, .modal-footer .btn-group .btn--secondary + .btn, .modal-footer .btn-group .btn--success + .btn, .modal-footer .btn-group .btn--info + .btn, .modal-footer .btn-group .btn--warning + .btn, .modal-footer .btn-group .btn--danger + .btn, .modal-footer .btn-group .btn--dark + .btn, .modal-footer .btn-group .btn--grey + .btn, .modal-footer .btn-group .btn--save + .btn, .modal-footer .btn-group .btn--hidetext + .btn, .modal-footer .btn-group .btn + .btn--default, .modal-footer .btn-group .btn--default + .btn--default, .modal-footer .btn-group .btn--primary + .btn--default, .modal-footer .btn-group .btn--secondary + .btn--default, .modal-footer .btn-group .btn--success + .btn--default, .modal-footer .btn-group .btn--info + .btn--default, .modal-footer .btn-group .btn--warning + .btn--default, .modal-footer .btn-group .btn--danger + .btn--default, .modal-footer .btn-group .btn--dark + .btn--default, .modal-footer .btn-group .btn--grey + .btn--default, .modal-footer .btn-group .btn--save + .btn--default, .modal-footer .btn-group .btn--hidetext + .btn--default, .modal-footer .btn-group .btn + .btn--primary, .modal-footer .btn-group .btn--default + .btn--primary, .modal-footer .btn-group .btn--primary + .btn--primary, .modal-footer .btn-group .btn--secondary + .btn--primary, .modal-footer .btn-group .btn--success + .btn--primary, .modal-footer .btn-group .btn--info + .btn--primary, .modal-footer .btn-group .btn--warning + .btn--primary, .modal-footer .btn-group .btn--danger + .btn--primary, .modal-footer .btn-group .btn--dark + .btn--primary, .modal-footer .btn-group .btn--grey + .btn--primary, .modal-footer .btn-group .btn--save + .btn--primary, .modal-footer .btn-group .btn--hidetext + .btn--primary, .modal-footer .btn-group .btn + .btn--secondary, .modal-footer .btn-group .btn--default + .btn--secondary, .modal-footer .btn-group .btn--primary + .btn--secondary, .modal-footer .btn-group .btn--secondary + .btn--secondary, .modal-footer .btn-group .btn--success + .btn--secondary, .modal-footer .btn-group .btn--info + .btn--secondary, .modal-footer .btn-group .btn--warning + .btn--secondary, .modal-footer .btn-group .btn--danger + .btn--secondary, .modal-footer .btn-group .btn--dark + .btn--secondary, .modal-footer .btn-group .btn--grey + .btn--secondary, .modal-footer .btn-group .btn--save + .btn--secondary, .modal-footer .btn-group .btn--hidetext + .btn--secondary, .modal-footer .btn-group .btn + .btn--success, .modal-footer .btn-group .btn--default + .btn--success, .modal-footer .btn-group .btn--primary + .btn--success, .modal-footer .btn-group .btn--secondary + .btn--success, .modal-footer .btn-group .btn--success + .btn--success, .modal-footer .btn-group .btn--info + .btn--success, .modal-footer .btn-group .btn--warning + .btn--success, .modal-footer .btn-group .btn--danger + .btn--success, .modal-footer .btn-group .btn--dark + .btn--success, .modal-footer .btn-group .btn--grey + .btn--success, .modal-footer .btn-group .btn--save + .btn--success, .modal-footer .btn-group .btn--hidetext + .btn--success, .modal-footer .btn-group .btn + .btn--info, .modal-footer .btn-group .btn--default + .btn--info, .modal-footer .btn-group .btn--primary + .btn--info, .modal-footer .btn-group .btn--secondary + .btn--info, .modal-footer .btn-group .btn--success + .btn--info, .modal-footer .btn-group .btn--info + .btn--info, .modal-footer .btn-group .btn--warning + .btn--info, .modal-footer .btn-group .btn--danger + .btn--info, .modal-footer .btn-group .btn--dark + .btn--info, .modal-footer .btn-group .btn--grey + .btn--info, .modal-footer .btn-group .btn--save + .btn--info, .modal-footer .btn-group .btn--hidetext + .btn--info, .modal-footer .btn-group .btn + .btn--warning, .modal-footer .btn-group .btn--default + .btn--warning, .modal-footer .btn-group .btn--primary + .btn--warning, .modal-footer .btn-group .btn--secondary + .btn--warning, .modal-footer .btn-group .btn--success + .btn--warning, .modal-footer .btn-group .btn--info + .btn--warning, .modal-footer .btn-group .btn--warning + .btn--warning, .modal-footer .btn-group .btn--danger + .btn--warning, .modal-footer .btn-group .btn--dark + .btn--warning, .modal-footer .btn-group .btn--grey + .btn--warning, .modal-footer .btn-group .btn--save + .btn--warning, .modal-footer .btn-group .btn--hidetext + .btn--warning, .modal-footer .btn-group .btn + .btn--danger, .modal-footer .btn-group .btn--default + .btn--danger, .modal-footer .btn-group .btn--primary + .btn--danger, .modal-footer .btn-group .btn--secondary + .btn--danger, .modal-footer .btn-group .btn--success + .btn--danger, .modal-footer .btn-group .btn--info + .btn--danger, .modal-footer .btn-group .btn--warning + .btn--danger, .modal-footer .btn-group .btn--danger + .btn--danger, .modal-footer .btn-group .btn--dark + .btn--danger, .modal-footer .btn-group .btn--grey + .btn--danger, .modal-footer .btn-group .btn--save + .btn--danger, .modal-footer .btn-group .btn--hidetext + .btn--danger, .modal-footer .btn-group .btn + .btn--dark, .modal-footer .btn-group .btn--default + .btn--dark, .modal-footer .btn-group .btn--primary + .btn--dark, .modal-footer .btn-group .btn--secondary + .btn--dark, .modal-footer .btn-group .btn--success + .btn--dark, .modal-footer .btn-group .btn--info + .btn--dark, .modal-footer .btn-group .btn--warning + .btn--dark, .modal-footer .btn-group .btn--danger + .btn--dark, .modal-footer .btn-group .btn--dark + .btn--dark, .modal-footer .btn-group .btn--grey + .btn--dark, .modal-footer .btn-group .btn--save + .btn--dark, .modal-footer .btn-group .btn--hidetext + .btn--dark, .modal-footer .btn-group .btn + .btn--grey, .modal-footer .btn-group .btn--default + .btn--grey, .modal-footer .btn-group .btn--primary + .btn--grey, .modal-footer .btn-group .btn--secondary + .btn--grey, .modal-footer .btn-group .btn--success + .btn--grey, .modal-footer .btn-group .btn--info + .btn--grey, .modal-footer .btn-group .btn--warning + .btn--grey, .modal-footer .btn-group .btn--danger + .btn--grey, .modal-footer .btn-group .btn--dark + .btn--grey, .modal-footer .btn-group .btn--grey + .btn--grey, .modal-footer .btn-group .btn--save + .btn--grey, .modal-footer .btn-group .btn--hidetext + .btn--grey, .modal-footer .btn-group .btn + .btn--save, .modal-footer .btn-group .btn--default + .btn--save, .modal-footer .btn-group .btn--primary + .btn--save, .modal-footer .btn-group .btn--secondary + .btn--save, .modal-footer .btn-group .btn--success + .btn--save, .modal-footer .btn-group .btn--info + .btn--save, .modal-footer .btn-group .btn--warning + .btn--save, .modal-footer .btn-group .btn--danger + .btn--save, .modal-footer .btn-group .btn--dark + .btn--save, .modal-footer .btn-group .btn--grey + .btn--save, .modal-footer .btn-group .btn--save + .btn--save, .modal-footer .btn-group .btn--hidetext + .btn--save, .modal-footer .btn-group .btn + .btn--hidetext, .modal-footer .btn-group .btn--default + .btn--hidetext, .modal-footer .btn-group .btn--primary + .btn--hidetext, .modal-footer .btn-group .btn--secondary + .btn--hidetext, .modal-footer .btn-group .btn--success + .btn--hidetext, .modal-footer .btn-group .btn--info + .btn--hidetext, .modal-footer .btn-group .btn--warning + .btn--hidetext, .modal-footer .btn-group .btn--danger + .btn--hidetext, .modal-footer .btn-group .btn--dark + .btn--hidetext, .modal-footer .btn-group .btn--grey + .btn--hidetext, .modal-footer .btn-group .btn--save + .btn--hidetext, .modal-footer .btn-group .btn--hidetext + .btn--hidetext {
+  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .btn--default + .btn, .modal-footer .btn-group .btn--first + .btn, .modal-footer .btn-group .btn--second + .btn, .modal-footer .btn-group .btn--success + .btn, .modal-footer .btn-group .btn--info + .btn, .modal-footer .btn-group .btn--warning + .btn, .modal-footer .btn-group .btn--danger + .btn, .modal-footer .btn-group .btn--dark + .btn, .modal-footer .btn-group .btn--grey + .btn, .modal-footer .btn-group .btn--save + .btn, .modal-footer .btn-group .btn--hidetext + .btn, .modal-footer .btn-group .btn + .btn--default, .modal-footer .btn-group .btn--default + .btn--default, .modal-footer .btn-group .btn--first + .btn--default, .modal-footer .btn-group .btn--second + .btn--default, .modal-footer .btn-group .btn--success + .btn--default, .modal-footer .btn-group .btn--info + .btn--default, .modal-footer .btn-group .btn--warning + .btn--default, .modal-footer .btn-group .btn--danger + .btn--default, .modal-footer .btn-group .btn--dark + .btn--default, .modal-footer .btn-group .btn--grey + .btn--default, .modal-footer .btn-group .btn--save + .btn--default, .modal-footer .btn-group .btn--hidetext + .btn--default, .modal-footer .btn-group .btn + .btn--first, .modal-footer .btn-group .btn--default + .btn--first, .modal-footer .btn-group .btn--first + .btn--first, .modal-footer .btn-group .btn--second + .btn--first, .modal-footer .btn-group .btn--success + .btn--first, .modal-footer .btn-group .btn--info + .btn--first, .modal-footer .btn-group .btn--warning + .btn--first, .modal-footer .btn-group .btn--danger + .btn--first, .modal-footer .btn-group .btn--dark + .btn--first, .modal-footer .btn-group .btn--grey + .btn--first, .modal-footer .btn-group .btn--save + .btn--first, .modal-footer .btn-group .btn--hidetext + .btn--first, .modal-footer .btn-group .btn + .btn--second, .modal-footer .btn-group .btn--default + .btn--second, .modal-footer .btn-group .btn--first + .btn--second, .modal-footer .btn-group .btn--second + .btn--second, .modal-footer .btn-group .btn--success + .btn--second, .modal-footer .btn-group .btn--info + .btn--second, .modal-footer .btn-group .btn--warning + .btn--second, .modal-footer .btn-group .btn--danger + .btn--second, .modal-footer .btn-group .btn--dark + .btn--second, .modal-footer .btn-group .btn--grey + .btn--second, .modal-footer .btn-group .btn--save + .btn--second, .modal-footer .btn-group .btn--hidetext + .btn--second, .modal-footer .btn-group .btn + .btn--success, .modal-footer .btn-group .btn--default + .btn--success, .modal-footer .btn-group .btn--first + .btn--success, .modal-footer .btn-group .btn--second + .btn--success, .modal-footer .btn-group .btn--success + .btn--success, .modal-footer .btn-group .btn--info + .btn--success, .modal-footer .btn-group .btn--warning + .btn--success, .modal-footer .btn-group .btn--danger + .btn--success, .modal-footer .btn-group .btn--dark + .btn--success, .modal-footer .btn-group .btn--grey + .btn--success, .modal-footer .btn-group .btn--save + .btn--success, .modal-footer .btn-group .btn--hidetext + .btn--success, .modal-footer .btn-group .btn + .btn--info, .modal-footer .btn-group .btn--default + .btn--info, .modal-footer .btn-group .btn--first + .btn--info, .modal-footer .btn-group .btn--second + .btn--info, .modal-footer .btn-group .btn--success + .btn--info, .modal-footer .btn-group .btn--info + .btn--info, .modal-footer .btn-group .btn--warning + .btn--info, .modal-footer .btn-group .btn--danger + .btn--info, .modal-footer .btn-group .btn--dark + .btn--info, .modal-footer .btn-group .btn--grey + .btn--info, .modal-footer .btn-group .btn--save + .btn--info, .modal-footer .btn-group .btn--hidetext + .btn--info, .modal-footer .btn-group .btn + .btn--warning, .modal-footer .btn-group .btn--default + .btn--warning, .modal-footer .btn-group .btn--first + .btn--warning, .modal-footer .btn-group .btn--second + .btn--warning, .modal-footer .btn-group .btn--success + .btn--warning, .modal-footer .btn-group .btn--info + .btn--warning, .modal-footer .btn-group .btn--warning + .btn--warning, .modal-footer .btn-group .btn--danger + .btn--warning, .modal-footer .btn-group .btn--dark + .btn--warning, .modal-footer .btn-group .btn--grey + .btn--warning, .modal-footer .btn-group .btn--save + .btn--warning, .modal-footer .btn-group .btn--hidetext + .btn--warning, .modal-footer .btn-group .btn + .btn--danger, .modal-footer .btn-group .btn--default + .btn--danger, .modal-footer .btn-group .btn--first + .btn--danger, .modal-footer .btn-group .btn--second + .btn--danger, .modal-footer .btn-group .btn--success + .btn--danger, .modal-footer .btn-group .btn--info + .btn--danger, .modal-footer .btn-group .btn--warning + .btn--danger, .modal-footer .btn-group .btn--danger + .btn--danger, .modal-footer .btn-group .btn--dark + .btn--danger, .modal-footer .btn-group .btn--grey + .btn--danger, .modal-footer .btn-group .btn--save + .btn--danger, .modal-footer .btn-group .btn--hidetext + .btn--danger, .modal-footer .btn-group .btn + .btn--dark, .modal-footer .btn-group .btn--default + .btn--dark, .modal-footer .btn-group .btn--first + .btn--dark, .modal-footer .btn-group .btn--second + .btn--dark, .modal-footer .btn-group .btn--success + .btn--dark, .modal-footer .btn-group .btn--info + .btn--dark, .modal-footer .btn-group .btn--warning + .btn--dark, .modal-footer .btn-group .btn--danger + .btn--dark, .modal-footer .btn-group .btn--dark + .btn--dark, .modal-footer .btn-group .btn--grey + .btn--dark, .modal-footer .btn-group .btn--save + .btn--dark, .modal-footer .btn-group .btn--hidetext + .btn--dark, .modal-footer .btn-group .btn + .btn--grey, .modal-footer .btn-group .btn--default + .btn--grey, .modal-footer .btn-group .btn--first + .btn--grey, .modal-footer .btn-group .btn--second + .btn--grey, .modal-footer .btn-group .btn--success + .btn--grey, .modal-footer .btn-group .btn--info + .btn--grey, .modal-footer .btn-group .btn--warning + .btn--grey, .modal-footer .btn-group .btn--danger + .btn--grey, .modal-footer .btn-group .btn--dark + .btn--grey, .modal-footer .btn-group .btn--grey + .btn--grey, .modal-footer .btn-group .btn--save + .btn--grey, .modal-footer .btn-group .btn--hidetext + .btn--grey, .modal-footer .btn-group .btn + .btn--save, .modal-footer .btn-group .btn--default + .btn--save, .modal-footer .btn-group .btn--first + .btn--save, .modal-footer .btn-group .btn--second + .btn--save, .modal-footer .btn-group .btn--success + .btn--save, .modal-footer .btn-group .btn--info + .btn--save, .modal-footer .btn-group .btn--warning + .btn--save, .modal-footer .btn-group .btn--danger + .btn--save, .modal-footer .btn-group .btn--dark + .btn--save, .modal-footer .btn-group .btn--grey + .btn--save, .modal-footer .btn-group .btn--save + .btn--save, .modal-footer .btn-group .btn--hidetext + .btn--save, .modal-footer .btn-group .btn + .btn--hidetext, .modal-footer .btn-group .btn--default + .btn--hidetext, .modal-footer .btn-group .btn--first + .btn--hidetext, .modal-footer .btn-group .btn--second + .btn--hidetext, .modal-footer .btn-group .btn--success + .btn--hidetext, .modal-footer .btn-group .btn--info + .btn--hidetext, .modal-footer .btn-group .btn--warning + .btn--hidetext, .modal-footer .btn-group .btn--danger + .btn--hidetext, .modal-footer .btn-group .btn--dark + .btn--hidetext, .modal-footer .btn-group .btn--grey + .btn--hidetext, .modal-footer .btn-group .btn--save + .btn--hidetext, .modal-footer .btn-group .btn--hidetext + .btn--hidetext {
     margin-left: -1px; }
   .modal-footer .btn-block + .btn-block {
     margin-left: 0; }
@@ -5687,7 +5918,7 @@ button.close {
   word-break: normal;
   word-spacing: normal;
   word-wrap: normal;
-  font-size: 12px;
+  font-size: 14px;
   opacity: 0;
   filter: alpha(opacity=0); }
   .tooltip.in {
@@ -5793,7 +6024,7 @@ button.close {
   word-break: normal;
   word-spacing: normal;
   word-wrap: normal;
-  font-size: 14px;
+  font-size: 16px;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ccc;
@@ -5813,7 +6044,7 @@ button.close {
 .popover-title {
   margin: 0;
   padding: 8px 14px;
-  font-size: 14px;
+  font-size: 16px;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
   border-radius: 5px 5px 0 0; }
@@ -6054,7 +6285,7 @@ button.close {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-  .carousel-caption .btn, .carousel-caption .btn--default, .carousel-caption .btn--primary, .carousel-caption .btn--secondary, .carousel-caption .btn--success, .carousel-caption .btn--info, .carousel-caption .btn--warning, .carousel-caption .btn--danger, .carousel-caption .btn--dark, .carousel-caption .btn--grey, .carousel-caption .btn--save, .carousel-caption .btn--hidetext {
+  .carousel-caption .btn, .carousel-caption .btn--default, .carousel-caption .btn--first, .carousel-caption .btn--second, .carousel-caption .btn--success, .carousel-caption .btn--info, .carousel-caption .btn--warning, .carousel-caption .btn--danger, .carousel-caption .btn--dark, .carousel-caption .btn--grey, .carousel-caption .btn--save, .carousel-caption .btn--hidetext {
     text-shadow: none; }
 
 @media screen and (min-width: 768px) {
@@ -6296,139 +6527,7 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-/* Carpeta partial */
-/*------------------------------------*\
-    ELEMENTS
-\*------------------------------------*/
-/*------------------------------------*\
-    FONTS
-\*------------------------------------*/
-/*------------------------------------*\
-    COLORS
-\*------------------------------------*/
-/*------------------------------------*\
-    MIXINS
-\*------------------------------------*/
-.hidetext, .btn--hidetext {
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-  text-decoration: none; }
-  .hidetext:before, .btn--hidetext:before {
-    position: relative !important;
-    left: -18px !important; }
-
-/*------------------------------------*\
-    MEDIA QUERIES BREAKPOINTS
-\*------------------------------------*/
-/*------------------------------------*\
-    GRID SYSTEM BOOTSTRAP
-\*------------------------------------*/
-/*------------------------------------*\
-    CONFIGURACION GENERAL HTML
-\*------------------------------------*/
-html {
-  -webkit-font-smoothing: subpixel-antialiased;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
-
-body {
-  font-size: 16px;
-  -webkit-text-size-adjust: 16px;
-  -ms-text-size-adjust: 16px; }
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
-h2 {
-  font-size: 1.5em;
-  margin: 0.83em 0; }
-
-h3 {
-  font-size: 1.17em;
-  margin: 1em 0; }
-
-h4 {
-  font-size: 1em;
-  margin: 1.33em 0; }
-
-h5 {
-  font-size: 0.83em;
-  margin: 1.67em 0; }
-
-h6 {
-  font-size: 0.75em;
-  margin: 2.33em 0; }
-
-p {
-  font-size: 0.875em;
-  line-height: 1.5em;
-  text-align: left; }
-
-p + p:not(:first-of-type) {
-  text-indent: 1em; }
-
-p .capitular {
-  float: left;
-  font-size: 3em;
-  padding-bottom: 0;
-  margin: 0.6rem 0.2rem 0.5rem 0; }
-
-hr {
-  border-top: 1px dashed #8c8b8b;
-  border-bottom: 1px dashed #fff;
-  margin: 15px 0; }
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
-  box-sizing: border-box; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
+/*** BASE ***/
 /*-----------------------------------------*\
     ESTA ES LA HOJA DE ESTILOS PRINCIPAL
 \*-----------------------------------------*/
@@ -6454,7 +6553,7 @@ h2 {
   background-color: rgba(86, 61, 124, 0.15);
   border: 1px solid rgba(86, 61, 124, 0.2); }
 
-@media (max-width: 400px) {
+@media (max-width: 300px) {
   body {
     background: #5bc0de; } }
 .font-primary, body {
@@ -6484,7 +6583,7 @@ h6, p .capitular {
   src: url("../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("../fonts/fontawesome/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("../fonts/fontawesome/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("../fonts/fontawesome/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-.fa, .icono--estrella:before, .btn--save:before, .btn--hidetext:before {
+.fa, .btn--save:before, .btn--hidetext:before, .icono--estrella:before {
   display: inline-block;
   font-family: FontAwesome;
   font-style: normal;
@@ -6544,10 +6643,10 @@ h6, p .capitular {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.icono--estrella:before, .pull-left.btn--save:before, .pull-left.btn--hidetext:before {
+.fa.pull-left, .pull-left.btn--save:before, .pull-left.btn--hidetext:before, .pull-left.icono--estrella:before {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.icono--estrella:before, .pull-right.btn--save:before, .pull-right.btn--hidetext:before {
+.fa.pull-right, .pull-right.btn--save:before, .pull-right.btn--hidetext:before, .pull-right.icono--estrella:before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -10771,91 +10870,7 @@ h6, p .capitular {
 .ionicon-var-xbox:before {
   content: "\f30c"; }
 
-/* Carpeta elements */
-/*------------------------------------*\
-    BUTTONS
-\*------------------------------------*/
-/*clase principal para definir un bot¾n*/
-.btn, .btn--default, .btn--primary, .btn--secondary, .btn--success, .btn--info, .btn--warning, .btn--danger, .btn--dark, .btn--grey, .btn--save, .btn--hidetext {
-  font-size: 0.875em;
-  padding: 11px 15px;
-  color: #fff;
-  background: #fff;
-  border-radius: 3px;
-  border: 1px solid #ccc;
-  border-color: rgba(0, 0, 0, 0.2);
-  display: inline-block;
-  text-align: center;
-  box-sizing: border-box;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -o-transition: 0.3s;
-  -ms-transition: 0.3s;
-  transition: 0.3s; }
-  .btn:hover, .btn--default:hover, .btn--primary:hover, .btn--secondary:hover, .btn--success:hover, .btn--info:hover, .btn--warning:hover, .btn--danger:hover, .btn--dark:hover, .btn--grey:hover, .btn--save:hover, .btn--hidetext:hover {
-    background: #e6e6e6;
-    cursor: pointer;
-    border-color: transparent;
-    color: #fff; }
-
-.btn--default {
-  color: #333; }
-
-.btn--primary {
-  background: #337ab7; }
-  .btn--primary:hover {
-    background: #285f8f; }
-
-.btn--secondary {
-  background: red; }
-  .btn--secondary:hover {
-    background: #cc0000; }
-
-.btn--success {
-  background: #5cb85c; }
-  .btn--success:hover {
-    background: #449d44; }
-
-.btn--info {
-  background: #5bc0de; }
-  .btn--info:hover {
-    background: #31b0d5; }
-
-.btn--warning {
-  background: #f0ad4e; }
-  .btn--warning:hover {
-    background: #ec971f; }
-
-.btn--danger {
-  background: #d9534f; }
-  .btn--danger:hover {
-    background: #c9302c; }
-
-.btn--dark {
-  background: #000; }
-  .btn--dark:hover {
-    background: #666666; }
-
-.btn--grey {
-  background: #ccc; }
-  .btn--grey:hover {
-    background: #b3b3b3; }
-
-.btn--save {
-  background: #337ab7; }
-  .btn--save:hover {
-    background: #285f8f; }
-  .btn--save:before {
-    padding: 0 3px 0 0; }
-
-.btn--hidetext {
-  background: #337ab7; }
-  .btn--hidetext:hover {
-    background: #285f8f; }
-  .btn--hidetext:before {
-    padding: 0 3px 0 0; }
-
-/* Carpeta modules */
-/* Carpeta vendor */
+/*** COMPONENTS ***/
+/* Carpeta vendor para las librerias*/
 
 /*# sourceMappingURL=web.css.map */
