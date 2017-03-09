@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    MIXINS
+\*------------------------------------*/
+
+@mixin transition{
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+}
+
+
+.hidetext{
+  width:40px;
+  height:40px;
+  display:inline-block;
+  position:relative;
+  overflow:hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  text-decoration:none;
+  &:before{
+    // colocamos el icono
+    position: relative !important;
+    left: -18px !important;
+  }
+}
