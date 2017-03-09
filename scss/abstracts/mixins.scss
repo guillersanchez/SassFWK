@@ -26,3 +26,38 @@
     left: -18px !important;
   }
 }
+
+// ----------------------------------------------------------------
+// Font & text useful Mixins
+// ----------------------------------------------------------------
+
+// Font-Size
+@mixin fs($font-size:$base-font-size, $lines:1) {
+  font-size: $font-size;
+  font-size: rem($font-size);
+}
+
+// Line-Height
+@mixin lh($lines:$base-line-increment, $font-size:$base-font-size) {
+  line-height: $font-size * $lines;
+  line-height: rem($font-size * $lines);
+}
+
+// Font-Weight
+@mixin fw($weight:$regular) {
+  font-weight: $weight;
+}
+// Font Family
+
+/*$base-font-family:Arial;*/
+
+
+
+// Creamos un mixin general que incluya a todos los mixin pequeños
+// Font >> tamaño, altura de linea, peso, tipografia
+@mixin font($font-size:$base-font-size, $lines:$base-line-increment, $weight:$regular,$font-family: $font-primary) {
+  @include fs($font-size);
+  @include lh($lines, $font-size);
+  @include fw($weight);
+  font-family: $font-family;
+}

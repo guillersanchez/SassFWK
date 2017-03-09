@@ -55,7 +55,16 @@ h2{
 
 //@media (max-width: 600px)
 
+.pruebafuente{
+  @include fs(30px);
+  @include lh(1.5);
+  @include fw($bold);
+}
 
+.pruebafuente2{
+  @include font(25px, 1.5,$bold,$font-secondary);
+  color:green;
+}
 
 
 

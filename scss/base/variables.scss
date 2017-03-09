@@ -6,25 +6,24 @@ $incluirBotones:           true!default;
 $radioBoton:               0; //px or %
 $bordeBoton:               3px; //px
 
-
 /*------------------------------------*\
     FONTS
 \*------------------------------------*/
 
+// Seleccionamos si queremos usar fuentes importadas de google o locales
 $fuenteImportada:          true!default;
 $fuenteLocal:              false!default;
 
 $iconosFontawesome:        true!default;
 $iconosIonicons:           true!default;
 
-$font-size-base:           16px;
+
+
 
 
 /*------------------------------------*\
     COLORS - DIFERENTES CLASIFICACIONES
 \*------------------------------------*/
-
-
 
 // General GrayColors
 $black:                                 #000;
@@ -110,6 +109,68 @@ $screen-md-max:              ($screen-lg-min - 1);
 
 
 
+
+
+
+
+
+
+// FONT SIZES ====================================================
+$font-sizes: (
+        7px,
+        9px,
+        11px,
+        13px,
+        14px,  //$base-font-size
+        16px,
+        18px,
+        22px,
+        28px,
+        30px,
+        36px,
+        49px,
+        67px,
+);
+
+$tiny:                                  nth($font-sizes, 1);
+$xxxsmall:                              nth($font-sizes, 2);
+$xxsmall:                               nth($font-sizes, 3);
+$small:                                 nth($font-sizes, 4);
+$normal:                                nth($font-sizes, 5);   // $base-font-size
+$med:                                   nth($font-sizes, 6);   // h2
+$xlarge:                                nth($font-sizes, 7);   // h1
+$xxlarge:                               nth($font-sizes, 8);
+$xxxlarge:                              nth($font-sizes, 9);
+$xxxxlarge:                             nth($font-sizes, 10);
+$reallybig:                             nth($font-sizes, 11);
+$tremendous:                            nth($font-sizes, 12);
+$absurd:                                nth($font-sizes, 13);
+
+
+$base-font-size:                        $normal;
+$base-line-increment:                   1.5;
+
+// FONT FAMILIES ====================================================
+// usa estas si las 2 fuentes (local o importada) son false. Es necesario tenerlas declaradas
+$font-primary: Arial, Helvetica, Verdana;
+$font-secondary: Georgia, Cambria, Times, "Times New Roman";
+
+// FONT WEIGHTS ====================================================
+$thin:                                  100;
+$light:                                 300;
+$regular:                               400;
+$bold:                                  700;
+$heavy:                                 900;
+
+
+
+//Llamamos a la fuente principal en el body y a la secundaria en los H1,H2,H3...
+
+body{
+ /* @extend .font-primary;*/
+}
+
+
 /*------------------------------------*\
     CONFIGURACION GENERAL HTML
 \*------------------------------------*/
@@ -124,18 +185,10 @@ html{
 body {
 
   //fuentes
-  font-size: $font-size-base;
-  -webkit-text-size-adjust: $font-size-base;
-  -ms-text-size-adjust: $font-size-base;
+  font-size: $base-font-size;
+  -webkit-text-size-adjust: $base-font-size;
+  -ms-text-size-adjust: $base-font-size;
 }
-
-
-//Llamamos a la fuente principal en el body y a la secundaria en los H1,H2,H3...
-
-body{
-  @extend .font-primary;
-}
-
 
 // HEADINGS ====================================================
 
@@ -145,7 +198,7 @@ h3,
 h4,
 h5,
 h6 {
-  @extend .font-secondary;
+/*  @extend .font-secondary;*/
 }
 
 
@@ -190,7 +243,7 @@ p+p:not(:first-of-type){
 }
 
 p .capitular{
-  @extend .font-secondary;
+ /* @extend .font-secondary;*/
   float: left;
   font-size: 3em;
   padding-bottom: 0;
@@ -202,4 +255,6 @@ hr{
   border-bottom: 1px dashed #fff;
   margin:15px 0;
 }
+
+
 

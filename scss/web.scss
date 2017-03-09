@@ -3,12 +3,16 @@
 \*------------------------------------*/
 
 
-
 // primero llamamos al fichero con las variables!!!
 @import 'base/variables.scss';
-@import 'base/variablesBoostrap.scss';
+
 @import 'base/reset.scss';
 
+// Importada
+@import 'base/fonts-imported.scss';
+
+// Local
+@import 'base/fonts-local.scss';
 
 
 /*** ABSTRACTS [para elementos sueltos] ***/
@@ -17,8 +21,10 @@
 
 
 
-/*** BOOTSTRAP ***/
-@import 'bootstrap/bootstrap';
+/*** BOOTSTRAP - Descomentar si vamos a usar bootstrap ***/
+/*@import 'base/variablesBootstrap.scss';
+@import 'bootstrap/bootstrap';*/
+
 
 
 
@@ -27,11 +33,7 @@
 //hoja principal de estilos
 @import 'base/shame.scss';
 // FUENTES
-  // Importada
-  @import 'base/fonts-imported.scss';
 
-  // Local
-  @import 'base/fonts-local.scss';
 
   //importamos la fuente de iconos FONTAWESOME para poder acceder a sus estilos y usarlos con @extend;
   @import 'base/font-awesome.scss';
